@@ -1,6 +1,7 @@
-Hyprland dotfiles by Binary Harbinger
+# Hyprland dotfiles by Binary Harbinger
 
-*Dependecies*
+
+## *Dependecies*
   
   » Arch Linux or other rolling release GNU/Linux distro based on Arch Linux.
 
