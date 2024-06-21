@@ -1,4 +1,4 @@
-yay -S ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout
+yay -S ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout kitty
 cp -r ./waybar ~/.config/
 cp -r ./hypr ~/.config/
 cp -r ./kitty ~/.config/
