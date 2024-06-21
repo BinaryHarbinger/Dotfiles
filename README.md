@@ -6,3 +6,7 @@ Hyprland dotfiles by Binary Harbinger
   » AUR helper yay.
 
   » Waybar and wlogout.
+
+  » Hyprlock and Hyprpaper
+
+  » Fira Code Font and otf Fira Code symbols
