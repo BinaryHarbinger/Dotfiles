@@ -11,3 +11,5 @@ Hyprland dotfiles by Binary Harbinger
   » Hyprlock and Hyprpaper
 
   » Fira Code Font and otf Fira Code symbols
+
+  » Kitty Terminal Emulator
