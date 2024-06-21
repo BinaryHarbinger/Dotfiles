@@ -1,1 +1,143 @@
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
+ * by Binary Harbinger
+ * ----------------------------------------------------- 
+*/
 
+
+
+
+* {
+    border: none;
+    font-family: 'Fira Code', 'Symbols Nerd Font Mono';
+    font-size: 14px;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    min-height: 15px;
+  }
+  
+  window#waybar {
+    border: 2px solid #cdd6f4;
+    background: #11111b;
+  }
+  
+  #custom-power,#custom-arch, #workspaces, #custom-runner,#taskbar,#tray {
+    /*border-radius: 10px;*/
+    background-color: #11111b;
+    color: #b4befe;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 2px solid #cdd6f4;
+    border-bottom: 2px solid #cdd6f4;
+  }
+  
+  #custom-power{
+    font-size: 20px;
+  }
+
+  #tooltip {
+    border-radius: 10px;
+    background-color: #11111b;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+  }
+
+  tooltip label {
+    color: #cdd6f4;
+  }
+
+  #custom-arch ,#custom-runner,#tray{
+    font-size: 24px;
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+  
+  #workspaces{
+    border-left: 0px;border-right: 0px;
+    /*border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;*/
+  }
+
+  #workspaces button {
+    padding: 0px 5px;
+    margin: 4px 8px;
+    border-radius: 8px;
+    border: 0px;
+    color: #73798d;
+    background-color: #cdd6f4;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+  }
+
+  #workspaces button.active {
+    color: #73798d;
+    background: #cdd6f4;
+    border-radius: 8px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+  }
+
+  #workspaces button:hover {
+    color: #73798d;
+    background: #cdd6f4;
+    border-radius: 15px;
+    opacity:0.7;
+  }
+
+
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+
+  #user,#taskbar,#playerctl, #playerlabel, #taskbar #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery,#clock{
+    /*border-radius: 10px;*/
+    border-top: 2px solid #cdd6f4;
+    border-bottom: 2px solid #cdd6f4;
+    background-color: #11111b;
+    color: #cdd6f4;
+    padding: 5px 12px;
+  }
+
+  #user{
+    font-size: 1px;
+  }
+
+/*#clock,#network,#battery,#bluetooth,#pulseaudio{
+  border-radius: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}*/
+
+#clock{
+  font-size: 16px;  
+}
+
+
+#backlight{
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: 0px;
+}
+
+  #tray {color: #11111b;
+  }
+
+  #tray menu{
+    background-color: #11111b;
+  }
