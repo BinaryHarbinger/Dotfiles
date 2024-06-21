@@ -44,7 +44,7 @@
 
     "custom/power": {
       "format": "",
-      "on-click": "kitty -e ~/.config/waybar/scripts/shutdown.sh"
+      "on-click": "wlogout"
     },
 
     "user": {
