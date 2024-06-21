@@ -16,3 +16,7 @@
   » Fira Code Font and otf Fira Code symbols
 
   » Kitty Terminal Emulator
+
+## *Some Photos*
+
+![Photo](https://raw.githubusercontent.com/BinaryHarbinger/HyprlandConfig/main/readme/photo1.png?raw=true)
