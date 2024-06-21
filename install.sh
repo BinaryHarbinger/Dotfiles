@@ -1,4 +1,4 @@
-yay -S ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout kitty fuzzel papirus-icon-theme
+yay -S ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout kitty fuzzel papirus-icon-theme python-playsound
 cp -r ./waybar ~/.config/
 cp -r ./hypr ~/.config/
 cp -r ./kitty ~/.config/
