@@ -26,6 +26,6 @@
 
 ## *Some Photos*
 
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/HyprlandConfig/main/readme/photo1.png?raw=true)
+![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/photo1.png?raw=true)
 
 ----------------------------------------------------------------------------------------
