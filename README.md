@@ -4,6 +4,8 @@ Hyprland dotfiles by Binary Harbinger
   
   » Arch Linux or other rolling release GNU/Linux distro based on Arch Linux.
 
+  » You have to enable extra repistories from Arch Linux
+
   » AUR helper yay.
 
   » Waybar and wlogout.
