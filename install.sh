@@ -1,6 +1,10 @@
-yay -S ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout kitty fuzzel papirus-icon-theme python-playsound
+yay -Sy ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout kitty papirus-icon-theme python-playsound base-devel git
+git clone https://github.com/lbonn/rofi.git
+cd rofi
+meson build
+
 cp -r ./waybar ~/.config/
 cp -r ./hypr ~/.config/
 cp -r ./kitty ~/.config/
-cp -r ./fuzzel ~/.config/
+cp -r ./rofi ~/.config/
 cp -r ./wlogout ~/.config/
