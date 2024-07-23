@@ -26,13 +26,33 @@
 
 ## How do I install?
 
-You have to install yay after all. Because some of the dependecies is not in offical repistories.
+You have to install yay before all. Because some of the dependecies is not in offical repistories.
 
-To install yay: `sudo pacman -Sy git base-devel;
-;git clone https://aur.archlinux.org/yay.git;
-cd yay;makepgk -si`
+To install yay: 
+```
+sudo pacman -Sy git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepgk -si
+```
 
-When you install files you'll see install.sh you have to run it with terminal and type your password to install all of the dependecies.
+# Installing with script
+
+Install yay. Then copy and paste this:
+``` 
+git clone https://github.com/BinaryHarbinger/Dotfiles.git
+cd Dotfiles
+./install.sh
+cd ..
+rm -r Dotfiles
+```
+_If you get errors during and after installation try to enable extra repistories from Arch Linux_
+
+# Installing manualy (For non-Arch based distros)
+
+» You have to install all the dependecies from your package manager.
+
+» Copy all the directories (except readme) to your .config folder
 
 ***
 
@@ -40,13 +60,15 @@ When you install files you'll see install.sh you have to run it with terminal an
   
   » Arch Linux or other rolling release GNU/Linux distro based on Arch Linux.
 
-  » You have to enable extra repistories from Arch Linux
+  » [Rofi Wayland Fork](https://github.com/A417ya/rofi-wayland)
 
   » AUR helper yay.
 
   » Waybar and wlogout.
 
-  » Hyprlock and Hyprpaper
+  » Swaync
+
+  » Hyprlock, Hyprpaper and Hyprpaper
 
   » Fira Code Font and otf Fira Code symbols
 
