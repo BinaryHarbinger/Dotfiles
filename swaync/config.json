@@ -64,23 +64,15 @@
       
                 {
                     "label": "",
-                    "command": "notify-send 'Opening hypr settings' && foot -e nvim ~/.config/hypr/hyprland.conf &"
+                    "command": "kitty -e nano ~/.config/hypr/hyprland.conf"
                 },
                 {
                     "label": "󰇚",
-                    "command": "thunar $HOME/Downloads/"
+                    "command": "thunar /home/USERNAME/Downloads/"
                 },
                 {
                     "label": "",
                     "command": "notify-send 'Clipboard history cleared' && clipman clear --all "
-                },
-                {
-                    "label": "",
-                    "command": "python $HOME/.config/hypr/scripts/gammastep.py"
-                },
-                {
-                    "label": "",
-                    "command": "notify-send 'Opening SwayNC Settings' && code $HOME/.config/swaync"
                 }
             ]
         }
