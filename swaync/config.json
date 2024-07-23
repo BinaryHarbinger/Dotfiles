@@ -1,0 +1,88 @@
+{
+    "$schema": "/etc/xdg/swaync/configSchema.json",
+    "positionX": "right",
+    "positionY": "bottom",
+    "control-center-margin-top": 2,
+    "control-center-margin-bottom": 2,
+    "control-center-margin-right": -2,
+    "control-center-margin-left": 2,
+    "notification-icon-size": 64,
+    "notification-body-image-height": 100,
+    "notification-body-image-width": 200,
+    "timeout": 1,
+    "timeout-low": 5,
+    "timeout-critical": 5,
+    "fit-to-screen": true,
+    "control-center-width": 420,
+    "control-center-height": 1000,
+    "notification-window-width": 320,
+    "keyboard-shortcuts": true,
+    "image-visibility": "when-available",
+    "transition-time": 200,
+    "hide-on-clear": false,
+    "hide-on-action": true,
+    "script-fail-notify": true,
+    "widgets": [
+        "buttons-grid",
+        "mpris",
+        "volume",
+        "title",
+        "notifications"
+    ],
+    "widget-config": {
+        "title": {
+            "text": "Notifications",
+            "clear-all-button": true,
+            "button-text": "Clear"
+        },
+        "label": {
+            "max-lines": 1,
+            "text": "Notifications"
+        },
+        "mpris": {
+            "image-size": 96,
+            "image-radius": 12
+        },
+        "volume": {
+            "label": " 󰕾 "
+        },
+      
+        "buttons-grid": {
+            "actions": [
+                {
+                    "label": "󰐥",
+                    "command": "systemctl poweroff"
+                },
+                {
+                    "label": "󰜉",
+                    "command": "systemctl reboot"
+                },
+                {
+                    "label": "󰌾",
+                    "command": "hyprlock"
+                },
+      
+                {
+                    "label": "",
+                    "command": "notify-send 'Opening hypr settings' && foot -e nvim ~/.config/hypr/hyprland.conf &"
+                },
+                {
+                    "label": "󰇚",
+                    "command": "thunar $HOME/Downloads/"
+                },
+                {
+                    "label": "",
+                    "command": "notify-send 'Clipboard history cleared' && clipman clear --all "
+                },
+                {
+                    "label": "",
+                    "command": "python $HOME/.config/hypr/scripts/gammastep.py"
+                },
+                {
+                    "label": "",
+                    "command": "notify-send 'Opening SwayNC Settings' && code $HOME/.config/swaync"
+                }
+            ]
+        }
+    }
+  }
