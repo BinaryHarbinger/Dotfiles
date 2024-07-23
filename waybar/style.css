@@ -13,131 +13,179 @@
 
 
 
+
+/*base background color*/
+@define-color bg_main rgba(25, 25, 25, 0.65);
+@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
+
+
+/*base background color of selections */
+@define-color bg_hover rgba(200, 200, 200, 0.3);
+/*base background color of active elements */
+@define-color bg_active rgba(100, 100, 100, 0.5);
+
+/*base border color*/
+@define-color border_main rgba(180, 190, 254, 0.2);
+
+/*text color for entries, views and content in general */
+@define-color content_main #b4befe;
+/*text color for entries that are unselected */
+@define-color content_inactive #b4befe;
+
 * {
-    border: none;
-    font-family: 'Fira Code', 'Symbols Nerd Font Mono';
-    font-size: 14px;
-    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-    min-height: 15px;
-  }
-  
-  window#waybar {
-    border: 2px solid #cdd6f4;
-    background: #11111b;
-  }
-  
-  #custom-power,#custom-arch, #workspaces, #custom-runner,#taskbar,#tray {
-    /*border-radius: 10px;*/
-    background-color: #11111b;
-    color: #b4befe;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-top: 2px solid #cdd6f4;
-    border-bottom: 2px solid #cdd6f4;
-  }
-  
-  #custom-power{
-    font-size: 20px;
-  }
-
-  #tooltip {
-    border-radius: 10px;
-    background-color: #11111b;
-    opacity:0.8;
-    padding:20px;
-    margin:0px;
-  }
-
-  tooltip label {
-    color: #cdd6f4;
-  }
-
-  #custom-arch ,#custom-runner,#tray{
-    font-size: 24px;
-    border-radius: 0px;
-    border-left: 0px;
-    border-right: 0px;
-  }
-  
-  #workspaces{
-    border-left: 0px;border-right: 0px;
-    /*border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;*/
-  }
-
-  #workspaces button {
-    padding: 0px 5px;
-    margin: 4px 8px;
-    border-radius: 8px;
-    border: 0px;
-    color: #73798d;
-    background-color: #cdd6f4;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.4;
-  }
-
-  #workspaces button.active {
-    color: #73798d;
-    background: #cdd6f4;
-    border-radius: 8px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity:1.0;
-  }
-
-  #workspaces button:hover {
-    color: #73798d;
-    background: #cdd6f4;
-    border-radius: 15px;
-    opacity:0.7;
-  }
-
-
-
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+	text-shadow: none;
+	box-shadow: none;
+  border: none;
+  border-radius: 0;
+	font-family: "Fira Code";
+  font-weight: 600;
+  font-size: 12.7px;
+	
 }
 
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
+window#waybar {
+  background:  rgba(17, 17, 27, 0.65);
+  border-bottom: 1px solid @border_main;
+  color: @content_main;
 }
 
-
-  #user,#taskbar,#playerctl, #playerlabel, #taskbar #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery,#clock{
-    /*border-radius: 10px;*/
-    border-top: 2px solid #cdd6f4;
-    border-bottom: 2px solid #cdd6f4;
-    background-color: #11111b;
-    color: #cdd6f4;
-    padding: 5px 12px;
-  }
-
-  #user{
-    font-size: 1px;
-  }
-
-/*#clock,#network,#battery,#bluetooth,#pulseaudio{
-  border-radius: 0px;
-  border-left: 0px;
-  border-right: 0px;
-}*/
-
-#clock{
-  font-size: 16px;  
+tooltip {
+  background: @bg_main_tooltip;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @border_main;
+}
+tooltip label{
+  color: @content_main;
 }
 
-
-#backlight{
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-right: 0px;
+#custom-os_button {
+	font-family: "JetBrainsMono Nerd Font";
+  font-size: 24px;
+	padding-left: 12px;
+	padding-right: 20px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#custom-os_button:hover {
+  background:  @bg_hover;
+	color: @content_main;
 }
 
-  #tray {color: #11111b;
+#custom-swaync {	font-family: "JetBrainsMono Nerd Font";
+	font-size: 20px;
+	  padding-left: 12px;
+	  padding-right: 20px;
+	  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  #tray menu{
-    background-color: #11111b;
-  }
+#workspaces {
+  color: transparent;
+	margin-right: 1.5px;
+	margin-left: 1.5px;
+}
+#workspaces button {
+  padding: 3px;
+  color: @content_inactive;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#workspaces button.active {
+	color: @content_main;
+	border-bottom: 3px solid white;
+}
+#workspaces button.focused {
+  color: @bg_active;
+}
+#workspaces button.urgent {
+	background:  rgba(255, 200, 0, 0.35);
+	border-bottom: 3px dashed @warning_color;
+	color: @warning_color;
+}
+#workspaces button:hover {
+  background: @bg_hover;
+	color: @content_main;
+}
+
+#taskbar {
+}
+
+#taskbar button {
+	min-width: 30px;
+	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+	margin-left: 2px;
+	margin-right: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#taskbar button.active {
+	border-bottom: 3px solid white;
+  background: @bg_active;
+}
+
+#taskbar button:hover {
+	border-bottom: 3px solid white;
+  background: @bg_hover;
+	color: @content_main;
+}
+
+#cpu, #disk, #memory {
+	padding:3px;
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#tray{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#tray > .passive {
+	border-bottom: none;
+}
+#tray > .active {
+	border-bottom: 3px solid white;
+}
+#tray > .needs-attention {
+	border-bottom: 3px solid @warning_color;
+}
+#tray > widget {
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#tray > widget:hover {
+	background: @bg_hover;
+}
+
+#pulseaudio {
+	font-family: "JetBrainsMono Nerd Font";
+	padding-left: 3px;
+  padding-right: 3px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#pulseaudio:hover {
+ 	background: @bg_hover;
+}
+
+#network {
+	padding-left: 3px;
+  padding-right: 3px;
+}
+
+#language {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clock {
+  padding-right: 5px;
+  padding-left: 5px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#clock:hover {
+	background: @bg_hover;
+}
