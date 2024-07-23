@@ -5,6 +5,13 @@
 
 ----------------------------------------------------------------------------------------
 
+## What is has?
+
+» Those dotfiles includes runner menu.
+» Notification center.
+» Understandable Waybar configuration.
+» Highly functional Hyprland configuration.
+
 ## How do I install?
 
 You have to install yay. Because some of the dependecies is not in offical repistories.
