@@ -1,4 +1,4 @@
-yay -Sy ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout kitty papirus-icon-theme python-playsound base-devel git
+yay -Sy ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout kitty papirus-icon-theme python-playsound base-devel git waybar swaync
 git clone https://github.com/lbonn/rofi.git
 cd rofi
 meson build
