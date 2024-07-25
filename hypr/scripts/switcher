@@ -1,0 +1,5 @@
+#!/bin/bash
+
+options="\n\n\n\n"
+
+rofi -config ~/.config/hypr/scripts/switcher.rasi -show window

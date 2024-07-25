@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rofi -dmenu -config ~/.config/hypr/scripts/help.rasi -i -p "Hyprland Keybindings" < ~/.config/hypr/scripts/help.txt

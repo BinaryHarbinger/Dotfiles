@@ -1,0 +1,99 @@
+configuration {
+    modi:                           "drun,run";
+    font:                           "Fira Code 16";
+    show-icons:                     true;
+    icon-theme:                     "Papirus";
+    display-drun:                   "";
+    window-format:            "{icon}";
+}
+
+@theme "colors.rasi"
+
+window {
+    location:                      center; /* Set the location to center */
+    anchor:                        center; /* Anchor to the center */
+    background-color:              @bg;
+    border:                        3px;
+    border-color:                  @bc;
+    border-radius:                 12px;
+    width:                         400px; /* Belirli bir genişlik belirleyin */
+    max-width:                     400px; /* Maksimum genişliği belirleyin */
+    x-offset:                      0px;
+    y-offset:                      20px;
+    horizontal-align:              center;
+}
+
+prompt {
+    enabled:                       false;
+    padding:                       0px;
+    background-color:              @bg;
+    text-color:                    @fg;
+    font:                          "JetBrainsMono Nerd Font 20";
+}
+
+entry {
+    background-color:              inherit; /* Hide the entry box */
+    text-color:                    inherit;
+    placeholder-color:             inherit;
+    placeholder:                   "";
+    padding:                       0px; /* Remove padding */
+    blink:                         false; /* Remove blinking cursor */
+}
+
+inputbar {
+    children:                      []; /* Remove prompt and entry */
+    background-color:              @bg;
+    text-color:                    @fg;
+    padding:                       0px; /* Remove padding */
+}
+
+listview {
+    background-color:              @bg;
+    columns:                       1;
+    lines:                         5;
+    spacing:                       1px;
+    layout:                        horizontal;
+    cycle:                         false;
+    scrollbar:                     false;
+}
+
+mainbox {
+    background-color:              @bg;
+    children:                      [listview]; /* Only show listview */
+    spacing:                       0%;
+    padding:                       25px;
+}
+
+element-icon {
+    background-color:              inherit;
+    horizontal-align:              0.5;
+    vertical-align:                0.5;
+    size:                          30px;
+    border:                        0px;
+}
+
+element {
+    border:                        0 0 1px 0;
+    text-align:                    center;
+    padding:                       16px;
+    background-color:              @ex;
+    text-color:                    @fg;
+    margin:                        1;
+    border-radius:                 6px;
+}
+
+element-text {
+    background-color:              inherit;
+    text-color:                    inherit;
+    text-align:                    center;
+    expand:                        true;
+    padding:                       0px;
+}
+
+element selected {
+    text-align:                    center;
+    background-color:              @fg;
+    text-color:                    @bg;
+    border:                        0% 0% 0% 0%;
+    border-radius:                 6px;
+}

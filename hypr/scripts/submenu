@@ -1,0 +1,29 @@
+#!/bin/bash
+
+options="\n\n\n\n\n"
+
+chosen=$(echo -e "$options" | rofi -config ~/.config/hypr/scripts/submenu.rasi -dmenu -p  "Select an option:")
+
+case $chosen in
+    "")
+        systemctl poweroff
+        ;;
+    "")
+        systemctl reboot
+        ;;
+    "")
+        hyprlock
+        ;;
+    "")
+        kitty -e ~
+        ;;
+    "")
+        xdg-open https://about:blank
+        ;;
+    "")
+        ~/.config/hypr/scripts/help
+        ;;
+    *)
+        echo "No option selected"
+        ;;
+esac
