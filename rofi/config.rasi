@@ -1,0 +1,99 @@
+configuration {
+modi:                           "drun,run";
+font:							"Fira Code 16";
+                  show-icons:                     true;
+                  icon-theme:            "Papirus";
+                  /*    display-drun: 					"";*/
+                  /*  display-drun: 					"";*/
+                  display-drun:                   "";
+                  drun-display-format:            "{icon} {name}";
+}
+
+@theme "colors.rasi"
+
+window {
+location:                    center; /* Set the location to southwest (bottom left corner) */
+anchor:                      center; 
+                             background-color:               @bg;
+border:							3px;
+                    border-color:					@bc;
+                    border-radius:                  12px;
+width:							450;
+
+                    x-offset:                       18;
+                    y-offset:                       60;
+}
+
+prompt {
+enabled: 						true;
+padding: 						3px 25px 0px 5px;
+                    background-color: 				@bg;
+                    text-color: 					@fg;
+font:							"JetBrainsMono Nerd Font 20";
+}
+
+entry {
+  background-color:               @bg;
+  text-color:                     @fg;
+  placeholder-color:              @fg;
+placeholder:                    "Search";
+padding:                        10px 0px 0px 0px;
+blink:                          true;
+}
+
+inputbar {
+children: 						[prompt, entry];
+                      background-color:               @bg;
+                      text-color:                     @fg;
+padding:                        0px 20px 25px 0px;
+}
+
+listview {
+  background-color:               @bg;
+columns:                        1;
+lines:                          5;
+spacing:                        1px;
+layout:                         vertical;
+}
+
+mainbox {
+  background-color:               @bg;
+children:                       [ inputbar, listview ];
+spacing:                       	0%;
+padding:                        25px;
+}
+
+element-icon {
+  background-color: 				inherit;
+  horizontal-align:               0.5;
+  vertical-align:                 0.5;
+size:                           26px;
+border:                         0px;
+}
+
+listview {
+cycle:                            false;
+scrollbar:                        false;
+}
+
+element {
+border:                           0 0 1px 0;
+padding:                          16px;
+                                  background-color:                 @ex;
+                                  text-color:                       @fg;
+margin:                           1;
+                                  border-radius:                    6px;
+}
+
+element-text {
+  background-color:               inherit;
+  text-color:                     inherit;
+expand:                         true;
+}
+
+element selected {
+  background-color:               @fg;
+  text-color:                     @bg;
+border:	                        0% 0% 0% 0%;
+                                border-radius:                  6px;
+}

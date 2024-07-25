@@ -1,6 +1,6 @@
-@define-color noti-border-color rgba(255, 255, 255, 0.15);
-@define-color noti-bg rgba(55, 55, 55, 0.8);
-@define-color noti-bg-hover rgba(65, 65, 65, 0.8);
+@define-color noti-border-color rgb(180, 190, 254);
+@define-color noti-bg rgba(17, 17, 27, 0.65);
+@define-color bg_hover rgba(200, 200, 200, 0.1);
 @define-color noti-bg-focus rgba(68, 68, 68, 0.6);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
@@ -8,8 +8,13 @@
 @define-color bg-selected rgb(0, 128, 255);
 
 
+* {
+  font-family: "Fira Code";
+}
+
 .testing {
   background-color: red;
+  color: rgb(180, 190, 254);
 }
 
 .notification-row {
@@ -59,7 +64,7 @@
 /* poi_1 */
 .notification-content {
   background: 	 #15161E;
-  border: 1.4px solid #28282b;
+  border: 1.4px solid #b4befe;
   /* margin-top: 10px; */
   /* margin-bottom: 10px; */
   font-size: 0.5rem;
@@ -172,7 +177,7 @@
   color:  #C0CAF5;
   background:  #15161E;
   border-radius:  12px 12px 12px 12px;
-  border: 2px solid #28282b;
+  border: 2px solid #b4befe;
   background-clip: border-box;
   padding: 4px;
   /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3); */
@@ -211,7 +216,7 @@
   color: #C0CAF5;
   text-shadow: none;
   background:  #15161E;
-  border: 0.5px solid @noti-border-color;
+  border: 0.5px solid #b4befe;
   box-shadow: none;
   border-radius: 12px;
 }
@@ -228,7 +233,7 @@
   font-size: initial;
   border-radius: 700px;
   background: @noti-bg;
-  border: 1px solid @noti-border-color;
+  border: 1px solid #b4befe;
   box-shadow: none;
 }
 .widget-dnd > switch:checked {
@@ -294,15 +299,15 @@
 /* poi3 */
 .widget-buttons-grid>flowbox>flowboxchild>button{
   background:  	#1A1E25;
-  font-size: 1rem;
+  font-size: 30px;
 
   border-radius: 12px;
   padding: 15px;
   border: 1.3px solid #28282b;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   color: #C0CAF5;
 }
 
@@ -347,7 +352,7 @@
   color: white;
   text-shadow: none;
   background: @noti-bg;
-  border: 1px solid @noti-border-color;
+  border: 1px solid #b4befe;
   box-shadow: none;
   border-radius: 12px;
 }

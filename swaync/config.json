@@ -68,7 +68,7 @@
                 },
                 {
                     "label": "󰇚",
-                    "command": "thunar /home/USERNAME/Downloads/"
+                    "command": "thunar /home/efe/Downloads/"
                 },
                 {
                     "label": "",
