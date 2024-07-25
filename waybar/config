@@ -73,7 +73,7 @@
     },
     "custom/os_button": {
         "format": "",
-        "on-click": "rofi -show drun",
+        "on-click": "~/.config/hypr/scripts/submenu",
         "tooltip": false
     },
 
