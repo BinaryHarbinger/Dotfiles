@@ -1,7 +1,7 @@
 * {
     background-image: none;
     font-size: 20px;
-    font-family: "Fira Codek";
+    font-family: "Fira Code";
 }
 
 window {
@@ -9,6 +9,7 @@ window {
 }
 
 button {
+    border-radius: 0px;
     color: #b4befe;
     border-color: #b4befe;
     background-color: rgba(32, 33, 36, 0.911);
@@ -18,7 +19,6 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
-    border-radius: 2px;
     box-shadow: none;
     text-shadow: none;
     animation: gradient_f 20s ease-in infinite;
@@ -40,10 +40,12 @@ button:hover {
 
 
 #lock {
+    border-top-left-radius: 50px;
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
 }
 
 #logout {
+    border-bottom-left-radius: 50px;
     background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
 }
 
@@ -52,6 +54,7 @@ button:hover {
 }
 
 #hibernate {
+    border-top-right-radius: 50px;
     background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
 }
 
@@ -60,5 +63,22 @@ button:hover {
 }
 
 #reboot {
+    border-bottom-right-radius: 50px;
     background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}
+
+#lock, #suspend,#hibernate {
+    border-bottom: #b4befe solid 1px;
+}
+
+#logout,#shutdown,#reboot {
+    border-top: #b4befe solid 1px;
+}
+
+#logout,#lock,#suspend,#shutdown{
+    border-right: #b4befe solid 1px;
+}
+
+#suspend,#shutdown,#hibernate,#reboot{
+    border-left: #b4befe solid 1px;
 }
