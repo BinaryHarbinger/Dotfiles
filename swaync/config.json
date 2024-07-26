@@ -50,16 +50,8 @@
         "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰐥",
-                    "command": "systemctl poweroff"
-                },
-                {
-                    "label": "󰜉",
-                    "command": "systemctl reboot"
-                },
-                {
                     "label": "󰌾",
-                    "command": "hyprlock"
+                    "command": "wlogout"
                 },
       
                 {
