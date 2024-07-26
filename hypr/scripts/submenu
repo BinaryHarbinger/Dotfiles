@@ -1,18 +1,18 @@
 #!/bin/bash
 
-options="\n\n\n\n\n"
+options="\n\n\n\n\n"
 
 chosen=$(echo -e "$options" | rofi -config ~/.config/hypr/scripts/submenu.rasi -dmenu -p  "Select an option:")
 
 case $chosen in
-    "")
-        systemctl poweroff
+    "")
+        rofi -show drun
         ;;
-    "")
-        systemctl reboot
+    "")
+        thunar
         ;;
     "")
-        hyprlock
+        wlogout
         ;;
     "")
         kitty -e ~
