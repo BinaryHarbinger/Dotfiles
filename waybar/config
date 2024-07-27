@@ -1,19 +1,4 @@
-// __        __          _                 
-// \ \      / /_ _ _   _| |__   __ _ _ __  
-//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
-//   \ V  V / (_| | |_| | |_) | (_| | |    
-//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
-//                 |___/                   
-//  
-// by Binary Harbinger
-// ----------------------------------------------------- 
-//
-
-
-[{
-  // Waybar
-  
-  // {
+{
     "layer": "top",
     "position": "top",
     "mod": "dock",
@@ -79,7 +64,7 @@
 
     "wlr/taskbar": {
         "format": "{icon}",
-        "icon-size": 30,
+        "icon-size": 25,
         "spacing": 3,
         "on-click-middle": "close",
         "tooltip-format": "{title}",
@@ -117,14 +102,15 @@
     },
     "network": {
         "format-wifi": "{icon}",
-        "format-ethernet": "  ",
+        "format-ethernet": "",
         "format-disconnected": "󰌙",
+        "tooltip-format": "{icon} {essid}",
         "format-icons": [
-            "󰤯 ",
-            "󰤟 ",
-            "󰤢 ",
-            "󰤢 ",
-            "󰤨 "
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤢",
+            "󰤨"
         ],
         "on-click-right": "kitty -e 'nmtui'"
     },
@@ -156,15 +142,15 @@
         "max-volume": 150,
         "scroll-step": 10,
         "format": "{icon}",
-        "tooltip-format": "{volume}%",
+        "tooltip-format": "{icon}  {volume}%",
         "format-icons": {
-            "format-muted": " ",
+            "format-muted": "",
             "default": [
-                " ",
-                " ",
-                " "
+                "",
+                "",
+                ""
             ]
         },
-        "on-click": "pwvucontrol"
+        "on-click": "pavucontrol"
     }
-}]
+} 
