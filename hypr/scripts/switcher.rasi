@@ -2,7 +2,7 @@ configuration {
     modi:                           "drun,run";
     font:                           "Fira Code 16";
     show-icons:                     true;
-    icon-theme:                     "Papirus";
+    icon-theme:                     "Papirus-Dark";
     display-drun:                   "";
     window-format:            "{icon}";
 }

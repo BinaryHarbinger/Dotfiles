@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "overlay",
+    "exclusive": false,
+    "gtk-layer-shell": true,
+    "margin-bottom": -1,
+    "passthrough": false,
+    "height": 41,
+    "modules-left": [    ],
+    "modules-center": ["pulseaudio"],
+    "modules-right": [    ],
+
+    "pulseaudio": {
+        "max-volume": 150,
+        "scroll-step": 10,
+        "format": "{icon}     {volume}%",
+        "tooltip": "false",
+        "tooltip-format": "{volume}%",
+        "format-icons": {
+            "format-muted": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    }
+}

@@ -19,8 +19,8 @@
     "passthrough": false,
     "height": 41,
     "modules-left": [
-        "custom/os_button",
-        "wlr/taskbar"
+        "custom/os_button"//,
+        //"wlr/taskbar"
     ],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [
@@ -164,4 +164,4 @@
         },
         "on-click": "pavucontrol"
     }
-} 
+}

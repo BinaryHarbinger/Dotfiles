@@ -39,11 +39,12 @@ $loginManager = hyprlock
 $screenshot = hyprshot-gui
 
 env = XCURSOR_SIZE,24
-env = QT_QPA_PLATFORMTHEME,qt6ct # change to qt6ct if you have that
+env = QT_QPA_PLATFORMTHEME,kvantum # change to qt6ct if you have that
 env = QT_QPA_PLATFORM,wayland
+env = QT_QPA_PLATFORMTHEME,kvantum
 env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 env = QT_AUTO_SCREEN_SCALE_FACTOR,1
-env = QT_STYLE_OVERRIDE,qt6ct
+env = QT_STYLE_OVERRIDE,kvantum
 
 # ----------------------------------------------------- 
 
@@ -67,11 +68,11 @@ input {
 # ----------------------------------------------------- 
 
 general {
-    gaps_in = 6
-    gaps_out = 10
+    gaps_in = 3
+    gaps_out = 6
     border_size = 2
     col.active_border = rgba(b4befeee) rgba(7db4b8ee) 60deg
-    col.inactive_border = rgba(445455ee) rgba(5b5d69ee) 60deg
+    col.inactive_border = rgba(7db4b8ee) rgba(b4befeee) 60deg
     layout = dwindle
 
     allow_tearing = false

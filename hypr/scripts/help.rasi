@@ -29,7 +29,7 @@ enabled: 						true;
 padding: 						3px 25px 0px 5px;
                 background-color: 				@bg;
                 text-color: 					@fg;
-font:							"JetBrainsMono Nerd Font 12";
+font:							"Fira Code 12";
 }
 
 entry {

@@ -1,8 +1,8 @@
 configuration {
     modi:                           "drun,run";
-    font:                           "Fira Code 16";
     show-icons:                     true;
     icon-theme:                     "Papirus";
+    font: "default 20";
     display-drun:                   "";
     drun-display-format:            "{icon} {name}";
 }
