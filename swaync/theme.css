@@ -1,0 +1,8 @@
+@define-color noti-border-color rgba(255, 255, 255, 0.15);
+@define-color noti-bg rgba(100, 100, 100, 0.5);
+@define-color bg_hover rgba(200, 200, 200, 0.1);
+@define-color noti-bg-focus rgba(68, 68, 68, 0.6);
+@define-color noti-close-bg rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
+@define-color mpris-album-art-overlay rgba(0, 0, 0, 0.55);
+@define-color bg-selected rgb(0, 128, 255);

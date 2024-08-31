@@ -3,9 +3,9 @@
 
 
 /*base background color of selections */
-@define-color bg_hover rgba(200, 200, 200, 0.1);
+@define-color bg_hover rgba(80,80,80,0.3);
 /*base background color of active elements */
-@define-color bg_active rgba(100, 100, 100, 0.5);
+@define-color bg_active rgba(80,80,80,0.3);
 
 /*base border color*/
 @define-color border_main rgba(180, 190, 254, 0.2);

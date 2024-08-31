@@ -17,19 +17,17 @@
     "gtk-layer-shell": true,
     "margin-bottom": -1,
     "passthrough": false,
-    "height": 20,
-    "modules-left": [   
-        "memory","cpu"
+    "height": 41,
+    "modules-left": [
+        "custom/os_button"//,
+        //"wlr/taskbar"
     ],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [
         "tray",
         "pulseaudio",
-        "bluetooth",
         "network",
         "battery",
-        "backlight",
-        "power-profiles-daemon",
         "hyprland/language",
         "clock",
         "custom/swaync"
@@ -39,37 +37,6 @@
         "format-en": "ENG",
         "format-tr": "TR"
     },
-
-
-"bluetooth": {
-	"format": "",
-	"format-connected": " {device_alias}",
-	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click" : "blueman-manager"
-},
-
-    "power-profiles-daemon": {
-  "format": "{icon}",
-  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-  "tooltip": true,
-  "format-icons": {
-    "default": "",
-    "performance": "",
-    "balanced": "",
-    "power-saver": ""
-  }
-},
-
-    "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", ""]
-},
 
     "custom/swaync": {
         "tooltip": false,
@@ -107,8 +74,8 @@
     },
 
     "wlr/taskbar": {
-        "format": "{icon} {title:.18}",
-        "icon-size": 18,
+        "format": "{icon}",
+        "icon-size": 25,
         "spacing": 3,
         "on-click-middle": "close",
         "tooltip-format": "{title}",
@@ -196,17 +163,5 @@
             ]
         },
         "on-click": "pavucontrol"
-    },
-
-    "memory": {
-    "format": "󰍛 {}%",
-    "format-alt": "󰍛 {used}/{total} GiB",
-    "interval": 5
-  },
-
-  "cpu": {
-    "format": "󰻠 {usage}%",
-    "format-alt": "󰻠 {avg_frequency} GHz",
-    "interval": 5
-  },
+    }
 }

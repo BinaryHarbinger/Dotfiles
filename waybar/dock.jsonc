@@ -1,0 +1,59 @@
+// __        __          _                 
+// \ \      / /_ _ _   _| |__   __ _ _ __  
+//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
+//   \ V  V / (_| | |_| | |_) | (_| | |    
+//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
+//                 |___/                   
+//  
+// by Binary Harbinger
+// ----------------------------------------------------- 
+//
+
+{
+    "layer": "top",
+    "position": "bottom",
+    "mod": "dock",
+    "exclusive": false,
+    "gtk-layer-shell": false,
+    "margin-bottom": -1,
+    "passthrough": false,
+    "height": 20,
+    "modules-left": [
+        
+    ],
+    "modules-center": ["custom/os_button","custom/terminal","custom/thunar","wlr/taskbar"],
+    "modules-right": [
+    ],
+
+    "custom/os_button": {
+        "format": "",
+        "on-click": "~/.config/hypr/scripts/submenu",
+        "tooltip": false
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 40,
+        "spacing": 3,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "ignore-list": [],
+        "on-click": "activate"
+    },
+    "custom/thunar": {
+        "format": "",
+        "spacing": 3,
+        "on-click-middle": "pkill thunar",
+        "tooltip-format": "Launch Thunar",
+        "ignore-list": [],
+        "on-click": "thunar"
+    },
+    "custom/terminal": {
+        "format": "",
+        "spacing": 3,
+        "on-click-middle": "pkill kitty",
+        "tooltip-format": "Launch kitty",
+        "ignore-list": [],
+        "on-click": "kitty"
+    }
+}

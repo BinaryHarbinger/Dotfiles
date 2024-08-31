@@ -1,0 +1,17 @@
+#!/bin/bash
+
+status=$(nmcli -t -f WIFI g)
+
+if [ "$status" = "enabled" ]; then
+    nmcli radio wifi off
+else
+    nmcli radio wifi on
+fi
+
+# Durumu yeniden kontrol edip uygun ikonu döndür
+status=$(nmcli -t -f WIFI g)
+if [ "$status" = "enabled" ]; then
+    echo "󰤨"
+else
+    echo "󰤮"
+fi
