@@ -20,9 +20,9 @@
 ![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image.png?raw=true)
 
 
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/photo4.png?raw=true)
+![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image0.png?raw=true)
 
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/photo1.png?raw=true)
+![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image1.png?raw=true)
 
 
 ----------------------------------------------------------------------------------------
