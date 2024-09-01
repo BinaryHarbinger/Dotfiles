@@ -222,7 +222,8 @@ tooltip label{
 	padding: 0px 10px;
 }
 
-#memory {
+#memory, #custom-search {
+	font-family: "Symbols Nerd Font";
     background-color: #282828;
     /*color: #83A598;*/
     border-radius: 16px;

@@ -2,7 +2,7 @@ configuration {
     modi:                           "drun,run";
     show-icons:                     true;
     icon-theme:                     "Papirus";
-    font: "default 20";
+    font: "Symbols Nerd Font 15";
     display-drun:                   "";
     drun-display-format:            "{icon} {name}";
 }

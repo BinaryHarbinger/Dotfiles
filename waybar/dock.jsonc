@@ -12,12 +12,12 @@
 {
     "layer": "top",
     "position": "bottom",
-    "mod": "dock",
+    "mod": "overlay",
     "exclusive": false,
     "gtk-layer-shell": false,
     "margin-bottom": -1,
     "passthrough": false,
-    "height": 20,
+    "height": 0,
     "modules-left": [
         
     ],

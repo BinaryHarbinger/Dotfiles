@@ -19,6 +19,7 @@
     "passthrough": false,
     "height": 20,
     "modules-left": [   
+        "custom/search",
         "memory","cpu"
     ],
     "modules-center": ["hyprland/workspaces"],
@@ -41,11 +42,17 @@
     },
 
 
+    "custom/search": {
+        "format": "",
+        "on-click": "rofi -show drun",
+        "tooltip": false,
+    },
+
+
 "bluetooth": {
 	"format": "",
 	"format-connected": " {device_alias}",
 	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
 	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
