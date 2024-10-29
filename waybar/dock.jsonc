@@ -13,7 +13,7 @@
     "layer": "top",
     "position": "bottom",
     "mod": "overlay",
-    "exclusive": false,
+    "exclusive": true,
     "gtk-layer-shell": false,
     "margin-bottom": -1,
     "passthrough": false,

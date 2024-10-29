@@ -26,7 +26,6 @@
     "modules-right": [
         "tray",
         "pulseaudio",
-        "bluetooth",
         "network",
         "battery",
         "backlight",
@@ -82,7 +81,7 @@
         "tooltip": false,
         "format": "{icon}",
         "format-icons": {
-          "notification": "<span foreground='red'><sup></sup></span>",
+          "notification": "<span foreground='#7b82c6'><sup></sup></span>",
           "none": "",
           "dnd-notification": "<span foreground='red'><sup></sup></span>",
           "dnd-none": "",
@@ -127,7 +126,8 @@
         "spacing": 3
     },
     "clock": {
-        "format": "      {:%R\n %d.%m.%Y}",
+        "format":"{:%R}",
+        "format-alt": "      {:%R\n %d.%m.%Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -163,6 +163,7 @@
             "󰤢",
             "󰤨"
         ],
+        "on-click": "rofi-wifi-menu",
         "on-click-right": "kitty -e 'nmtui'"
     },
     "battery": {

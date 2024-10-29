@@ -36,8 +36,7 @@
   border-radius: 0;
 	font-family: "Fira Code";
   font-weight: 600;
-  font-size: 12.7px;
-	
+  font-size: 12.7px;	
 }
 
 window#waybar {
@@ -57,8 +56,8 @@ tooltip label{
 }
 
 #custom-os_button {
-	font-family: "JetBrainsMono Nerd Font";
-  	font-size: 38px;
+	font-family: "JetBrainsMono Nerd Font,Ubuntu",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
 	padding-left: 12px;
 	padding-right: 20px;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -81,13 +80,14 @@ tooltip label{
 	margin-left: 1.5px;
 }
 #workspaces button {
-  padding: 3px;
-  color: @content_inactive;
+	padding: 3px;
+	color: @content_inactive;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #workspaces button.active {
 	color: @content_main;
 	border-bottom: 3px solid white;
+	background: rgba(80,80,80,0.3);
 }
 #workspaces button.focused {
   color: @bg_active;
@@ -118,7 +118,7 @@ tooltip label{
 
 #taskbar button.active {
 	border-bottom: 3px solid white;
-  background: @bg_active;
+    background: @bg_active;
 }
 
 #taskbar button:hover {
@@ -167,7 +167,7 @@ tooltip label{
  	background: @bg_hover;
 }
 
-#network {
+#network, #battery {
 	padding-left: 3px;
   padding-right: 3px;
 }
@@ -186,9 +186,63 @@ tooltip label{
 	background: @bg_hover;
 }
 
+#battery{
+	padding-left: 10px;
+}
+
+#bluetooth{
+	padding: 0px 10px;
+	font-size: 14px;
+	font-family: "Fira Code";
+}
+
+#bluetooth.disabled, #bluetooth.off{
+	color: #565858;
+}
+
+#bluetooth.on, #bluetooth.connected{
+	color: #6f7dd8;
+}
+
 #custom-swaync, #network, #pulseaudio{
 	font-size: 25px;
 }
-#custom-os_button{
-	font-size: 38px;
+
+#custom-swaync{
+	color: rgb(255, 255, 255);
+
+}
+
+#power-profiles-daemon{
+	color: rgb(104, 131, 223);
+	padding: 0px 10px;
+	font-size: 20px;
+}
+
+#backlight {
+	padding: 0px 10px;
+}
+
+#memory, #custom-search {
+	font-family: "Symbols Nerd Font";
+    background-color: #282828;
+    /*color: #83A598;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+
+#cpu {
+    background-color: #282828;
+    /*color: #FABD2D;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
 }
