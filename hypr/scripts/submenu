@@ -15,7 +15,7 @@ case $chosen in
         wlogout
         ;;
     "")
-        kitty -e ~
+        alacritty
         ;;
     "")
         xdg-open https://about:blank

@@ -163,7 +163,7 @@
             "󰤢",
             "󰤨"
         ],
-        "on-click": "rofi-wifi-menu",
+        "on-click": "alacritty -e nmtui",
         "on-click-right": "kitty -e 'nmtui'"
     },
     "battery": {

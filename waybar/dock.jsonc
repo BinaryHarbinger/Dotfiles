@@ -51,9 +51,9 @@
     "custom/terminal": {
         "format": "",
         "spacing": 3,
-        "on-click-middle": "pkill kitty",
-        "tooltip-format": "Launch kitty",
+        "on-click-middle": "pkill alacritty",
+        "tooltip-format": "Launch alacritty",
         "ignore-list": [],
-        "on-click": "kitty"
+        "on-click": "alacritty"
     }
 }
