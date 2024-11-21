@@ -61,13 +61,16 @@ tooltip label{
   border-top: 2px solid #b4befe;
   background-color: rgba(17, 17, 27, 1);
 	font-family: "JetBrainsMono Nerd Font,Ubuntu",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 45px;
+  font-size: 40px;
 	padding-left: 15px;
 	padding-right: 15px;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 0px;
 }
 
+#custom-thunar ,#custom-os_button,#custom-terminal{
+	padding-right: 30px;
+}
 
 #custom-os_button {
   border-left: 2px solid #b4befe;
@@ -85,6 +88,7 @@ tooltip label{
 
 #custom-thunar,#custom-terminal {
   border-radius: 0px;
+  font-size: 40px;
 }
 
 #taskbar {

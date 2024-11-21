@@ -68,7 +68,7 @@ tooltip label{
 }
 
 #custom-swaync {	font-family: "JetBrainsMono Nerd Font";
-	font-size: 20px;
+	font-size: 1px;
 	background-color: rgba(17, 17, 27, 1);
 	  padding-left: 12px;
 	  padding-right: 12px;
@@ -88,12 +88,11 @@ tooltip label{
 	padding: 0px 20px ;
 }
 #workspaces button {
-	padding: 3px;
 	border-radius: 3px;
 	color: @content_inactive;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-	padding: 0px 3px;
-	margin: 4px 0px;
+	padding: 0px 5px;
+	margin: 3px 2px;
 }
 #workspaces button.active {
 	color: #d5d8e9;
@@ -256,13 +255,13 @@ tooltip label{
 }
 
 #custom-swaync, #network, #pulseaudio{
-	font-size: 25px;
+	font-size: 20px;
 	padding: 0px 8px;
 }
 
 #custom-swaync{
 	color: rgb(255, 255, 255);
-
+	padding-right: 13px; 
 }
 
 #custom-swaync:hover{
@@ -329,4 +328,8 @@ tooltip label{
 	border: 2px solid #b4befe;
 	border-left: 0px;
 	border-radius: 0px 10px 10px 0px;
+}
+
+#bluetooth, #network, #pulseaudio {
+    font-size: 15px ; /* Simge boyutunu küçült */
 }
