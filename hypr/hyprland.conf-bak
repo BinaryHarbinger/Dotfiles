@@ -32,7 +32,7 @@ exec-once=systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTO
 # Variables
 # ----------------------------------------------------- 
 $terminal = alacritty
-$fileManager = kitty -e yazi
+$fileManager = thunar
 $menu = rofi -show drun
 $rmenu = rofi -show run
 $browser = xdg-open https://about:blank
@@ -93,7 +93,7 @@ decoration {
 # Animation
 # ----------------------------------------------------- 
 animations {
-    enabled = true
+    enabled = yes
 
     bezier = myBezier, 0.05, 0.9, 0.1, 1.05
 
@@ -105,7 +105,6 @@ animations {
     animation = borderangle, 1, 8, default
     animation = fade, 1, 7, default
     animation = workspaces, 1, 6, default, slidevert
-    first_launch_animation = true
 }
 
 dwindle {
@@ -114,9 +113,7 @@ dwindle {
 }
 
 gestures {
-    workspace_swipe = true
-    workspace_swipe_create_new = true
-    workspace_swipe_forever = false
+    workspace_swipe = off
 }
 # ----------------------------------------------------- 
 
@@ -126,8 +123,6 @@ misc {
     force_default_wallpaper = 2 # Set to 0 or 1 to disable the anime mascot wallpapers
     disable_hyprland_logo = true
     disable_splash_rendering = true
-    animate_manual_resizes = true
-    animate_mouse_windowdragging = true
 }
 # ----------------------------------------------------- 
 
@@ -215,24 +210,3 @@ bind = , XF86AudioPrev, exec, playerctl previous
 bind = , XF86MonBrightnessUp, exec, brightnessctl s +10%
 bind = , XF86MonBrightnessDown, exec, brightnessctl s 10%-
 # ----------------------------------------------------- 
-
-xwayland {
-    enabled = true
-}
-
-opengl {
-    nvidia_anti_flicker = true
-}
-
-render {
-    explicit_sync = 2
-    explicit_sync_kms = 2
-}
-
-cursor {
-    sync_gsettings_theme = true
-    hide_on_touch = true
-    enable_hyprcursor = false
-    hide_on_key_press = true
-    warp_on_change_workspace = false
-}
