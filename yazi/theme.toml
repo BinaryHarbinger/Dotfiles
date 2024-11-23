@@ -70,18 +70,18 @@ title   = {}
 hovered = { underline = true }
 
 [which]
-mask            = { bg = "#b4befe" }
+mask            = { bg = "#11111b" }
 cand            = { fg = "#94e2d5" }
 rest            = { fg = "#9399b2" }
 desc            = { fg = "#f5c2e7" }
 separator       = "  "
-separator_style = { fg = "#b4befe" }
+separator_style = { fg = "#ffffff" }
 
 [help]
 on      = { fg = "#f5c2e7" }
 exec    = { fg = "#94e2d5" }
 desc    = { fg = "#9399b2" }
-hovered = { bg = "#b4befe", bold = true }
+hovered = { bg = "#ffffff", bold = true }
 footer  = { fg = "#45475a", bg = "#cdd6f4" }
 
 [filetype]
