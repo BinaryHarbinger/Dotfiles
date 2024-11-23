@@ -17,12 +17,14 @@
 
 ## *Some Photos*
 
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image.png?raw=true)
-
-
 ![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image0.png?raw=true)
 
+
 ![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image1.png?raw=true)
+
+![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image2.png?raw=true)
+
+![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/readme/image3.png?raw=true)
 
 
 ----------------------------------------------------------------------------------------
