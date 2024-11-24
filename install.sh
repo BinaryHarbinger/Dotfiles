@@ -3,12 +3,12 @@ yay -Syu --noconfirm git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf
 git clone https://github.com/BinaryHarbinger/dotfiles.git
 cd dotfiles
 
-rm -r preview readme.md
+rm -r preview
 
 sed -i "s/USERNAME/${USER}/g" ./swaync/config.json
 mv ./.scripts ~
 chmod +x ~/.scripts/*
-mv -r ./* ~/.config/
+mv ./* ~/.config/
 chmod +x ~/.config/hypr/scripts/*
 
 chsh -s /bin/fish
