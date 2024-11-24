@@ -1,4 +1,4 @@
-yay -Syu --noconfirm git nwg-look qt6ct power-profiles-daemon fastfetch ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel git waybar swaync network-manager-applet
+yay -Syu --noconfirm git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel git waybar swaync network-manager-applet
 
 git clone https://github.com/BinaryHarbinger/dotfiles.git
 cd dotfiles
@@ -10,3 +10,5 @@ mv ./.scripts ~
 chmod +x ~/.scripts/*
 mv -r ./* ~/.config/
 chmod +x ~/.config/hypr/scripts/*
+
+chsh -s /bin/fish
