@@ -45,11 +45,8 @@ makepgk -si
 
 Install yay. Then copy and paste this:
 ``` 
-git clone https://github.com/BinaryHarbinger/Dotfiles.git
-cd Dotfiles
-./install.sh
-cd ..
-rm -r Dotfiles
+curl -sSL https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/refs/heads/main/install.sh | bash
+
 ```
 _If you get errors during and after installation try to enable extra repistories from Arch Linux_
 
@@ -73,11 +70,13 @@ _If you get errors during and after installation try to enable extra repistories
 
   » Swaync
 
+  » Noto fonts
+
   » Hyprlock, Hyprpaper and Hyprpaper
 
   » Fira Code Font and otf Fira Code symbols
 
-  » Kitty Terminal Emulator
+  » Curl
 
 
 ----------------------------------------------------------------------------------------
