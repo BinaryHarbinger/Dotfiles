@@ -1,0 +1,171 @@
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
+ * by Binary Harbinger
+ * ----------------------------------------------------- 
+*/
+
+
+/*base background color*/
+@define-color bg_main rgba(25, 25, 25, 0.65);
+@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
+
+
+/*base background color of selections */
+@define-color bg_hover rgba(200, 200, 200, 0.3);
+/*base background color of active elements */
+@define-color bg_active rgba(100, 100, 100, 0.5);
+
+/*base border color*/
+@define-color border_main rgba(180, 190, 254, 0.2);
+
+/*text color for entries, views and content in general */
+@define-color content_main #b4befe;
+/*text color for entries that are unselected */
+@define-color content_inactive #b4befe;
+
+* {
+	text-shadow: none;
+	box-shadow: none;
+  border: none;
+  border-radius: 0;
+	font-family: "Fira Code";
+  font-weight: 600;
+  font-size: 12.7px;
+	
+}
+
+window#waybar {
+  background:  rgba(17, 17, 27, 1);
+  border-top: 1px solid #b4befe;
+  color: @content_main;
+}
+
+tooltip {
+  background: @bg_main_tooltip;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @border_main;
+}
+tooltip label{
+  color: @content_main;
+}
+
+
+#custom-os_button,#custom-thunar,#custom-terminal {
+  border-top: 1px solid #b4befe;
+  background-color: rgba(17, 17, 27, 1);
+	font-family: "JetBrainsMono Nerd Font,Ubuntu",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 0px;
+}
+
+
+#custom-os_button {
+    border-top: 1px solid #b4befe;
+}
+
+
+#custom-os_button:hover,#custom-thunar,#custom-terminal {
+	color: #d1d6f8;
+}
+
+#custom-os_button:hover, #custom-thunar:hover ,#custom-terminal:hover {
+  background-color: rgb(46, 46, 65);
+}
+
+#custom-thunar,#custom-terminal {
+  border-radius: 0px;
+}
+
+#taskbar {
+  border-top: 1px solid #b4befe;
+    background-color: rgba(17, 17, 27, 1);
+    padding: 2px 10px;
+    border-radius: 0px;
+    
+}
+
+#taskbar button {
+	min-width: 20px;
+	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+	margin-left: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#taskbar button.active {
+	border-bottom: 3px solid white;
+    background: @bg_active;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#taskbar button:hover {
+	border-bottom: 3px solid white;
+  background: @bg_hover;
+	color: @content_main;
+  border-radius: 8px 8px 0px 0px;
+}
+
+#window {
+  border-radius: 10px;
+}
+
+#custom-swaync {	font-family: "JetBrainsMono Nerd Font";
+	font-size: 30px;
+	  padding-left: 12px;
+	  padding-right: 20px;
+	  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#network,#pulseaudio,#battery {
+    font-size: 26px;
+    padding: 0px 5px;
+}
+
+#battery {
+    font-size: 20px;
+}
+
+#workspaces {
+    color: transparent;
+      margin-right: 1.5px;
+      margin-left: 1.5px;
+  }
+  #workspaces button {
+      padding: 3px;
+      color: @content_inactive;
+      transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  #workspaces button.active {
+      color: @content_main;
+      border-bottom: 3px solid white;
+      background: rgba(80,80,80,0.3);
+  }
+  #workspaces button.focused {
+    color: @bg_active;
+  }
+  #workspaces button.urgent {
+      background:  rgba(255, 200, 0, 0.35);
+      border-bottom: 3px dashed @warning_color;
+      color: @warning_color;
+  }
+  #workspaces button:hover {
+    background: @bg_hover;
+      color: @content_main;
+  }
+
+#workspaces, #workspaces button{
+    border-top: 1px solid #b4befe;
+}

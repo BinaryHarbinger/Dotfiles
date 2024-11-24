@@ -91,14 +91,14 @@ tooltip label{
 	border-radius: 3px;
 	color: @content_inactive;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-	padding: 0px 5px;
-	margin: 3px 2px;
+	padding: 0px 2px;
+	margin: 4px 2px;
 }
 #workspaces button.active {
 	color: #d5d8e9;
 	border-radius: 10px;
 	background: rgba(96, 100, 128,0.8);
-	padding: 0px 10px;
+	padding: 0px 8px;
 }
 #workspaces button.focused {
   color: @bg_active;
