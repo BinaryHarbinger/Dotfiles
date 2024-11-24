@@ -1,13 +1,5 @@
-yay -Sy ttf-fira-code otf-fira-code-symbol hyprlock hyprpaper wlogout alacritty papirus-icon-theme base-devel git waybar swaync network-manager-applet
-git clone https://github.com/lbonn/rofi.git
-cd rofi
-meson build
+yay -Syu --noconfirm ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel git waybar swaync network-manager-applet
 
 sed -i "s/USERNAME/${USER}/g" ./swaync/config.json
 
-cp -r ./waybar ~/.config/
-cp -r ./hypr ~/.config/
-cp -r ./kitty ~/.config/
-cp -r ./rofi ~/.config/
-cp -r ./wlogout ~/.config/
-cpr -r ./swaync ~/.config/
+cp -r ./* ~/.config/
