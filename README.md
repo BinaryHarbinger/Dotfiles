@@ -20,7 +20,7 @@
 ![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image0.png?raw=true)
 
 
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image1.png?raw=true)
+![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image4.png?raw=true)
 
 ![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image2.png?raw=true)
 
