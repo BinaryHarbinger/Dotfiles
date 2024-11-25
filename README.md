@@ -15,6 +15,10 @@
 
 » Highly functional Hyprland configuration.
 
+» Themed and extension included spotify.
+
+» Custom scripts.
+
 ## *Some Photos*
 
 ![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image0.png?raw=true)
