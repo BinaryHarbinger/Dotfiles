@@ -12,7 +12,7 @@ button {
     border-radius: 0px;
     color: #b4befe;
     border-color: #b4befe;
-    background-color: rgba(32, 33, 36, 0.911);
+    background-color: rgba(17, 17, 27, 0.781);
     outline-style: none;
     border-style: solid;
 	border-width: 3px;
@@ -24,20 +24,12 @@ button {
     animation: gradient_f 20s ease-in infinite;
 }
 
-button:focus {
-    background-color: rgba(67, 69, 85, 0.445) ;
+button:hover,button:focus {
+    background-color: rgba(37, 37, 68, 0.541);
     background-size: 30%;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
-
-button:hover {
-    background-color: rgba(67, 69, 85, 0.445) ;
-    background-size: 30%;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
-}
-
 
 #lock {
     border-top-left-radius: 50px;
