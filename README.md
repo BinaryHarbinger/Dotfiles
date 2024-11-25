@@ -15,9 +15,11 @@
 
 » Highly functional Hyprland configuration.
 
-» Themed and extension included spotify.
+» Themed and extension included Spotify.
 
 » Custom scripts.
+
+» Custom QT theme (still in development.)
 
 ## *Some Photos*
 
