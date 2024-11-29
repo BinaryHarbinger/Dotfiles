@@ -2,7 +2,7 @@
 
 # First, update the system, but skip already installed packages
 echo "Updating system..."
-yay -Syu --noconfirm --skipinteg
+yay -Syu --noconfirm --needed
 
 # Install required packages, but skip already installed ones
 PACKAGES=(
