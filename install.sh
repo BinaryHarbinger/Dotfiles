@@ -34,7 +34,7 @@ sed -i "s/USERNAME/${USER}/g" ./swaync/config.json
 
 # Move script files to the home directory, force overwrite
 echo "Moving script files..."
-mv -f ./.scripts ~
+cp -r ./.scripts ~
 chmod +x ~/.scripts/*
 
 # Move configuration files to the .config directory, force overwrite
@@ -49,6 +49,9 @@ spicetify apply
 # Set Fish as the default shell
 echo "Setting Fish as the default shell..."
 chsh -s /bin/fish
+
+cd .. 
+rm -r ./dotfiles
 
 # Final message after installation
 echo "Installation complete! Please restart your terminal."
