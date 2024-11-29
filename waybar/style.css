@@ -105,7 +105,7 @@ tooltip label{
 }
 #workspaces button.urgent {
 	background:  rgba(255, 200, 0, 0.35);
-	border-bottom: 3px dashed @warning_color;
+	border-bottom: 0px dashed @warning_color;
 	color: @warning_color;
 }
 #workspaces button:hover {
