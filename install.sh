@@ -13,7 +13,7 @@ PACKAGES=(
 )
 
 echo "Installing packages..."
-yay -S --noconfirm --skipinteg "${PACKAGES[@]}"
+yay -S --noconfirm --needed "${PACKAGES[@]}"
 
 # Install Spicetify
 echo "Installing Spicetify..."
