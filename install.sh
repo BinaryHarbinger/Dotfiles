@@ -49,24 +49,21 @@ echo "Would you like to change the default shell to Fish? (y/n)"
 read -r response
 
 if [[ "$response" =~ ^[Yy]$ ]]; then
-  if sudo -n true 2>/dev/null; then
-    echo "Using sudo to change the shell to Fish."
-    if sudo chsh -s /bin/fish "$USER"; then
-      echo "Shell successfully changed to Fish."
-    else
-      echo "Failed to change shell using sudo."
-    fi
+  if [[ "$SHELL" == "/bin/fish" ]]; then
+    echo "Fish is already your default shell."
   else
-    echo "Changing shell interactively. Please follow the prompts."
-    if chsh; then
-      echo "Shell successfully changed."
+    echo "Changing the default shell to Fish using sudo..."
+    sudo chsh -s /bin/fish "$USER"
+    if [[ $? -eq 0 ]]; then
+      echo "Shell successfully changed to Fish. Please log out and log back in for changes to take effect."
     else
-      echo "Failed to change shell interactively."
+      echo "Failed to change shell. Please check your permissions or manually run 'sudo chsh -s /bin/fish $USER'."
     fi
   fi
 else
   echo "Shell change skipped."
 fi
+
 
 cd .. 
 rm -r ./dotfiles
