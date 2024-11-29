@@ -8,7 +8,7 @@ yay -Syu --noconfirm --needed
 
 # Install required packages, but skip already installed ones
 PACKAGES=(
-  breeze cliphist spicetify-cli git nwg-look qt6ct fish power-profiles-daemon fastfetch
+  breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync
   network-manager-applet
@@ -26,10 +26,6 @@ echo "Cloning dotfiles repository..."
 git clone https://github.com/BinaryHarbinger/dotfiles.git
 cd dotfiles || { echo "Failed to enter the dotfiles directory!"; exit 1; }
 
-# Remove preview files
-echo "Cleaning up preview files..."
-rm -rf preview
-
 # Replace the username in the config file
 echo "Updating username in config..."
 sed -i "s/USERNAME/${USER}/g" ./swaync/config.json
@@ -46,23 +42,31 @@ chmod +x ~/.config/hypr/scripts/*
 
 # Apply Spicetify theme
 echo "Applying Spicetify theme..."
-spicetify apply
+spicetify restore backup apply
 
 # Set Fish as the default shell
 echo "Would you like to change the default shell to Fish? (y/n)"
 read -r response
+
 if [[ "$response" =~ ^[Yy]$ ]]; then
   if sudo -n true 2>/dev/null; then
     echo "Using sudo to change the shell to Fish."
-    sudo chsh -s /bin/fish "$USER"
+    if sudo chsh -s /bin/fish "$USER"; then
+      echo "Shell successfully changed to Fish."
+    else
+      echo "Failed to change shell using sudo."
+    fi
   else
     echo "Changing shell interactively. Please follow the prompts."
-    chsh
+    if chsh; then
+      echo "Shell successfully changed."
+    else
+      echo "Failed to change shell interactively."
+    fi
   fi
 else
   echo "Shell change skipped."
 fi
-
 
 cd .. 
 rm -r ./dotfiles
