@@ -39,7 +39,7 @@ chmod +x ~/.scripts/*
 
 # Move configuration files to the .config directory, force overwrite
 echo "Moving configuration files..."
-mv -f ./* ~/.config/
+cp -r ./* ~/.config/
 chmod +x ~/.config/hypr/scripts/*
 
 # Apply Spicetify theme
