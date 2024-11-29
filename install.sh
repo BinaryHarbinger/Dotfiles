@@ -45,24 +45,8 @@ echo "Applying Spicetify theme..."
 spicetify restore backup apply
 
 # Set Fish as the default shell
-echo "Would you like to change the default shell to Fish? (y/n)"
-read -r response
-
-if [[ "$response" =~ ^[Yy]$ ]]; then
-  if [[ "$SHELL" == "/bin/fish" ]]; then
-    echo "Fish is already your default shell."
-  else
-    echo "Changing the default shell to Fish using sudo..."
-    sudo chsh -s /bin/fish "$USER"
-    if [[ $? -eq 0 ]]; then
-      echo "Shell successfully changed to Fish. Please log out and log back in for changes to take effect."
-    else
-      echo "Failed to change shell. Please check your permissions or manually run 'sudo chsh -s /bin/fish $USER'."
-    fi
-  fi
-else
-  echo "Shell change skipped."
-fi
+echo "Changing default shell to fish..."
+sudo chsh -s /bin/fish $USER
 
 
 cd .. 
