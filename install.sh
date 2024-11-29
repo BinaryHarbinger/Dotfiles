@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo Binary Harbingers Dotfiles v1.4.1
+
 # First, update the system, but skip already installed packages
 echo "Updating system..."
 yay -Syu --noconfirm --needed
@@ -47,11 +49,23 @@ echo "Applying Spicetify theme..."
 spicetify apply
 
 # Set Fish as the default shell
-echo "Setting Fish as the default shell..."
-chsh -s /bin/fish
+echo "Would you like to change the default shell to Fish? (y/n)"
+read -r response
+if [[ "$response" =~ ^[Yy]$ ]]; then
+  if sudo -n true 2>/dev/null; then
+    echo "Using sudo to change the shell to Fish."
+    sudo chsh -s /bin/fish "$USER"
+  else
+    echo "Changing shell interactively. Please follow the prompts."
+    chsh
+  fi
+else
+  echo "Shell change skipped."
+fi
+
 
 cd .. 
 rm -r ./dotfiles
 
 # Final message after installation
-echo "Installation complete! Please restart your terminal."
+echo "Installation complete!"
