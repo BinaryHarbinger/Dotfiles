@@ -6,7 +6,7 @@ yay -Syu --noconfirm --skipinteg
 
 # Install required packages, but skip already installed ones
 PACKAGES=(
-  cliphist spicetify-cli git nwg-look qt6ct fish power-profiles-daemon fastfetch
+  breeze cliphist spicetify-cli git nwg-look qt6ct fish power-profiles-daemon fastfetch
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync
   network-manager-applet
