@@ -11,7 +11,7 @@ PACKAGES=(
   breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync
-  network-manager-applet
+  network-manager-applet materia-gtk-theme
 )
 
 echo "Installing packages..."
