@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo Binary Harbingers Dotfiles v1.4.1
+echo "Binary Harbingers Dotfiles v1.5"
 
 # First, update the system, but skip already installed packages
 echo "Updating system..."
@@ -32,12 +32,12 @@ sed -i "s/USERNAME/${USER}/g" ./swaync/config.json
 
 # Move script files to the home directory, force overwrite
 echo "Moving script files..."
-cp -r ./.scripts ~
+cp -rf ./.scripts ~
 chmod +x ~/.scripts/*
 
 # Move configuration files to the .config directory, force overwrite
 echo "Moving configuration files..."
-cp -r ./* ~/.config/
+cp -rf ./* ~/.config/
 chmod +x ~/.config/hypr/scripts/*
 
 # Apply Spicetify theme
@@ -48,9 +48,51 @@ spicetify restore backup apply
 echo "Changing default shell to fish..."
 sudo chsh -s /bin/fish $USER
 
+# Change default theme
+THEME_NAME="Materia-dark-compact"
 
-cd .. 
-rm -r ./dotfiles
+echo "Setting GTK theme to $THEME_NAME..."
+
+# Set the GTK theme for GNOME using GSettings
+if command -v gsettings &> /dev/null; then
+    echo "Configuring GNOME settings..."
+    gsettings set org.gnome.desktop.interface gtk-theme "$THEME_NAME"
+    gsettings set org.gnome.desktop.wm.preferences theme "$THEME_NAME"
+else
+    echo "GSettings is not available. Skipping GNOME-specific settings."
+fi
+
+# Update the GTK 3 configuration file
+GTK3_CONFIG="$HOME/.config/gtk-3.0/settings.ini"
+echo "Configuring GTK 3 settings..."
+mkdir -p "$(dirname "$GTK3_CONFIG")"
+cat > "$GTK3_CONFIG" <<EOL
+[Settings]
+gtk-theme-name=$THEME_NAME
+gtk-icon-theme-name=Papirus-Dark
+gtk-font-name=Noto Sans 10
+EOL
+
+# Update the GTK 2 configuration file
+GTK2_CONFIG="$HOME/.gtkrc-2.0"
+echo "Configuring GTK 2 settings..."
+cat > "$GTK2_CONFIG" <<EOL
+gtk-theme-name="$THEME_NAME"
+gtk-icon-theme-name="Papirus-Dark"
+gtk-font-name="Noto Sans 10"
+EOL
+
+# Apply the changes to the desktop environment
+echo "Applying changes..."
+if pgrep xfce4-panel &> /dev/null; then
+    xfsettingsd --replace &  # Reload XFCE settings if XFCE panel is running
+else
+    echo "Restart your session or log out and back in to apply changes."
+fi
+
+# Cleanup the dotfiles repository
+cd ..
+rm -rf ./dotfiles
 
 # Final message after installation
 echo "Installation complete!"
