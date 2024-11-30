@@ -35,20 +35,21 @@
 
 ----------------------------------------------------------------------------------------
 
-## How do I install?
+## How to install?
 
 You have to install yay before all. Because some of the dependecies is not in offical repistories.
 
 To install yay: 
 ```
-sudo pacman -Sy git base-devel
+sudo pacman -Sy --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepgk -si
 ```
 
 After you installed yay. Run this command:
-``` 
+```
+pacman -Sy --needed curl
 curl -sSL https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/refs/heads/main/install.sh | bash
 
 ```
