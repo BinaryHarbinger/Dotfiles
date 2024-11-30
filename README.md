@@ -5,7 +5,7 @@
 
 ----------------------------------------------------------------------------------------
 
-## What is has?
+## What are oppurtunities?
 
 » Those dotfiles includes runner menu.
 
@@ -19,7 +19,7 @@
 
 » Custom scripts.
 
-» Custom QT theme (still in development.)
+» Custom QT theme.
 
 ## *Some Photos*
 
@@ -47,14 +47,12 @@ cd yay
 makepgk -si
 ```
 
-# Installing with script
-
-Install yay. Then copy and paste this:
+After you installed yay. Run this command:
 ``` 
 curl -sSL https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/refs/heads/main/install.sh | bash
 
 ```
-_If you get errors during and after installation try to enable extra repistories from Arch Linux_
+_If you get errors during and after installation try to enable multilib repistory from Arch Linux_
 
 # Installing manualy (For non-Arch based distros)
 
@@ -63,26 +61,6 @@ _If you get errors during and after installation try to enable extra repistories
 » Copy all the directories (except preview) to your .config folder
 
 ***
-
-## *Dependecies*
-  
-  » Arch Linux or other rolling release GNU/Linux distro based on Arch Linux.
-
-  » [Rofi Wayland Fork](https://github.com/A417ya/rofi-wayland)
-
-  » AUR helper yay.
-
-  » Waybar and wlogout.
-
-  » Swaync
-
-  » Noto fonts
-
-  » Hyprlock, Hyprpaper and Hyprpaper
-
-  » Fira Code Font and otf Fira Code symbols
-
-  » Curl
 
 
 ----------------------------------------------------------------------------------------
@@ -97,6 +75,7 @@ _If you get errors during and after installation try to enable extra repistories
 - **SUPER + P**: Toggle pseudo-tile layout (Dwindle mode)
 - **SUPER + J**: Toggle split mode (Dwindle mode)
 - **SUPER + F**: Toggle fullscreen mode for the active window
+- **SUPER + X**: Open clipboard
 
 ## Application Shortcuts
 - **SUPER + N**: Launch `swaync-client` in system tray mode
