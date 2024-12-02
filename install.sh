@@ -37,6 +37,7 @@ chmod +x ~/.scripts/*
 
 # Move configuration files to the .config directory, force overwrite
 echo "Moving configuration files..."
+rm -rf ./preview
 cp -rf ./* ~/.config/
 chmod +x ~/.config/hypr/scripts/*
 
