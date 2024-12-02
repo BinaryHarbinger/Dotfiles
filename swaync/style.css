@@ -49,12 +49,10 @@
 .notification {
   /* font-size: 2rem; */
   transition: all 200ms ease;
-  /* border-radius: 12px; */
-  border-top-left-radius: 12px; /* Rounded top-left corner */
-  border-top-right-radius: 12px; /* Rounded top-right corner */
+  border-radius: 12px;
   /* margin: 6px 6px; */
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   box-shadow: none;
   /* padding: 20px; */
   color: #C0CAF5;
@@ -63,19 +61,19 @@
 
 /* poi_1 */
 .notification-content {
-  background: 	 #15161E;
+  background: 	 #1a1a29;
   border: 1.4px solid #b4befe;
   /* margin-top: 10px; */
   /* margin-bottom: 10px; */
   font-size: 0.5rem;
   padding: 18px;
-  border-radius:  0px 0px 0 0px;
+  border-radius: 10px;
   color: #C0CAF5;
 }
 
 .close-button {
   background: @noti-close-bg;
-  color: white;
+  color: #b4befe;
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
@@ -99,7 +97,7 @@
   padding: 4px;
   margin: 0;
   box-shadow: none;
-  background: #101012;
+  background: #1a1a29;
   /* border: 1px solid @noti-border-color; */
   border-top-left-radius: 12px; /* Rounded top-left corner */
   border-top-right-radius: 12px; /* Rounded top-right corner */
@@ -174,15 +172,13 @@
 }
 /* poi_2 */
 .control-center {
-  margin-bottom: 20px;
   color:  #C0CAF5;
   background:  #11111b;
-  border-radius:  0px 0px 0px 32px;
+  border-radius:  10px;
   border: 2px solid #b4befe;
-  border-right: 0px;
-  border-top: 0px;
+  margin: 10px 20px;
   background-clip: border-box;
-  padding: 4px;
+  padding: 4px 0px;
   /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3); */
   box-shadow: none;
 }
@@ -215,10 +211,10 @@
 .widget-title > button {
   font-size: 1rem;
   margin: 4px;
-  padding: 10px;
+  padding: 5px 4px;
   color: #C0CAF5;
   text-shadow: none;
-  background:  #15161E;
+  background: #1b1b2b;
   border: 0.5px solid #b4befe;
   box-shadow: none;
   border-radius: 12px;
@@ -264,7 +260,7 @@
 .widget-mpris-player {
   padding: 16px;
   margin: 16px;
-  background-color: #15161E;
+  background-color: #1b1b2b;
   border-radius: 12px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -292,30 +288,24 @@
 
 /* Buttons widget */
 .widget-buttons-grid {
-  padding: 25px;
-  border: 1.2px solid #28282b;
-  /* margin-top: 8px; */
-  /* margin-bottom: 22px; */
+  padding: 0px;
+  border: 1px solid #1b1b2b;
   border-radius: 12px;
-  background-color: #15161e;
+  background-color: #12121b;
 }
 /* poi3 */
 .widget-buttons-grid>flowbox>flowboxchild>button{
-  background:  	#1A1E25;
-  font-size: 30px;
-
-  border-radius: 12px;
-  padding: 15px;
+  background:  	#1b1b2b;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px;
   border: 1.3px solid #28282b;
-  margin-right: 5px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin: 0px;
   color: #C0CAF5;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @noti-bg-hover;
+  background: #2a2a42;
 }
 
 /* Menubar widget */
@@ -335,12 +325,13 @@
 /* Volume widget */
 /* poi_4 */
 .widget-volume {
-  background-color: #1A1E25;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 12px;
-  border: 1px solid #28282b;
-  color: #C0CAF5;
+  background-color: #1b1b2b;
+  padding: 5px 10px;
+  margin: 18px;
+  border-radius: 10px;
+  border: 1px solid #1b1b2b;
+  color: #b4befe;
+  font-size: 15px;
 }
 
 
