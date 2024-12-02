@@ -1,0 +1,27 @@
+[general]
+mode = scientific
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = noncurses
+channels = stereo
+mono_option = average
+reverse = 0
+
+[color]
+gradient = 1
+gradient_count = 6
+gradient_color_1 = '#1a1a29'
+gradient_color_2 = '#5a5a8b'
+gradient_color_3 = '#8a9bbb'
+gradient_color_4 = '#b4befe'
+gradient_color_5 = '#fbfbfb'
+gradient_color_6 = '#ffffff'
+
+[smoothing]
+integral = 100
+monstercat = 1
+noise_reduction = 80
