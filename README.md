@@ -1,36 +1,29 @@
 
 ----------------------------------------------------------------------------------------
 
-# Hyprland dotfiles by Binary Harbinger
+<h1 align="center">Hyprland Dotfiles by Binary Harbinger</h1>
 
 ----------------------------------------------------------------------------------------
 
-## What are oppurtunities?
+## Features
 
-» Those dotfiles includes runner menu.
+» Simple and effective style.
 
-» Notification center.
+» Easy to configure.
 
-» Understandable Waybar configuration.
+» Optimized.
 
-» Highly functional Hyprland configuration.
+» Auto installable. (On Arch *(based distros)*)
 
-» Themed and extension included Spotify.
+## *Example Photos*
 
-» Custom scripts.
+[**🔍Rofi**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/rofi.png)
 
-» Custom QT theme.
+[**🎧Spicetify**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/spicetify.png)
 
-## *Some Photos*
+[**🔔Swaync**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/swaync.png)
 
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image0.png?raw=true)
-
-
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image4.png?raw=true)
-
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image6.png?raw=true)
-
-![Photo](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/image3.png?raw=true)
+[**Terminal Applications**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/terminal.png)
 
 
 ----------------------------------------------------------------------------------------
@@ -66,7 +59,7 @@ _If you get errors during and after installation try to enable multilib repistor
 
 ----------------------------------------------------------------------------------------
 
-# Keybindings
+<h1 align="center">Keybindings</h1>
 
 ## General Management
 - **SUPER + M**: Exit Hyprland
