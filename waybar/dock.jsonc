@@ -21,7 +21,7 @@
     "modules-left": [
         
     ],
-    "modules-center": ["custom/os_button","custom/terminal","custom/thunar","wlr/taskbar"],
+    "modules-center": ["custom/os_button","custom/terminal","custom/yazi","custom/browser","wlr/taskbar"],
     "modules-right": [
     ],
 
@@ -40,13 +40,21 @@
         "ignore-list": [],
         "on-click": "activate"
     },
-    "custom/thunar": {
+    "custom/yazi": {
         "format": "",
         "spacing": 3,
-        "on-click-middle": "pkill thunar",
-        "tooltip-format": "Launch Thunar",
+        "on-click-middle": "",
+        "tooltip-format": "Launch yazi",
         "ignore-list": [],
-        "on-click": "thunar"
+        "on-click": "kitty -e yazi"
+    },
+    "custom/browser": {
+        "format": "",
+        "spacing": 3,
+        "on-click-middle": "",
+        "tooltip-format": "Launch Browser",
+        "ignore-list": [],
+        "on-click": "xdg-open https://about:blank"
     },
     "custom/terminal": {
         "format": "",

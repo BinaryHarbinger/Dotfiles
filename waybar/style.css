@@ -40,7 +40,7 @@
 }
 
 window#waybar {
-  background:  rgba(17, 17, 27, 0.54);
+  background:  rgba(17, 17, 27, 0.1);
   color: @content_main;
 }
 
@@ -109,31 +109,6 @@ tooltip label{
 	color: @warning_color;
 }
 #workspaces button:hover {
-  background: @bg_hover;
-	color: @content_main;
-}
-
-#taskbar {
-}
-
-#taskbar button {
-	min-width: 30px;
-	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-	margin-left: 2px;
-	margin-right: 2px;
-  padding-left: 8px;
-  padding-right: 8px;
-  color: white;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#taskbar button.active {
-	border-bottom: 3px solid white;
-    background: @bg_active;
-}
-
-#taskbar button:hover {
-	border-bottom: 3px solid white;
   background: @bg_hover;
 	color: @content_main;
 }

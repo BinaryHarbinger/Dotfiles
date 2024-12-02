@@ -37,6 +37,8 @@
 	font-family: "Fira Code";
   font-weight: 600;
   font-size: 12.7px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 	
 }
 
@@ -57,18 +59,18 @@ tooltip label{
 }
 
 
-#custom-os_button,#custom-thunar,#custom-terminal {
+#custom-os_button, #custom-yazi, #custom-browser, #custom-terminal {
   border-top: 2px solid #b4befe;
   background-color: rgba(17, 17, 27, 1);
 	font-family: "JetBrainsMono Nerd Font,Ubuntu",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 40px;
+  font-size: 45px;
 	padding-left: 15px;
 	padding-right: 15px;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 0px;
 }
 
-#custom-thunar ,#custom-os_button,#custom-terminal{
+#custom-yazi, #custom-browser, #custom-os_button, #custom-terminal{
 	padding-right: 30px;
 }
 
@@ -78,15 +80,16 @@ tooltip label{
 }
 
 
-#custom-os_button:hover,#custom-thunar,#custom-terminal {
+#custom-os_button:hover,#custom-yazi:hover,#custom-browser:hover,#custom-terminal:hover {
 	color: #d1d6f8;
 }
 
-#custom-os_button:hover, #custom-thunar:hover ,#custom-terminal:hover {
+#custom-os_button:hover, #custom-yazi:hover, #custom-browser:hover ,#custom-terminal:hover {
   background-color: rgb(46, 46, 65);
+  font-size: 45px;
 }
 
-#custom-thunar,#custom-terminal {
+#custom-yazi,#custom-browser,#custom-terminal {
   border-radius: 0px;
   font-size: 40px;
 }
@@ -102,7 +105,7 @@ tooltip label{
 }
 
 #taskbar button {
-	min-width: 20px;
+	min-width: 30px;
 	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 	margin-left: 2px;
   padding-left: 8px;
@@ -122,6 +125,11 @@ tooltip label{
   background: @bg_hover;
 	color: @content_main;
   border-radius: 8px 8px 0px 0px;
+}
+
+#custom-terminal {
+  padding-right: 34px;
+  padding-left: 14px;
 }
 
 #window {
