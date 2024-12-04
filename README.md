@@ -23,8 +23,11 @@
 
 [**🔔Swaync**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/swaync.png)
 
-[**Terminal Applications**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/terminal.png)
+[**⌨️Terminal Applications**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/terminal.png)
 
+[**📺On Screen Display**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/osd.png)
+
+[**🔄Window Switcher**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/switcher.png)
 
 ----------------------------------------------------------------------------------------
 
