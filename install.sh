@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Binary Harbingers Dotfiles v1.6.5"
+echo "Binary Harbingers Dotfiles v1.7"
 
 # First, update the system, but skip already installed packages
 echo "Updating system..."
@@ -11,7 +11,7 @@ PACKAGES=(
   breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync
-  network-manager-applet materia-gtk-theme colloid-icon-theme-git pamixer brightnessctl
+  network-manager-applet materia-gtk-theme colloid-icon-theme-git pamixer brightnessctl hyprswitch avizo
 )
 
 echo "Installing packages..."
