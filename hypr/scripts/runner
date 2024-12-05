@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+## Run
+rofi \
+    -show run \
+    -theme ~/.config/hypr/scripts/launcher.rasi

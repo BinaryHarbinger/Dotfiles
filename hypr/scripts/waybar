@@ -1,4 +1,4 @@
 #!/bin/bash
 
 waybar&disown
-waybar -c ~/.config/waybar/dock.jsonc -s ~/.config/waybar/dock.css&disown
+#waybar -c ~/.config/waybar/dock.jsonc -s ~/.config/waybar/dock.css&disown
