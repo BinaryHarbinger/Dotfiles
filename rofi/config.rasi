@@ -9,7 +9,7 @@ font:							"Fira Code 16";
                   drun-display-format:            "{icon} {name}";
 }
 
-@theme "colors.rasi"
+@theme ".config/rofi/colors/menucolors.rasi"
 
 window {
 location:                    center; /* Set the location to southwest (bottom left corner) */

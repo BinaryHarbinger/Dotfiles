@@ -1,0 +1,12 @@
+/**
+ *
+ * Author : BinaryHarbinger
+ * Github : BinaryHarbinger
+ * 
+ * Colors
+ *
+ **/
+
+/* Import color-scheme from `colors` directory */
+
+@import "~/.config/rofi/colors/binary.rasi"

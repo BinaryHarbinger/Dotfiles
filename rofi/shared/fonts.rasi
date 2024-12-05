@@ -1,0 +1,12 @@
+/**
+ *
+ * Author : BinaryHarbinger
+ * Github : BinaryHarbinger
+ * 
+ * Fonts
+ *
+ **/
+
+* {
+    font: "JetBrains Mono Nerd Font 10";
+}
