@@ -76,18 +76,19 @@ _If you get errors during and after installation try to enable multilib repistor
 
 ## Application Shortcuts
 - **SUPER + N**: Launch `swaync-client` in system tray mode
-- **SUPER + T**: Open terminal (`kitty`)
+- **SUPER + T**: Open terminal (`alacritty`)
 - **SUPER + Q**: Open application menu (`rofi` submenu)
-- **SUPER + E**: Open file manager (`thunar`)
+- **SUPER + E**: Open file manager (`yazi`)
 - **SUPER + B**: Open web browser with a blank page (`xdg-open`)
-- **SUPER + L**: Lock screen (`hyprlock`)
+- **SUPER + L**: Lock screen (`Wlogout`)
 - **SUPER + O**: Lock screen (alternative with `wlogout`)
 - **SUPER + W**: Launch `waybar`
-- **SUPER + H**: Launch `hyprpaper`
+- **SUPER + H**: Launch `Help.txt`
 - **SUPER + PRINT**: Take a screenshot (`hyprshot-gui`)
 - **SUPER + S**: Open application menu (`rofi` dmenu)
 - **SUPER + R**: Open application menu (`rofi` run)
-- **SUPER + TAB**: Switch between applications (`rofi` switcher)
+- **SUPER + TAB**: Switch between applications (`hyprswitch`)
+- **SUPER + X**: Launch rofi with cliphist (`Clipboard`)
 
 ## Media and Brightness Control
 - ** Function buttons on your keyboard will work.
