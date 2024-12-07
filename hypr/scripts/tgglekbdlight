@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Klavye ışığının mevcut seviyesini al
+current_brightness=$(brightnessctl --device=rgb:kbd_backlight get)
+
+# Eğer ışık %0 ise, %100 yap, aksi takdirde %0 yap
+if [ "$current_brightness" -eq 0 ]; then
+    brightnessctl --device=rgb:kbd_backlight set 100%
+    avizo-client --image-resource=brightness_high_dark --progress=1
+else
+    brightnessctl --device=rgb:kbd_backlight set 0%
+    avizo-client --image-resource=brightness_low_dark --progress=0
+fi
