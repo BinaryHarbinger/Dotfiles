@@ -1,9 +1,9 @@
 # Font Values
 [font]
-size = 14
+size = 12
 [font.bold]
 family = "Fira Code"
-style = "Bold"
+style = "Regular"
 
 [font.bold_italic]
 family = "Fira Code"
@@ -23,5 +23,5 @@ style = "Underline"
 
 # Color Values
 [colors.primary]
-background = "#11111b"
+background = "#10101b"
 foreground = "#b4befe"

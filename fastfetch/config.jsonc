@@ -22,7 +22,7 @@
       {
         "type": "os",
         "key": " ",
-        "keyColor": "33"
+        "keyColor": "cyan"
       },
       {
         "type": "kernel",
@@ -32,12 +32,12 @@
       {
         "type": "shell",
         "key": " ",
-        "keyColor": "33"
+        "keyColor": "1"
       },
       {
         "type": "uptime",
         "key": " ",
-        "keyColor": "33"
+        "keyColor": "32"
       },
       {
         "type": "packages",
@@ -48,7 +48,7 @@
       {
         "type": "memory",
         "key": " ",
-        "keyColor": "33"
+        "keyColor": "34"
       },
       "break",
       {
