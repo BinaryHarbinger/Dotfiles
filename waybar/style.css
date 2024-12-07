@@ -92,9 +92,10 @@ tooltip label{
 	color: #484872;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 	padding: 0px 5px;
-	margin: 4px 4px;
+	margin: 3px 4px;
 	background-color: #939cda;
 	border-radius: 100px;
+	border-color: #11111b;
 }
 #workspaces button.active {
 	color: #222236;
