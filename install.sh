@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Binary Harbingers Dotfiles v1.8.5"
+echo "Binary Harbingers Dotfiles v1.8.6"
 
 # First, update the system, but skip already installed packages
 echo "Updating system..."
