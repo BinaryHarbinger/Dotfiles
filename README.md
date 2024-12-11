@@ -81,7 +81,7 @@ _If you get errors during and after installation try to enable multilib repistor
 - **SUPER + E**: Open file manager (`yazi`)
 - **SUPER + B**: Open web browser with a blank page (`xdg-open`)
 - **SUPER + L**: Lock screen (`Wlogout`)
-- **SUPER + O**: Lock screen (alternative with `wlogout`)
+- **SUPER + O**: Color Picker (alternative with `Hyprpicker`)
 - **SUPER + W**: Launch `waybar`
 - **SUPER + H**: Launch `Help.txt`
 - **SUPER + PRINT**: Take a screenshot (`hyprshot-gui`)
