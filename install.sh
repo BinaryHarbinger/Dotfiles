@@ -29,9 +29,9 @@ echo "Cloning dotfiles repository..."
 git clone https://github.com/BinaryHarbinger/dotfiles.git
 cd dotfiles || { echo "Failed to enter the dotfiles directory!"; exit 1; }
 
-# Replace the username in the config file
-echo "Updating username in config..."
-sed -i "s/USERNAME/${USER}/g" ./swaync/config.json
+# Replace the username in the config files
+echo "Updating username in configs..."
+sed -i "s/kb_layout = tr/kb_layout = $(localectl status | grep "X11 Layout" | awk '{print $3}')/g" ./hypr/hyprland.conf
 
 # Move script files to the home directory, force overwrite
 echo "Moving script files..."
