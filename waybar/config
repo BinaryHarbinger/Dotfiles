@@ -19,7 +19,7 @@
     "passthrough": false,
     "height": 20,
     "modules-left": [   
-        "custom/search",
+        "custom/search","custom/runner","custom/os_button",
         "memory","cpu"
     ],
     "modules-center": ["hyprland/workspaces"],
@@ -43,7 +43,13 @@
 
     "custom/search": {
         "format": "",
-        "on-click": "rofi -show drun",
+        "on-click": "~/.config/hypr/scripts/launcher",
+        "tooltip": false,
+    },
+
+    "custom/runner": {
+        "format": "",
+        "on-click": "~/.config/hypr/scripts/runner",
         "tooltip": false,
     },
 
