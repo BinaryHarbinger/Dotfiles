@@ -9,7 +9,7 @@
 
 
 * {
-  font-family: "Fira Code";
+  font-family: "Fira Mono";
 }
 
 .testing {
@@ -130,6 +130,7 @@
 /* add bottom border radius to eliminate clipping */
 .notification-action:first-child {
   border-bottom-left-radius: 12px;
+  
 }
 
 .notification-action:last-child {

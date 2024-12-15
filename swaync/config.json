@@ -1,10 +1,9 @@
 {
     "$schema": "/etc/xdg/swaync/configSchema.json",
     "positionX": "right",
-    "positionY": "top",
-  
-    "control-center-width": 400,
-    "control-center-height": 900, 
+    "positionY": "top",  
+    "control-center-width": 380,
+    "control-center-height": 750, 
     "control-center-margin-top": 2,
     "control-center-margin-bottom": 2,
     "control-center-margin-right": 1,
@@ -40,17 +39,14 @@
       }
     },
     "widgets": [
-      "label",
-      "buttons-grid",
-      "mpris",
-      "volume",
+
       "title",
       "dnd",
       "notifications"
     ],
     "widget-config": {
       "title": {
-        "text": "Notifications",
+        "text": " Notifications",
         "clear-all-button": true,
         "button-text": " 󰎟 "
       },

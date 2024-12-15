@@ -1,0 +1,47 @@
+(defpoll volume :interval "1s"
+  "scripts/getVol.sh")
+(defpoll networkstatus :interval "1s"
+  `nmcli -t -f active,ssid dev wifi | grep "yes" | cut -c5-`)
+(defpoll bluetoothstatus :interval "1s"
+  `bluetoothctl show | grep "Powered" | cut -c11-`)
+(defpoll temp :interval "1s"
+  "sensors | grep -A 0 'temp1' | cut -c16-17")
+(defpoll cpusage :interval "1s"
+  "vmstat 1 2 | awk 'END { print 100 - $15 }'")
+(defpoll memoryusage :interval "1s"
+  `free -m | awk 'NR==2{printf "%.f", $3*100/$2 }'`)
+
+
+(defpoll uptime :interval "60s"
+  "uptime -p | cut -c3-")
+(defpoll brightness :interval "5"
+  "brightnessctl -m echo 'text|jdbc' | sed -e 's/,/\ /g' | awk '{print $3/$5*100}'")
+
+
+(defpoll musicartlink :interval "1s"
+  `playerctl metadata --format "{{ mpris:artUrl }}" | sed 's/b273/1e02/'`)
+(defpoll musicposition :interval "1s"
+  `playerctl metadata --format "{{ duration(position) }}"`)
+(defpoll musiclength :interval "10s"
+  `playerctl metadata --format "{{ duration(mpris:length)}}"`)
+(defpoll musicpositionpercentage :interval "1s"
+  `playerctl metadata --format "{{ position / (mpris:length / 100)  }}"`)
+(defpoll playingorpaused :interval "0" 
+  `playerctl status`)
+(defpoll music :interval "1s"
+  "playerctl metadata --format '{{ title }} - {{ artist }}' || true")
+(defpoll musicshort :interval "1s"
+  `playerctl metadata --format '{{ title }}' | cut -c1-30`)
+
+
+(defvar ismusicopenornot false)
+(defvar bluetoggle false)
+(defvar nighttoggle false)
+
+(defvar notification ``)
+(defvar notificationreveal false)
+(defvar notifsliteral "")
+
+(defpoll monthname :interval "2s"
+  "date +%B"
+)

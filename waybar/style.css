@@ -17,7 +17,7 @@
 
 
 /*base background color of selections */
-@define-color bg_hover rgba(200, 200, 200, 0.3);
+@define-color bg_hover #26263d;
 /*base background color of active elements */
 @define-color bg_active rgba(100, 100, 100, 0.5);
 
@@ -90,7 +90,7 @@ tooltip label{
 	color: #222236;
 	border-radius: 15px;
 	background: #b4befe;
-	padding: 0px 13px;
+	padding: 0px 16px;
 }
 #workspaces button.focused {
   color: @bg_active;
@@ -101,7 +101,7 @@ tooltip label{
 	color: @warning_color;
 }
 #workspaces button:hover {
-  background: @bg_hover;
+  background: #b4bbeb;
 	color: @content_main;
 }
 
@@ -266,7 +266,7 @@ tooltip label{
 	background-color: @bg_hover;
 }
 
-#memory, #custom-search,#custom-os_button,#custom-runner {
+#memory, #custom-search,#custom-os_button,#custom-runner,#mpris {
 	font-family: "Symbols Nerd Font";
     background-color: rgba(17, 17, 27, 1);
     /*color: #83A598;*/
@@ -280,8 +280,8 @@ tooltip label{
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#custom-search:hover,#custom-os_button:hover,#custom-runner:hover{
-	background-color: @bg_hover;
+#custom-search:hover,#custom-os_button:hover,#custom-runner:hover,#mpris:hover{
+	background-color: #26263d;
 }
 
 

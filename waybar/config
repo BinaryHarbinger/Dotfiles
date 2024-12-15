@@ -17,9 +17,9 @@
     "gtk-layer-shell": true,
     "margin-bottom": -1,
     "passthrough": false,
-    "height": 20,
+    "height": -30,
     "modules-left": [   
-        "custom/search","custom/runner","custom/os_button",
+        "custom/search","custom/runner","custom/os_button","mpris",
         "memory","cpu"
     ],
     "modules-center": ["hyprland/workspaces"],
@@ -53,6 +53,19 @@
         "tooltip": false,
     },
 
+    "mpris": {
+    "on-click-right": "eww open musiccenter --toggle --no-daemonize &",
+	"format": "{player_icon}",
+	"format-paused": "{status_icon}",
+	"player-icons": {
+		"default": "▶  Playing",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "⏸  Paused"
+	},
+    "tooltip": false
+},
 
 "bluetooth": {
 	"format": "",
@@ -78,6 +91,7 @@
 },
 
     "backlight": {
+    "on-click": "eww open actioncenter --toggle --no-daemonize &",
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["", ""]
@@ -169,10 +183,11 @@
             "󰤢",
             "󰤨"
         ],
-        "on-click": "alacritty -e nmtui",
+        "on-click": "eww open actioncenter --toggle --no-daemonize &",
         "on-click-right": "kitty -e 'nmtui'"
     },
     "battery": {
+        "on-click": "eww open actioncenter --toggle --no-daemonize &",
         "states": {
             "good": 95,
             "warning": 30,
@@ -209,7 +224,8 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click":"eww open actioncenter --toggle --no-daemonize &",
+        "on-click-right": "pavucontrol"
     },
 
     "memory": {

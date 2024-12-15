@@ -1,0 +1,253 @@
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+  font-weight: 600;
+}
+
+//Global Styles
+.bar {
+  background-color: #111111;
+  color: white;
+  padding: 0px 0px 0px 0px;
+}
+
+// Styles on classes (see eww.yuck for more information)
+
+.meters, .music, .connectivity{
+  background-color: #252525;
+  border-radius: 50px;
+  padding: 0px 11px;
+  margin: 5px 0px;
+  min-height: 30px;
+  font-weight: 500;
+}
+
+.meters{
+  padding: 0px 15px;
+  margin-right: 5px;
+}
+.connectivity{
+  padding: 0px 15px 0px 12px;
+  margin-right: 5px;
+}
+.wifi{
+  margin-right: 6px;
+}
+
+.sidestuff slider {
+  all: unset;
+  color: #c57a6b;
+}
+
+.metric{
+  margin: 0px;
+  padding: 0px;
+}
+.metric label{
+  font-size: 14px;
+}
+
+.time{
+  margin: 0px;
+  padding: 0px 5px 0px 10px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  font-weight: 500;
+  font-size: 15px;
+  min-height: 30px;
+  background-color: #252525;
+}
+
+.workspaces{
+  font-weight: 600;
+  background-color: #252525;
+  border-radius: 50px;
+  margin: 5px 0px;
+  padding: 0px 3px;
+}
+
+.workspaces button{
+  padding: 0px 7px 0px 7px;
+  margin: 4px 3px 4px 3px;
+  font-size: 15px;
+  border-radius: 50px;
+}
+
+.workspaces button.focused, .workspaces button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(245, 245, 245);
+}
+
+.launcher {
+  font-size: 20px;
+  padding: 0px 10px 0px 8px; 
+  border-top-right-radius: 50px; 
+  border-bottom-right-radius: 50px;
+  margin: 5px 10px 5px 0px;
+  min-height: 30px;
+  color: white;
+  background-color: #252525;
+}
+
+.powermenu{
+  background-color: #111111;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.powermenu button{
+  transition: 0.2s;
+  color:white;
+}
+.sleep{
+  border-top-right-radius: 20px;
+}
+.poweroff{
+  border-top-left-radius: 20px;
+
+}
+.powermenu button:hover{
+  background-color: #252525;
+}
+
+.actioncenter{
+  border: solid 2px #b4befe;
+  background-color: #11111b;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.topcenter{
+  font-family: "Fira Mono", "JetBrainsMono Nerd Font";
+  font-weight: 500;
+}
+.middlecenter{
+  margin-top: 10px;
+  min-width: 230px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #191929;
+}
+.bottomcenter{
+  margin-top: 10px;
+  min-width: 230px;
+  padding: 10px;
+  background-color: #191929;
+  border-radius: 20px;
+}
+
+.welcometext{
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.pfp, .musicart {
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.scalecenter scale trough highlight {
+  all: unset;
+  background-color: #b4befe;
+  color: #131320;
+  border-radius: 100px;
+}
+
+.scalecenter scale trough {
+  all: unset;
+  background-color: #131320;
+  border-radius: 50px;
+  min-height: 20px;
+  min-width: 225px;
+  margin-right: 5px;
+}
+.scalecenter label{
+  font-size: 18px;
+  color: #b4befe;
+  margin: 0px 15px 0px 5px;
+}
+
+.test, .testenabled{
+  min-width: 80px;
+  min-height: 50px;
+  background-color: #131320;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #b4befe;
+  transition: 0.3s;
+}
+
+.test:hover{
+  background-color: #b4befe;
+  color: #191925;
+}
+
+.testenabled{
+  background-color: #b4befe;
+  color: #191925;
+}
+
+.musiccenter{
+  border-radius: 10px ;
+  border: 2px solid #b4befe;
+  background-color: #11111b;
+  padding: 10px 10px 5px 10px;
+  color:white;
+}
+.musiccontrols{
+  background-color: #1a1a29;
+  min-width: 170px;
+  padding: 5px 20px;
+  margin: 0px 5px;
+  border-radius: 10px;
+}
+.musicbutton{
+  margin-top: 0px;
+  font-size: 22px;
+  padding: 0px 5px;
+}
+
+.musicbutton:hover {
+  background-color: #25253b;
+  border-radius: 5px;
+  
+}
+
+.musictitle{
+  font-family: "Fira Mono", "JetBrainsMono Nerd Font";
+  margin-top: 5px;
+  font-size:15px;
+  font-weight: 600;
+}
+.musicscale scale trough highlight {
+  all: unset;
+  background-color: #b4befe;
+  color: #b4befe;
+  border-radius: 10px;
+  min-width: 10px;
+}
+.musicscale scale trough {
+  all: unset;
+  background-color: #25253b;
+  border-radius: 50px;
+  min-height: 10px;
+  min-width: 170px;
+  margin: 0px 10px;
+}
+.musicscale label{
+  font-size: 12px;
+}
+.musicart{
+  border: 1px solid #b4befe;
+  background-image: unset;
+  margin: 8px 3px;
+}
+
+.summary{
+  font-size: 20px;
+  font-weight: 700;
+}

@@ -1,0 +1,260 @@
+(defwidget bar []
+    (centerbox :orientation "h"
+      (topstuff)
+      (music)
+      (sidestuff)
+    )
+  )
+  
+  (defwindow powermenu
+    :monitor 0
+    :exclusive "false"
+    :windowtype "normal"
+    :stacking "fg"
+    :geometry (geometry :x "55"
+                        :y "0"
+                        :width "150px"
+                        :height "40px"
+                        :anchor "bottom right")
+    :reserve (struts :side "right" :distance "4%")
+    (box :class "powerbuttons"
+      (button 
+        :class "poweroff"
+        :onclick "poweroff &"
+        ""
+      )
+      (button 
+        :class "restart"
+        :onclick "reboot &"
+        ""
+      )
+      (button 
+        :class "sleep"
+        :onclick "eww open powermenu --toggle & systemctl suspend &"
+        ""
+      )
+    )
+  )
+  
+  (defwidget meters []
+    (box :class "meters" :orientation "h" :halign "end" :spacing 12 :space-evenly "false"
+      (metric :label "󰍛"
+              :value "󱃃 ${temp}C"
+              :onchange ""
+              :onclick "")
+      (metric :label "󰍛"
+              :value "󰍛  ${memoryusage}%"
+              :onchange ""
+              :onclick "")
+      (metric :label "󰻠"
+              :value "󰻠  ${cpusage}%"
+              :onchange ""
+              :onclick "")
+      (metric :label ""
+              :value {volume != "0" ? "󰕾  ${volume}%" : "󰝟 "}
+              :onchange "pamixer --set-volume {} &"
+              :onclick "bash ~/.config/scripts/volume mute &")
+    )
+  )
+  
+  (defwidget connectivity []
+    (box :class "connectivity"
+      :spacing 10
+      (button 
+        :class "bluetooth"
+        :onclick "rofi-bluetooth &"
+        ""
+      )
+      (button 
+        :class "wifi"
+        :onclick "rofi-bluetooth &"
+        {networkstatus != "" ? "󰤨" : "󰤭"}
+      )
+      (button 
+        :class "power"
+        :onclick "eww open powermenu --toggle &"
+        ""
+      )
+    )
+  )
+  
+  (defwidget topstuff []
+    (box :class "topstuff" :orientation "h" :space-evenly false
+      (launcher)
+    )
+  )
+  
+  (defwidget sidestuff []
+    (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+      (meters)
+      (connectivity)
+      (time)
+    )
+  )
+  
+  (defwidget launcher []
+    (button 
+      :class "launcher"
+      :onclick "killall rofi || rofi -show drun -theme ~/.config/rofi/config.rasi &"
+      ""
+    )
+  )
+  
+  (defwidget workspaces [array]
+    (box :class "workspaces"
+         :orientation "h"
+         :space-evenly false
+         :spacing 1
+         :halign "start"
+      (for entry in array
+        (button :onclick `swaymsg workspace "${entry.name}"`
+                :class {entry.focused ? "focused" : ""}
+                `${entry.name}`
+        )
+      )
+    )
+  )
+  
+  (defwidget metric [label value onchange onclick]
+    (box :orientation "h" 
+         :class "metric"
+         :space-evenly false
+      (button :onclick onclick `${value}`)
+    )
+  )
+  
+  (defpoll username :interval "100s"
+    "whoami")
+  (defpoll hostname :interval "100s"
+    "cat /etc/hostname")
+  
+  (defwidget topcenter []
+    (box :class "topcenter" :orientation "h" :halign "start" :spacing 10 :space-evenly "false"
+      (image :class "pfp" :valign "start" :style `background-image: url("/home/${username}/.face");` )
+      (box :orientation "v" :space-evenly "false" :valign "center" :spacing 5
+        (label :class "welcometext" :text username :halign "start" :valign "center")
+        (label :text "${username}@${hostname}" :halign "center" :halign "start" :valign "start" :style "color: #b4befe")
+        (label :text "${uptime}" :halign "start" :valign "start" :halign "start" :style "color: #ffffff")
+      )
+    )
+  )
+  (defwidget middlecenter []
+    (box :class "middlecenter" :orientation "v" :valign "center" :halign "center" :spacing 5
+      (scalecenter :label ""
+          :value "${volume}"
+          :onchange "pamixer --set-volume {}")
+    
+    (scalecenter :label ""
+          :value "${brightness}"
+          :onchange "brightnessctl set {}%")
+    )
+  )
+  (defwidget bottomcenter []
+    (box :class "bottomcenter" :valign "end" :orientation "v" :halign "center" :spacing 10  
+      (box :spacing 10
+        (button :class { networkstatus != "" ? "testenabled" : "test"} :onclick {networkstatus != "" ? "rfkill block wifi &" : "rfkill unblock wifi"} "󰤨  ")
+        (button :class { bluetoothstatus != "no" ? "testenabled" : "test"}  :onclick {bluetoothstatus != "no" ? "bluetoothctl power off" : "bluetoothctl power on"}  "")
+        (button :class { nighttoggle != false ? "testenabled" : "test"} :onclick {nighttoggle != false ? "wlsunset -t 0 & eww update nighttoggle=false" : "wlsunset -t 5200 -S 0:00 -s 0:00 & eww update nighttoggle=true"} "  ")
+      )
+      (box :spacing 10
+        (button :class "test" :onclick "eww open actioncenter --toggle && hyprshot-gui &" "󰹑  ")
+        (button :class "test" :onclick "thunar ~ & eww open actioncenter --toggle &" " ")
+        (button :class "test" :onclick "bash lightmode.sh" "")
+      )
+    )
+  )
+  
+  (defwidget scalecenter [label value onchange]
+    (box :orientation "h"
+         :class "scalecenter"
+         :space-evenly false
+      (box :class "label" label)
+      (scale :min 0
+             :max 101
+             :active {onchange != ""}
+             :value value
+             :onchange onchange)
+    )
+  )
+  (defwindow actioncenter
+    :monitor 0
+    :exclusive "false"
+    :windowtype "normal"
+    :stacking "fg"
+    :geometry (geometry :x "61"
+                        :y "10"
+                        :width "300px"
+                        :height "300px"
+                        :anchor "top right")
+    :reserve (struts :side "right" :distance "4%")
+    (centerbox :orientation "v"
+      (topcenter)
+      (middlecenter)
+      (bottomcenter)
+    )
+  )
+  
+  (include "./music_center.yuck")
+  (include "./calendar.yuck")
+  (include "./variables.yuck")
+  
+  (defwidget time []
+    (box :class "time"
+         :orientation "h"
+         :space-evenly false
+         :valign "center"
+      (button :onclick "eww open actioncenter --toggle --no-daemonize &"
+        :onrightclick "eww open calendarcenter --toggle --no-daemonize &"
+      "${hours}:${minutes} ${pmoram}")
+    )
+  )
+  
+  (defpoll
+      hours
+        :interval "1s"
+          "date +%I")
+  (defpoll
+      minutes
+        :interval "1s"
+          "date +%M")
+  (defpoll
+      pmoram
+        :interval "1s"
+          "date +%p")
+  
+  (defwindow notificationwidget
+    :monitor 0
+    :exclusive "true"
+    :windowtype "dialog"
+    :stacking "fg"
+    :geometry (geometry :x "0"
+                        :y "0"
+                        :width "0px"
+                        :height "0px"
+                        :anchor "bottom right")
+    :reserve (struts :side "right" :distance "4%")
+    (revealer :transition "slideup" :duration "500ms" :reveal notificationreveal (box :orientation "h" :space-evenly "false"
+      (box :orientation "v" :space-evenly "false" :valign "center" :class "notificationbox"
+        (box :spacing 10 :space-evenly "false"
+          (label :class "summary" :text "${notification.summary}" :halign "start")
+          (label :class "notificationicon" :text {notification.source == "Spotify" ? "" : notification.source == "VOLUME" ? "󰋋" : notification.source == "firefox" ? "󰈹" : ""} :halign "start")
+        )
+        (label :class "body" :text "${notification.body}" :halign "start")
+      )
+    ))
+  )
+  
+  (defwindow bar
+    :monitor 0
+    :exclusive "true"
+    :focusable "false"
+    :windowtype "normal"
+    :stacking "fg"
+    :geometry (geometry :x "0"
+                        :y "0"
+                        :width "100%"
+                        :height "0px"
+                        :anchor "bottom center")
+    :reserve (struts :side "left" :distance "4%")
+    (bar)
+  )
