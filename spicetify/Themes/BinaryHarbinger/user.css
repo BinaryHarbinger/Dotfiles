@@ -1,0 +1,191 @@
+/* Expanded Cover Art Image (+ position fix) */
+.main-navBar-navBar > :nth-child(3) {
+    margin: 0 0 0 1px;
+    border-radius: 6px;
+}
+
+/* Collapsed Cover Art Image */
+.cover-art-image,
+.artist-artistOverview-sideBlock > div > section > div:nth-child(3) > section:nth-child(2) > div > img,
+.view-homeShortcutsGrid-image {
+    border-radius: 4px;
+}
+
+/*
+ Playlist Header
+ Search Category Card Image
+ List Cards
+ Local Files Card
+ Placeholder Profile Card
+ Artist Overview Side Block
+ */
+.main-entityHeader-shadow,
+.x-categoryCard-image,
+.x-entityImage-circle,
+.main-image-image,
+.main-cardImage-image,
+.main-cardImage-imageWrapper,
+.main-entityHeader-imagePlaceholder > div,
+.artist-artistOverview-sideBlock > div > section {
+    border-radius: 6px;
+}
+
+/* Circled Artist + Profile Cards (force) */
+.main-cardImage-circular,
+.main-entityHeader-imagePlaceholder,
+.main-entityHeader-circle {
+    border-radius: 50% !important;
+}
+
+/* Track List Image */
+.main-trackList-rowImage {
+    border-radius: 3px;
+}
+
+@property --progress-bar-transform { 
+    inherits: true; 
+    initial-value: 0%; 
+    syntax: '<percentage>'; 
+}
+
+.progress-bar {
+    transition: --progress-bar-transform 1s linear !important;
+}
+
+.progress-bar--isDragging {
+    transition-duration: 150ms !important;
+}
+
+/* Expanded Cover Art Image (+ position fix) */
+.main-navBar-navBar > :nth-child(3) {
+    margin: 0 0 0 1px;
+    border-radius: 6px;
+}
+
+/* Collapsed Cover Art Image */
+.cover-art-image,
+.artist-artistOverview-sideBlock > div > section > div:nth-child(3) > section:nth-child(2) > div > img,
+.view-homeShortcutsGrid-image {
+    border-radius: 4px;
+}
+
+/*
+ Playlist Header
+ Search Category Card Image
+ List Cards
+ Local Files Card
+ Placeholder Profile Card
+ Artist Overview Side Block
+ */
+.main-entityHeader-shadow,
+.x-categoryCard-image,
+.x-entityImage-circle,
+.main-image-image,
+.main-cardImage-image,
+.main-cardImage-imageWrapper,
+.main-entityHeader-imagePlaceholder > div,
+.artist-artistOverview-sideBlock > div > section {
+    border-radius: 6px;
+}
+
+/* Circled Artist + Profile Cards (force) */
+.main-cardImage-circular,
+.main-entityHeader-imagePlaceholder,
+.main-entityHeader-circle {
+    border-radius: 50% !important;
+}
+
+/* Track List Image */
+.main-trackList-rowImage {
+    border-radius: 3px;
+}
+
+/* Lyrics Background (Hide) */
+.lyrics-lyrics-background {
+    display: none;
+}
+
+/* Lyrics Content Customization */
+.lyrics-lyrics-contentWrapper > *:not(.lyrics-lyricsContent-active, 
+                                       .lyrics-lyricsContent-highlight, 
+                                       .lyrics-lyricsContent-provider, 
+                                       .lyrics-lyricsContent-description, 
+                                       .lyrics-lyricsContent-unsynced) {
+    color: #FFFFFF4D !important;
+}
+
+/* Lyrics Content Hover State */
+.lyrics-lyrics-contentWrapper > *:not(.lyrics-lyricsContent-active, 
+                                       .lyrics-lyricsContent-highlight, 
+                                       .lyrics-lyricsContent-provider, 
+                                       .lyrics-lyricsContent-description, 
+                                       .lyrics-lyricsContent-unsynced):hover {
+    color: #FFFFFF !important;
+}
+
+/* Highlighted Lyrics */
+.lyrics-lyricsContent-highlight {
+    color: #FFFFFF66;
+}
+
+/* Unsynced Lyrics */
+.lyrics-lyricsContent-unsynced {
+    color: #FFFFFF !important;
+}
+
+/* Unsynced Lyrics Hover State */
+.lyrics-lyricsContent-unsynced:hover {
+    color: #FFFFFF !important;
+}
+
+/* Provider and Description Content */
+.lyrics-lyricsContent-provider, 
+.lyrics-lyricsContent-description {
+    color: #FFFFFFB6 !important;
+}
+
+/* Centered Text for Lyrics */
+.lyrics-lyrics-contentWrapper {
+    text-align: center;
+}
+
+/* Main Menu and Player Sections Styling */
+
+/* Main Menu */
+.main-globalNav-searchInputContainer,
+.main-topBar-searchBar,
+.x-searchInput-searchInput {
+    border-radius: 6px !important;
+    border-collapse: separate;
+}
+
+/* Player */
+.main-nowPlayingView-aboutArtistV2FollowButton,
+.main-playPauseButton-button,
+.main-playlistEditDetailsModal-closeBtn {
+    border-radius: 6px !important;
+}
+
+/* General Border Radius Styling */
+.main-avatar-avatar, 
+.main-topBar-buddyFeed, 
+.main-topBar-button, 
+.main-coverSlotCollapsed-expandButton {
+    border-radius: 15% !important;
+}
+
+/* Other Buttons */
+.Button-sc-1dqy6lx-0,
+.Button-sc-y0gtbx-0,
+.main-playPauseButton-button, 
+.main-embedWidgetGenerator-closeBtn,
+.Chip__ChipComponent-sc-ry3uox-0 {
+    border-radius: 6px !important;
+}
+
+/* Home button background removal */
+.main-globalNav-homeButton,
+.main-globalNav-homeButton > div {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
