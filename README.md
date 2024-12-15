@@ -33,6 +33,8 @@
 
 [**🔄Window Switcher**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/switcher.png)
 
+[**📺Desktop Widgets**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/desktop.png)
+
 ----------------------------------------------------------------------------------------
 
 ## How to install?
