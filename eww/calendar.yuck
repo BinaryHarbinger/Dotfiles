@@ -1,39 +1,9 @@
-(defvar calendarliteral "")
-
-(defwindow calendarcenter
-  :monitor 0
-  :exclusive "false"
-  :windowtype "normal"
-  :stacking "overlay"
-  :geometry (geometry :x "0"
-                      :y "0"
-                      :width "0px"
-                      :height "0px"
-                      :anchor "bottom right")
-  :reserve (struts :side "right" :distance "4%")
-  (box
-    :orientation "v" :space-evenly "false" :spacing 10
-    (box :orientation "v" :space-evenly "false" :spacing 10
-        :class "notificationhistory"
-        :style { notifsliteral == "" ? "background-color:transparent;" : ""} 
-        (literal :content notifsliteral)
-        (box :orientation "v" :space-evenly "false" :valign "end" :spacing 10
-            (box :orientation "h" :spacing 10
-                (button :style { notifsliteral == "" ? "font-size:0px; background-color:transparent;" : ""} " 󰂛   Silence")
-                (button :onclick `truncate -s 0 ~/.config/eww/notifhistory` :style { notifsliteral == "" ? "font-size:0px; background-color:transparent;" : ""} "   Clear All")
-            )
-        )
-    )
-    (box :class "calendarcenter1" (box 
-        :class "calendar"
-        :valign "center"
-        :halign "center"    
-        :orientation "v"
-        :space-evenly "false"
-        (label :class "month" :text "${monthname}  -  2024" :halign "start")
-        (box :class "actualcalendar" :orientation "v" :valign "center" :halign "center" :space-evenly "false"
-            (literal :content calendarliteral)
-        )
-    ))
-  )
-)
+(defwindow calendar
+    :monitor 0
+    :windowtype "normal"
+    :wm-ignore true
+    :geometry (geometry :anchor "top right" :x 60 :y 15 :width "312px" :height "250px")
+    (calendar :tooltip "${date.d}-${date.m}-${date.y}" :day {date.d} :month {date.m} :year {date.y}))
+  
+  (defpoll date :interval "100s" :initial `{"d":"1","m":"1","y":"0"}`
+    `date '+{"d":"%d","m":"%m","y":"%Y"}'`)

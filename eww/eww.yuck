@@ -198,17 +198,6 @@
   (include "./calendar.yuck")
   (include "./variables.yuck")
   
-  (defwidget time []
-    (box :class "time"
-         :orientation "h"
-         :space-evenly false
-         :valign "center"
-      (button :onclick "eww open actioncenter --toggle --no-daemonize &"
-        :onrightclick "eww open calendarcenter --toggle --no-daemonize &"
-      "${hours}:${minutes} ${pmoram}")
-    )
-  )
-  
   (defpoll
       hours
         :interval "1s"

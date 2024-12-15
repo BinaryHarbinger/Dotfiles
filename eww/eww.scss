@@ -26,10 +26,7 @@
   padding: 0px 15px;
   margin-right: 5px;
 }
-.connectivity{
-  padding: 0px 15px 0px 12px;
-  margin-right: 5px;
-}
+
 .wifi{
   margin-right: 6px;
 }
@@ -55,57 +52,6 @@
   font-weight: 500;
   font-size: 15px;
   min-height: 30px;
-  background-color: #252525;
-}
-
-.workspaces{
-  font-weight: 600;
-  background-color: #252525;
-  border-radius: 50px;
-  margin: 5px 0px;
-  padding: 0px 3px;
-}
-
-.workspaces button{
-  padding: 0px 7px 0px 7px;
-  margin: 4px 3px 4px 3px;
-  font-size: 15px;
-  border-radius: 50px;
-}
-
-.workspaces button.focused, .workspaces button:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(245, 245, 245);
-}
-
-.launcher {
-  font-size: 20px;
-  padding: 0px 10px 0px 8px; 
-  border-top-right-radius: 50px; 
-  border-bottom-right-radius: 50px;
-  margin: 5px 10px 5px 0px;
-  min-height: 30px;
-  color: white;
-  background-color: #252525;
-}
-
-.powermenu{
-  background-color: #111111;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.powermenu button{
-  transition: 0.2s;
-  color:white;
-}
-.sleep{
-  border-top-right-radius: 20px;
-}
-.poweroff{
-  border-top-left-radius: 20px;
-
-}
-.powermenu button:hover{
   background-color: #252525;
 }
 
@@ -251,3 +197,48 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+.calendar {
+  font-family: Fira Mono;
+  background: #1c1c2e;
+  font-size: 15px;
+  padding: 2px 5px;
+  border:2px solid #b4befe ;
+  border-radius: 10px;
+
+  &.view {
+    background-color: #11111b;
+  }
+
+  &.button {
+    background: transparent;
+    border-radius: 2px;
+    color: #b4befe;
+
+    &:hover {
+      color: #71C0BA;
+    }
+
+    &:disabled {
+      color: #b4befe;
+    }
+  }
+
+  &.header {
+    background-color: #1c1c2e;
+    border-radius: 5px;
+  }
+
+  &.highlight {
+    color: #3D464E;
+  }
+
+  &:selected {
+    color: #11111b;
+    background: #b4befe;
+    border-radius: 5px;
+  }
+
+  &:indeterminate {
+    color: #606792;
+  }}
