@@ -8,7 +8,7 @@ yay -Syu --noconfirm --needed
 
 # Install required packages, but skip already installed ones
 PACKAGES=(
-  breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch
+  breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpolkitagent-git
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync mpv hyprpicker eww pamixer
   network-manager-applet graphite-gtk-theme-nord-normal-git colloid-icon-theme-git pamixer brightnessctl hyprswitch avizo
