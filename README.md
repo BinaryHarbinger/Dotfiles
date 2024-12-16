@@ -17,23 +17,25 @@
 
 ## *Example Photos*
 
-[**🔍Rofi**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/rofi.png)
+[**🔍 Rofi**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/rofi.png)
 
-[**🎧Spicetify**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/spicetify.png)
+[**🎧 Spicetify**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/spicetify.png)
 
-[**⚙️Center**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/center.png)
+[**⚙️ Action Center**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/center.png)
 
-[**🎵Player**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/Player.png)
+[**🎵 Player**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/Player.png)
 
-[**🔔Swaync**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/swaync.png)
+[**🔔 Swaync**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/swaync.png)
 
-[**⌨️Terminal Applications**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/terminal.png)
+[**⌨️ Terminal Applications**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/terminal.png)
 
-[**📺On Screen Display**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/osd.png)
+[**❗On Screen Display**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/osd.png)
 
-[**🔄Window Switcher**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/switcher.png)
+[**🔄 Window Switcher**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/switcher.png)
 
-[**📺Desktop Widgets**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/desktop.png)
+[**💻 Desktop Widgets**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/desktop.png)
+
+[**🔒 Lock Screen**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/hyprlock.png)
 
 ----------------------------------------------------------------------------------------
 
