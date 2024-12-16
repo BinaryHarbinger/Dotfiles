@@ -25,7 +25,7 @@
       )
       (box :class "musicbuttons" :orientation "h" :halign "center" :spacing 30
         (button :class "musicbutton" :onclick "playerctl previous &" "󰒮")
-        (button :class "musicbutton" :onclick "playerctl play-pause &" {playingorpaused != "Paused" ? "󰏤" : "󰐊" })
+        (button :class "playbutton" :onclick "playerctl play-pause &" {playingorpaused != "Paused" ? "󰏤" : "󰐊" })
         (button :class "musicbutton" :onclick "playerctl next &" "󰒭")
       )
     )

@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "hyprlock",
+    "action" : "~/.config/hypr/scripts/playerctlock.sh --arturl&&hyprlock",
     "text" : "Lock",
     "keybind" : "l"
 }
