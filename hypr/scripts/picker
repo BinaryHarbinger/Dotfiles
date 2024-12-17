@@ -1,0 +1,7 @@
+#!/bin/bash
+COLOR=$(hyprpicker)
+if [ $? -eq 0 ]; then
+    notify-send "Picked color " "$COLOR"
+else
+    notify-send "Hyprpicker Error" "Unable to pick a color"
+fi
