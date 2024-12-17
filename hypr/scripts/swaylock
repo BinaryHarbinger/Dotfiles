@@ -1,3 +1,0 @@
-#!/bin/bash
-
-swaylock -C $XDG_CONFIG_HOME/swaylock/config
