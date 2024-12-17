@@ -57,11 +57,10 @@
 }
 
 .pfp, .musicart {
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 80px;
+  min-height: 80px;
   border-radius: 10px;
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -73,7 +72,7 @@
   background-position: center;
   border: 2px solid #b4befe;
   padding: 0px;
-  padding-top: 180px;
+  padding-top: 0px;
   margin: 0px 10px;
   margin-bottom: 20px;
 }
@@ -96,7 +95,7 @@
 .scalecenter label{
   font-size: 18px;
   color: #b4befe;
-  margin: 0px 15px 0px 5px;
+  margin: 0px 20px 0px 0px;
 }
 
 .test, .testenabled{
@@ -149,7 +148,7 @@
   background-color: #1a1a29;
   min-width: 170px;
   padding: 5px 20px;
-  margin: 0px 5px;
+  margin: 3px 5px;
   border-radius: 10px;
 }
 .musicbutton, .playbutton{
@@ -208,7 +207,8 @@
 .musicart{
   border: 1px solid #b4befe;
   background-image: unset;
-  margin: 8px 3px;
+  margin: 0px 0px;
+  padding: 0px 20px;
 }
 
 .summary{

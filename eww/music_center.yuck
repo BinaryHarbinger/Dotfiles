@@ -5,12 +5,12 @@
   :stacking "overlay"
   :geometry (geometry :x "0"
                       :y "10"
-                      :width "420px"
+                      :width "450px"
                       :height "120px"
                       :anchor "top center")
   :reserve (struts :side "right" :distance "4%")
   (box :orientation "h" :space-evenly "false"
-    (box :class "musicart" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:84px; min-width: 84px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
+    (box :class "musicart" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:80px; min-width: 75px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
     (box :class "musiccontrols" :orientation "v" :space-evenly "false" :spacing 5
       (label :class "musictitle" :text {musicshort} :valign "start" :halign "center")
       (box :orientation "h"

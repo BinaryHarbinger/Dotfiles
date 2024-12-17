@@ -1,6 +1,6 @@
 (defwindow desktopmusic
   :monitor 0
-  :exclusive "false"
+  :exclusive "true"
   :windowtype "normal"
   :stacking "bg"
   :geometry (geometry :x "20"
@@ -10,7 +10,7 @@
                       :anchor "bottom left")
   :reserve (struts :side "right" :distance "4%")
   (box :orientation "v" :space-evenly "false"
-    (box :class "musicartdesk" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:84px; min-width: 84px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
+    (box :class "musicartdesk" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:280px; min-width: 80px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
     (box :class "musiccontrols" :orientation "v" :space-evenly "false" :spacing 5
       (label :class "musictitle" :text {musicshort} :valign "start" :halign "center")
       (box :orientation "h"
