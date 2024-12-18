@@ -10,7 +10,7 @@
                       :anchor "bottom left")
   :reserve (struts :side "right" :distance "4%")
   (box :orientation "v" :space-evenly "false"
-    (box :class "musicartdesk" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:280px; min-width: 80px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
+    (box :class "musicartdesk" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:280px; min-width: 310px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
     (box :class "musiccontrols" :orientation "v" :space-evenly "false" :spacing 5
       (label :class "musictitle" :text {musicshort} :valign "start" :halign "center")
       (box :orientation "h"
@@ -34,11 +34,11 @@
 
 (defwidget status []
 (box :class "status" :orientation "v" :valign "center" :halign "center" :spacing 8
-  (scalecenter :label ""
+  (scalestat :label ""
       :value "${volume}"
       :onchange "pamixer --set-volume {}")
 
-(scalecenter :label ""
+(scalestat :label ""
       :value "${brightness}"
       :onchange "brightnessctl set {}%")
 )
@@ -59,9 +59,9 @@
   )
 )
 
-(defwidget scalecenter [label value onchange]
+(defwidget scalestat [label value onchange]
 (box :orientation "h"
-     :class "scalecenter"
+     :class "scalestat"
      :space-evenly false
   (box :class "label" label)
   (scale :min 0
@@ -78,7 +78,7 @@
 :stacking "bg"
 :geometry (geometry :x "20"
                     :y "20"
-                    :width "310px"
+                    :width "355px"
                     :height "100px"
                     :anchor "bottom left")
 :reserve (struts :side "left" :distance "0%")

@@ -1,4 +1,4 @@
-(defpoll volume :interval "1s"
+(defpoll volume :interval "0s"
   "scripts/getVol.sh")
 (defpoll networkstatus :interval "1s"
   `nmcli -t -f active,ssid dev wifi | grep "yes" | cut -c5-`)

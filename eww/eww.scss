@@ -77,14 +77,14 @@
   margin-bottom: 20px;
 }
 
-.scalecenter scale trough highlight {
+.scalecenter scale trough highlight,.scalestat scale trough highlight {
   all: unset;
   background-color: #b4befe;
   color: #131320;
   border-radius: 100px;
 }
 
-.scalecenter scale trough {
+.scalecenter scale trough,.scalestat scale trough {
   all: unset;
   background-color: #0b0b11;
   border-radius: 50px;
@@ -92,11 +92,15 @@
   min-width: 225px;
   margin-right: 5px;
 }
-.scalecenter label{
+.scalecenter label,.scalestat label{
   font-size: 18px;
   color: #b4befe;
   margin: 0px 20px 0px 0px;
 }
+
+.scalecenter scale trough,.scalestat scale trough {
+ min-width: 260px;
+ }
 
 .test, .testenabled{
   min-width: 80px;
