@@ -10,7 +10,7 @@
                       :anchor "bottom left")
   :reserve (struts :side "right" :distance "4%")
   (box :orientation "v" :space-evenly "false"
-    (box :class "musicartdesk" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:280px; min-width: 310px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
+    (box :class "musicartdesk" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:260px; min-width: 200px; margin-right: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
     (box :class "musiccontrols" :orientation "v" :space-evenly "false" :spacing 5
       (label :class "musictitle" :text {musicshort} :valign "start" :halign "center")
       (box :orientation "h"
@@ -78,7 +78,7 @@
 :stacking "bg"
 :geometry (geometry :x "20"
                     :y "20"
-                    :width "355px"
+                    :width "310px"
                     :height "100px"
                     :anchor "bottom left")
 :reserve (struts :side "left" :distance "0%")

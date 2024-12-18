@@ -65,10 +65,10 @@
 }
 
 .musicartdesk {
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 200px;
+  min-height: 200px;
   border-radius: 10px;
-  background-size: 300px;
+  background-size: 260px;
   background-position: center;
   border: 2px solid #b4befe;
   padding: 0px;
@@ -81,14 +81,14 @@
   all: unset;
   background-color: #b4befe;
   color: #131320;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .scalecenter scale trough,.scalestat scale trough {
   all: unset;
   background-color: #0b0b11;
   border-radius: 50px;
-  min-height: 20px;
+  min-height: 17px;
   min-width: 225px;
   margin-right: 5px;
 }
@@ -99,7 +99,7 @@
 }
 
 .scalecenter scale trough,.scalestat scale trough {
- min-width: 260px;
+ min-width: 230px;
  }
 
 .test, .testenabled{
@@ -195,14 +195,14 @@
   background-color: #b4befe;
   color: #b4befe;
   border-radius: 10px;
-  min-width: 10px;
+  min-width: 5px;
 }
 .musicscale scale trough {
   all: unset;
   background-color: #25253b;
   border-radius: 50px;
-  min-height: 10px;
-  min-width: 170px;
+  min-height: 6px;
+  min-width: 150px;
   margin: 0px 10px;
 }
 .musicscale label{
