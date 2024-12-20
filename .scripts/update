@@ -4,5 +4,8 @@ echo Arch Linux Update
 yay --noconfirm
 yay -Scc --noconfirm
 echo
+echo Updating Flatpaks
+flatpak update
+echo
 echo Triming Disks
 sudo fstrim -Av

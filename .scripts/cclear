@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo Clearing Cache...
+find ~/.cache -mindepth 1 -maxdepth 1 ! -name "spotify" -exec rm -rf {} +
+echo Cache Cleared.
