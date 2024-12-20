@@ -145,7 +145,6 @@ tooltip label{
 	font-family: "JetBrainsMono Nerd Font";
 	padding-left: 10px;
   padding-right: 3px;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 	border: 2px solid #b4befe;
 	border-right: 0px;
 	border-radius: 10px 0px 0px 10px;
@@ -221,9 +220,9 @@ tooltip label{
 	padding: 0px 8px;
 }
 
-#network {
-	padding-left: 6px;
-	padding-right: 12px;
+#network,#pulseaudio {
+	padding: 0px 10px;
+	padding-right: 15px;
 }
 
 #custom-swaync{
@@ -266,7 +265,7 @@ tooltip label{
 	background-color: @bg_hover;
 }
 
-#memory, #custom-search,#custom-os_button,#custom-runner,#mpris {
+#memory, #custom-search,#custom-os_button,#custom-runner,#mpris,#custom-cafein {
 	font-family: "Symbols Nerd Font";
     background-color: rgba(17, 17, 27, 1);
     /*color: #83A598;*/
@@ -280,9 +279,10 @@ tooltip label{
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#custom-search:hover,#custom-os_button:hover,#custom-runner:hover,#mpris:hover{
+#custom-search:hover,#custom-os_button:hover,#custom-runner:hover,#mpris:hover,#custom-cafein:hover{
 	background-color: #26263d;
 }
+
 
 
 #cpu {

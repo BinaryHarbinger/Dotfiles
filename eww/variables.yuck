@@ -1,5 +1,4 @@
-(defpoll volume :interval "0s"
-  "scripts/getVol.sh")
+
 (defpoll networkstatus :interval "1s"
   `nmcli -t -f active,ssid dev wifi | grep "yes" | cut -c5-`)
 (defpoll bluetoothstatus :interval "1s"
@@ -32,7 +31,8 @@
   "playerctl metadata --format '{{ title }} - {{ artist }}' || true")
 (defpoll musicshort :interval "1s"
   `playerctl metadata --format '{{ title }}' | cut -c1-30`)
-
+(defpoll volume :interval "0s"
+  "scripts/getVol.sh")
 
 (defvar ismusicopenornot false)
 (defvar bluetoggle false)
