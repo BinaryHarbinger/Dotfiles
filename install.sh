@@ -43,6 +43,7 @@ echo "Moving configuration files..."
 rm -rf ./preview
 cp -rf ./* ~/.config/
 chmod +x ~/.config/hypr/scripts/*
+chmod +x ~/.config/eww/scripts/*
 
 # Apply Spicetify theme
 echo "Applying Spicetify theme..."
