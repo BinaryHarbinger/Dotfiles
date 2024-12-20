@@ -10,218 +10,181 @@
 //
 
 {
-    "layer": "top",
-    "position": "top",
-    "mod": "dock",
-    "exclusive": true,
-    "gtk-layer-shell": true,
-    "margin-bottom": -1,
-    "passthrough": false,
-    "height": -30,
-    "modules-left": [   
-        "custom/search","custom/runner","custom/os_button","custom/cafein","mpris",
-        "memory","cpu"
-    ],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": [
-        "tray",
-        "pulseaudio",
-        "network",
-        "battery",
-        "backlight",
-        "power-profiles-daemon",
-        "hyprland/language",
-        "clock",
-        "custom/swaync"
-    ],
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "ENG",
-        "format-tr": "TR"
-    },
-
-
-    "custom/search": {
-        "format": "",
-        "on-click": "~/.config/hypr/scripts/launcher",
-        "tooltip": false,
-    },
-
-    "custom/runner": {
-        "format": "",
-        "on-click": "~/.config/hypr/scripts/runner",
-        "tooltip": false,
-    },
-
-    "mpris": {
-    "on-click-right": "eww open musiccenter --toggle --no-daemonize &",
-	"format": "{player_icon}",
-	"format-paused": "{status_icon}",
-	"player-icons": {
-		"default": "▶  Playing",
-		"mpv": "🎵"
-	},
-	"status-icons": {
-		"paused": "⏸  Paused"
-	},
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "margin-bottom": -1,
+  "passthrough": false,
+  "height": -30,
+  "modules-left": [
+    "custom/search", "custom/runner", "custom/os_button", "custom/cafein", "mpris",
+    "memory", "cpu"
+  ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "tray", "pulseaudio", "network", "battery", "backlight", "power-profiles-daemon",
+    "hyprland/language", "clock", "custom/swaync"
+  ],
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "ENG",
+    "format-tr": "TR"
+  },
+  "custom/search": {
+          "format": "",
+          "on-click": "~/.config/hypr/scripts/rofilaunch.sh --drun",
+          "tooltip": false,
+      },
+  "custom/runner": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/rofilaunch.sh --run",
     "tooltip": false
-},
-
-"bluetooth": {
-	"format": "",
-	"format-connected": " {device_alias}",
-	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click" : "blueman-manager"
-},
-
-    "power-profiles-daemon": {
-  "format": "{icon}",
-  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-  "tooltip": true,
-  "format-icons": {
-    "default": "",
-    "performance": "",
-    "balanced": "",
-    "power-saver": ""
-  }
-},
-
-    "backlight": {
+  },
+  "mpris": {
+    "on-click-right": "eww open musiccenter --toggle --no-daemonize &",
+    "format": "{player_icon}",
+    "format-paused": "{status_icon}",
+    "player-icons": {
+      "default": "▶  Playing",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸  Paused"
+    },
+    "tooltip": false
+  },
+  "bluetooth": {
+    "format": "",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "blueman-manager"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  "backlight": {
     "on-click": "eww open actioncenter --toggle --no-daemonize &",
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["", ""]
-},
-
-    "custom/swaync": {
-        "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-          "notification": "<span foreground='#7b82c6'><sup></sup></span>",
-          "none": "",
-          "dnd-notification": "<span foreground='red'><sup></sup></span>",
-          "dnd-none": "",
-          "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-          "inhibited-none": "",
-          "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-          "dnd-inhibited-none": ""
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-      },
-
-    "hyprland/workspaces": {
-        "icon-size": 32,
-        "spacing": 16,
-        "on-scroll-up": "hyprctl dispatch workspace r+1",
-        "on-scroll-down": "hyprctl dispatch workspace r-1",
-        "persistent-workspaces": {
-              "*": 4}
+  },
+  "custom/swaync": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='#7b82c6'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
     },
-    "custom/os_button": {
-        "format": "",
-        "on-click": "~/.config/hypr/scripts/submenu",
-        "tooltip": false
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "hyprland/workspaces": {
+    "icon-size": 32,
+    "spacing": 16,
+    "on-scroll-up": "hyprctl dispatch workspace r+1",
+    "on-scroll-down": "hyprctl dispatch workspace r-1",
+    "persistent-workspaces": { "*": 4 }
+  },
+  "custom/os_button": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/rofilaunch.sh --menu",
+    "tooltip": false
+  },
+  "custom/cafein": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/cafein toggle",
+    "tooltip": false
+  },
+  "wlr/taskbar": {
+    "format": "{icon} {title:.18}",
+    "icon-size": 18,
+    "spacing": 3,
+    "on-click-middle": "close",
+    "tooltip-format": "{title}",
+    "ignore-list": [],
+    "on-click": "activate"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 3
+  },
+  "clock": {
+    "format": "{:%R}",
+    "on-click": "eww open calendar --toggle --no-daemonize &",
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{icon} {essid}",
+    "format-icons": [
+      "󰤯", "󰤟", "󰤢", "󰤢", "󰤨"
+    ],
+    "on-click": "eww open actioncenter --toggle --no-daemonize &",
+    "on-click-right": "kitty -e 'nmtui'"
+  },
+  "battery": {
+    "on-click": "eww open actioncenter --toggle --no-daemonize &",
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
     },
-
-    "custom/cafein": {
-        "format": "",
-        "on-click": "~/.config/hypr/scripts/cafein toggle",
-        "tooltip": false
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+    ]
+  },
+  "pulseaudio": {
+    "max-volume": 150,
+    "scroll-step": 10,
+    "format": "{icon}",
+    "tooltip-format": "{icon}  {volume}%",
+    "format-icons": {
+      "format-muted": "",
+      "default": [
+        "", "", ""
+      ]
     },
-
-    "wlr/taskbar": {
-        "format": "{icon} {title:.18}",
-        "icon-size": 18,
-        "spacing": 3,
-        "on-click-middle": "close",
-        "tooltip-format": "{title}",
-        "ignore-list": [],
-        "on-click": "activate"
-    },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 3
-    },
-    "clock": {
-        "format":"{:%R}",
-        "on-click": "eww open calendar --toggle --no-daemonize &",
-        "tooltip": false,
-    },
-    "network": {
-        "format-wifi": "{icon}",
-        "format-ethernet": "",
-        "format-disconnected": "󰌙",
-        "tooltip-format": "{icon} {essid}",
-        "format-icons": [
-            "󰤯",
-            "󰤟",
-            "󰤢",
-            "󰤢",
-            "󰤨"
-        ],
-        "on-click": "eww open actioncenter --toggle --no-daemonize &",
-        "on-click-right": "kitty -e 'nmtui'"
-    },
-    "battery": {
-        "on-click": "eww open actioncenter --toggle --no-daemonize &",
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": [
-            "󰂎",
-            "󰁺",
-            "󰁻",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󰁹"
-        ]
-    },
-    "pulseaudio": {
-        "max-volume": 150,
-        "scroll-step": 10,
-        "format": "{icon}",
-        "tooltip-format": "{icon}  {volume}%",
-        "format-icons": {
-            "format-muted": "",
-            "default": [
-                "",
-                "",
-                ""
-            ]
-        },
-        "on-click":"eww open actioncenter --toggle --no-daemonize &",
-        "on-click-right": "pavucontrol"
-    },
-
-    "memory": {
+    "on-click": "eww open actioncenter --toggle --no-daemonize &",
+    "on-click-right": "pavucontrol"
+  },
+  "memory": {
     "format": "󰍛 {}%",
     "format-alt": "󰍛 {used}/{total} GiB",
     "interval": 5
   },
-
   "cpu": {
     "format": "󰻠 {usage}%",
     "format-alt": "󰻠 {avg_frequency} GHz",
     "interval": 5
-  },
+  }
 }

@@ -11,293 +11,302 @@
 */
 
 
-/*base background color*/
+/* Base background color for general elements */
 @define-color bg_main rgba(25, 25, 25, 0.65);
 @define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
 
-
-/*base background color of selections */
+/* Background color for selections */
 @define-color bg_hover #26263d;
-/*base background color of active elements */
+/* Background color for active elements */
 @define-color bg_active rgba(100, 100, 100, 0.5);
 
-/*base border color*/
+/* Border color for general elements */
 @define-color border_main rgba(180, 190, 254, 0.2);
 
-/*text color for entries, views and content in general */
+/* Text color for entries, views, and general content */
 @define-color content_main #b4befe;
-/*text color for entries that are unselected */
+/* Text color for unselected entries */
 @define-color content_inactive #b4befe;
 
 * {
-	text-shadow: none;
-	box-shadow: none;
-  border: none;
-  border-radius: 0;
-	font-family: "Fira Code";
-  font-weight: 600;
-  font-size: 12.7px;	
+    text-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    font-family: "Fira Code";
+    font-weight: 600;
+    font-size: 12.7px;    
 }
 
 window#waybar {
-  background:  rgba(17, 17, 27, 0.1);
-  color: @content_main;
+    background: rgba(17, 17, 27, 0.1);
+    color: @content_main;
 }
 
 tooltip {
-  background: @bg_main_tooltip;
-  border-radius: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: @border_main;
+    background: @bg_main_tooltip;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @border_main;
 }
-tooltip label{
-  color: @content_main;
+tooltip label {
+    color: @content_main;
 }
 
+/* Custom widget for sway notifications */
+#custom-swaync {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 1px;
+    background-color: rgba(17, 17, 27, 1);
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 10px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 2px solid #b4befe;
+    border-radius: 10px;
+}
 
-#custom-swaync {	font-family: "JetBrainsMono Nerd Font";
-	font-size: 1px;
-	background-color: rgba(17, 17, 27, 1);
-	  padding-left: 12px;
-	  padding-right: 12px;
-	  margin-left: 10px;
-	  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-	  border: 2px solid #b4befe;
-	  border-radius: 10px;
-  }
-
+/* Workspaces styling */
 #workspaces {
-  color: transparent;
-	margin-right: 1.5px;
-	margin-left: 1.5px;
-	border-radius: 20px;
-	border: 2px solid #b4befe;
-	background-color: rgba(17, 17, 27, 1);
-	padding: 0px 25px ;
+    color: transparent;
+    margin-right: 1.5px;
+    margin-left: 1.5px;
+    border-radius: 20px;
+    border: 2px solid #b4befe;
+    background-color: rgba(17, 17, 27, 1);
+    padding: 0px 25px;
 }
 #workspaces button {
-	border-radius: 3px;
-	color: #484872;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-	padding: 0px 8px;
-	margin: 3px 4px;
-	background-color: #939cda;
-	border-radius: 15px;
-	border-color: #11111b;
+    border-radius: 3px;
+    color: #484872;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 0px 8px;
+    margin: 3px 4px;
+    background-color: #939cda;
+    border-radius: 15px;
+    border-color: #11111b;
 }
 #workspaces button.active {
-	color: #222236;
-	border-radius: 15px;
-	background: #b4befe;
-	padding: 0px 16px;
+    color: #222236;
+    border-radius: 15px;
+    background: #b4befe;
+    padding: 0px 16px;
 }
 #workspaces button.focused {
-  color: @bg_active;
+    color: @bg_active;
 }
 #workspaces button.urgent {
-	background:  rgba(255, 200, 0, 0.35);
-	border-bottom: 0px dashed @warning_color;
-	color: @warning_color;
+    background: rgba(255, 200, 0, 0.35);
+    border-bottom: 0px dashed @warning_color;
+    color: @warning_color;
 }
 #workspaces button:hover {
-  background: #b4bbeb;
-	color: @content_main;
+    background: #b4bbeb;
+    color: @content_main;
 }
 
+/* Styling for system info panels like CPU, Disk, Memory */
 #cpu, #disk, #memory {
-	padding:3px;
+    padding: 3px;
 }
 
+/* Window styling */
 #window {
-  border-radius: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-#tray{
-  margin-left: 5px;
-  margin-right: 5px;
-  border: 2px solid #b4befe;
-	border-radius: 10px;
-	padding: 0px 10px;
-	margin-right: 20px;
-	background-color: rgba(17, 17, 27, 1);
-  
+/* Tray panel styling */
+#tray {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid #b4befe;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin-right: 20px;
+    background-color: rgba(17, 17, 27, 1);
 }
 #tray > .passive {
-	border-bottom: none;
+    border-bottom: none;
 }
 #tray > .active {
-	border-bottom: 2px solid white;
+    border-bottom: 2px solid white;
 }
 #tray > .needs-attention {
-	border-bottom: 2px solid @warning_color;
+    border-bottom: 2px solid @warning_color;
 }
 #tray > widget {
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #tray > widget:hover {
-	background: @bg_hover;
+    background: @bg_hover;
 }
 
+/* Pulseaudio widget styling */
 #pulseaudio {
-	font-family: "JetBrainsMono Nerd Font";
-	padding-left: 10px;
-  padding-right: 3px;
-	border: 2px solid #b4befe;
-	border-right: 0px;
-	border-radius: 10px 0px 0px 10px;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-	background-color: rgba(17, 17, 27, 1);
-
+    font-family: "JetBrainsMono Nerd Font";
+    padding-left: 10px;
+    padding-right: 3px;
+    border: 2px solid #b4befe;
+    border-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: rgba(17, 17, 27, 1);
 }
 
+/* Network and Battery widget styling */
 #network, #battery {
-	background-color: rgba(17, 17, 27, 1);
-	padding-left: 3px;
-  padding-right: 3px;
-  border: 2px solid #b4befe;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px;
-  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: rgba(17, 17, 27, 1);
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 2px solid #b4befe;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#network:hover, #pulseaudio:hover{
-	background-color: @bg_hover;
+/* Hover effect for network and pulseaudio */
+#network:hover, #pulseaudio:hover {
+    background-color: @bg_hover;
 }
 
+/* Language widget styling */
 #language {
-	background-color: rgba(17, 17, 27, 1);
-  padding-left: 5px;
-  padding-right: 5px;
-  border: 2px solid #b4befe;
-	border-left: 0px;
-	border-right: 0px;
-	border-radius: 0px;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: rgba(17, 17, 27, 1);
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid #b4befe;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+/* Clock widget styling */
 #clock {
-	background-color: rgba(17, 17, 27, 1);
-  padding-right: 15px;
-  padding-left: 15px;
-  border: 2px solid #b4befe;
-	border-left: 0px;
-	border-radius: 0px 10px 10px 0px;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: rgba(17, 17, 27, 1);
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 2px solid #b4befe;
+    border-left: 0px;
+    border-radius: 0px 10px 10px 0px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #clock:hover {
-	background: @bg_hover;
+    background: @bg_hover;
 }
 
-#battery{
-	background-color: rgba(17, 17, 27, 1);
-	padding-left: 8px;
-	padding-right: 8px;
-}
-
-#battery:hover {
-	background-color: @bg_hover;
-}
-#bluetooth{
-	padding: 0px 10px;
-	font-size: 14px;
-	font-family: "Fira Code";
-}
-
-#bluetooth.disabled, #bluetooth.off{
-	color: #565858;
-}
-
-#bluetooth.on, #bluetooth.connected{
-	color: #6f7dd8;
-}
-
-#custom-swaync, #network, #pulseaudio{
-	font-size: 20px;
-	padding: 0px 8px;
-}
-
-#network,#pulseaudio {
-	padding: 0px 10px;
-	padding-right: 15px;
-}
-
-#custom-swaync{
-	color: rgb(255, 255, 255);
-	padding-right: 13px; 
-}
-
-#custom-swaync:hover{
-	background-color: @bg_hover;
-}
-
-#power-profiles-daemon{
-	background-color: rgba(17, 17, 27, 1);
-	color: rgb(104, 131, 223);
-	padding: 0px 10px;
-	padding-right: 15px;
-	font-size: 20px;
-	border: 2px solid #b4befe;
-	border-left: 0px;
-	border-right: 0px;
-	border-radius: 0px;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#power-profiles-daemon:hover{
-	background-color: @bg_hover;
-}
-
-#backlight {
-	background-color: rgba(17, 17, 27, 1);
-	padding: 0px 10px;
-	border: 2px solid #b4befe;
-	border-left: 0px;
-	border-right: 0px;
-	border-radius: 0px;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#backlight:hover{
-	background-color: @bg_hover;
-}
-
-#memory, #custom-search,#custom-os_button,#custom-runner,#mpris,#custom-cafein {
-	font-family: "Symbols Nerd Font";
+/* Battery widget hover effect */
+#battery {
     background-color: rgba(17, 17, 27, 1);
-    /*color: #83A598;*/
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#battery:hover {
+    background-color: @bg_hover;
+}
+
+/* Bluetooth widget styling */
+#bluetooth {
+    padding: 0px 10px;
+    font-size: 14px;
+    font-family: "Fira Code";
+}
+
+/* Bluetooth widget status colors */
+#bluetooth.disabled, #bluetooth.off {
+    color: #565858;
+}
+#bluetooth.on, #bluetooth.connected {
+    color: #6f7dd8;
+}
+
+/* Sway notification custom widget and other widgets */
+#custom-swaync, #network, #pulseaudio {
+    font-size: 20px;
+    padding: 0px 8px;
+}
+
+#network, #pulseaudio {
+    padding: 0px 10px;
+    padding-right: 15px;
+}
+
+#custom-swaync {
+    color: rgb(255, 255, 255);
+    padding-right: 13px; 
+}
+
+#custom-swaync:hover {
+    background-color: @bg_hover;
+}
+
+/* Power profile daemon widget styling */
+#power-profiles-daemon {
+    background-color: rgba(17, 17, 27, 1);
+    color: rgb(104, 131, 223);
+    padding: 0px 10px;
+    padding-right: 15px;
+    font-size: 20px;
+    border: 2px solid #b4befe;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#power-profiles-daemon:hover {
+    background-color: @bg_hover;
+}
+
+/* Backlight widget styling */
+#backlight {
+    background-color: rgba(17, 17, 27, 1);
+    padding: 0px 10px;
+    border: 2px solid #b4befe;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#backlight:hover {
+    background-color: @bg_hover;
+}
+
+/* Styling for memory, search, os button, etc. */
+#memory, #custom-search, #custom-os_button, #custom-runner, #mpris, #custom-cafein {
+    font-family: "Symbols Nerd Font";
+    background-color: rgba(17, 17, 27, 1);
+    font-weight: bold;
     border-radius: 16px;
     padding: 0px 10px 0px 10px;
-    font-weight: bold;
-	border: 2px solid #b4befe;
-	border-left: 0px;
-	border-right: 0px;
-	border-radius: 0px;
-	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 2px solid #b4befe;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#custom-search:hover,#custom-os_button:hover,#custom-runner:hover,#mpris:hover,#custom-cafein:hover{
-	background-color: #26263d;
+/* Hover effect for the custom widgets */
+#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
+    background-color: #26263d;
 }
 
-
-
+/* CPU widget styling */
 #cpu {
     background-color: rgba(17, 17, 27, 1);
-    /*color: #FABD2D;*/
-    border-radius: 16px;
-    padding: 0px 10px 0px 10px;
     font-weight: bold;
-	padding: 0px 10px 0px 10px;
-    font-weight: bold;
-	border: 2px solid #b4befe;
-	border-left: 0px;
-	border-radius: 0px 10px 10px 0px;
+    padding: 0px 10px;
+    border: 2px solid #b4befe;
+    border-left: 0px;
+    border-radius: 0px 10px 10px 0px;
 }
 
+/* Bluetooth, network, pulseaudio icon size adjustment */
 #bluetooth, #network, #pulseaudio {
-    font-size: 15px ; /* Simge boyutunu küçült */
+    font-size: 15px; /* Decrease icon size */
 }
+
