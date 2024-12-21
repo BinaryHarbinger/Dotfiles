@@ -44,6 +44,7 @@ rm -rf ./preview
 cp -rf ./* ~/.config/
 chmod +x ~/.config/hypr/scripts/*
 chmod +x ~/.config/eww/scripts/*
+ln -sf $HOME/.config/hypr/wallppr.jpg ~/.config/hypr/wallppr.png
 
 # Apply Spicetify theme
 echo "Applying Spicetify theme..."
