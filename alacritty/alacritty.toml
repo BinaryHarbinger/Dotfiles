@@ -2,19 +2,19 @@
 [font]
 size = 12
 [font.bold]
-family = "Fira Mono"
+family = "JetBrainsMono Nerd Font"
 style = "bold"
 
 [font.bold_italic]
-family = "Fira Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Fira Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Fira Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 # Cursor Values
@@ -27,4 +27,4 @@ background = "#10101b"
 foreground = "#b4befe"
 
 [window]
-opacity = 0.4
+opacity = 0.3
