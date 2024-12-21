@@ -80,7 +80,7 @@
     "on-click": "eww open actioncenter --toggle --no-daemonize &",
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
-    "format-icons": ["", ""]
+    "format-icons": ["", "", ""]
   },
   "custom/swaync": {
     "tooltip": false,

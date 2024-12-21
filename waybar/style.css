@@ -29,11 +29,12 @@
 @define-color content_inactive #b4befe;
 
 * {
+	all: unset; /*Remove the useless GTK theme rules*/
     text-shadow: none;
     box-shadow: none;
     border: none;
     border-radius: 0;
-    font-family: "Fira Code";
+    font-family: "JetBrainsMono Nerd Font","Fira Mono";
     font-weight: 600;
     font-size: 12.7px;    
 }
@@ -131,12 +132,12 @@ tooltip label {
 #tray > .passive {
     border-bottom: none;
 }
-#tray > .active {
+/*#tray > .active {
     border-bottom: 2px solid white;
 }
 #tray > .needs-attention {
     border-bottom: 2px solid @warning_color;
-}
+}*/
 #tray > widget {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -144,16 +145,31 @@ tooltip label {
     background: @bg_hover;
 }
 
-/* Pulseaudio widget styling */
-#pulseaudio {
-    font-family: "JetBrainsMono Nerd Font";
-    padding-left: 10px;
-    padding-right: 3px;
+#tray menu {
+	font-family: "JetBrainsMono Nerd Font";
     border: 2px solid #b4befe;
-    border-right: 0px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: rgba(17, 17, 27, 1);
+    padding: 5px 0px;
+}
+
+#tray menu > * {
+    border: 2px solid #b4befe;border-top:0px;border-bottom:0px;
+    border-radius: 3px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 0px 5px; /* Alt öğeler arasında boşluk */
+}
+
+#tray menu > *:hover {
+    background-color: rgba(34, 34, 50, 1); /* Alt öğe hover arka plan rengi */
+	border: 2px solid #b4befe;border-top:0px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#tray menu > *:active {
+    background-color: rgba(51, 51, 76, 1); /* Alt öğe aktif arka plan rengi */
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* Network and Battery widget styling */
@@ -166,6 +182,18 @@ tooltip label {
     border-right: 0px;
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Pulseaudio widget styling */
+#pulseaudio {
+    font-family: "JetBrainsMono Nerd Font";
+    padding-left: 10px;
+    padding-right: 3px;
+    border: 2px solid #b4befe;
+    border-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: rgba(17, 17, 27, 1);
 }
 
 /* Hover effect for network and pulseaudio */
@@ -247,7 +275,7 @@ tooltip label {
 /* Power profile daemon widget styling */
 #power-profiles-daemon {
     background-color: rgba(17, 17, 27, 1);
-    color: rgb(104, 131, 223);
+    color: #b4befe;
     padding: 0px 10px;
     padding-right: 15px;
     font-size: 20px;
