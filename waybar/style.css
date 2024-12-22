@@ -10,23 +10,8 @@
  * ----------------------------------------------------- 
 */
 
-
-/* Base background color for general elements */
-@define-color bg_main rgba(25, 25, 25, 0.65);
-@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
-
-/* Background color for selections */
-@define-color bg_hover #30304d;
-/* Background color for active elements */
-@define-color bg_active rgba(100, 100, 100, 0.5);
-
-/* Border color for general elements */
-@define-color border_main rgba(180, 190, 254, 0.2);
-
-/* Text color for entries, views, and general content */
-@define-color content_main #b4befe;
-/* Text color for unselected entries */
-@define-color content_inactive #b4befe;
+/*Import the theme.css file */
+@import "theme.css";
 
 * {
 	all: unset; /*Remove the useless GTK theme rules*/
@@ -165,7 +150,7 @@ tooltip label {
 }
 
 #tray menu > *:active {
-    background-color: rgba(51, 51, 76, 1); /* Alt öğe aktif arka plan rengi */
+    background-color: rgba(51, 51, 76, 1);
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
