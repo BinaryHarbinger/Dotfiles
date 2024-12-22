@@ -40,7 +40,7 @@
 }
 
 window#waybar {
-    background: rgba(17, 17, 27, 0.1);
+    background: rgba(17, 17, 27, 0);
     color: @content_main;
 }
 

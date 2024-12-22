@@ -15,9 +15,9 @@
   "mod": "dock",
   "exclusive": true,
   "gtk-layer-shell": true,
-  "margin-bottom": -1,
+  "margin-top": 5,
   "passthrough": false,
-  "height": -30,
+  "height": 0,
   "modules-left": [
     "custom/search", "custom/runner", "custom/os_button", "custom/cafein", "mpris",
     "memory", "cpu"
@@ -133,7 +133,7 @@
     "spacing": 3
   },
   "clock": {
-    "format": "{:%R}",
+    "format": " {:%R}",
     "on-click": "eww open calendar --toggle --no-daemonize &",
     "tooltip": false
   },
