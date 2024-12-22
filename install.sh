@@ -81,6 +81,22 @@ gtk-font-name="Noto Sans 10"
 EOL
 
 echo "Applying changes..."
+
+if pgrep -x "waybar" >/dev/null; then
+    echo "Relaunching waybar"
+    pkill waybar&&waybar& disown&
+fi
+
+if pgrep -x "hyprpaper" >/dev/null; then
+    echo "Relaunching hyprpaper"
+    pkill hyprpaper&&hyprpaper& disown&
+fi
+
+if pgrep -x "eww" >/dev/null; then
+    echo "Relaunching eww"
+    killall eww&eww d&eww open-many stats desktopmusic& disown&
+fi
+
 if pgrep xfce4-panel &>/dev/null; then
     run_cmd xfsettingsd --replace &
 else
