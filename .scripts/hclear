@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo yes|history clear
+rm -rf .local/share/fish/fish_history
 
 clear
-
 fastfetch

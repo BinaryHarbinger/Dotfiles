@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -sSL https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/refs/heads/main/install.sh | bash
