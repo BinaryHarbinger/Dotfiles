@@ -35,8 +35,9 @@ configuration {
     urgent-foreground:           var(background);
     active-background:           var(active);
     active-foreground:           var(background);
-    selected-normal-background:  var(selected);
-    selected-normal-foreground:  var(background);
+    selected-normal-background:  #30304d;
+    selected-normal-border: 	#b4befe;
+    selected-normal-foreground:  #b4befe;
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
     selected-active-background:  var(urgent);
@@ -210,6 +211,8 @@ element normal.active {
     text-color:                  var(active-foreground);
 }
 element selected.normal {
+	border-radius: 2px ;
+	border: 2px solid;
     background-color:            var(selected-normal-background);
     text-color:                  var(selected-normal-foreground);
 }
