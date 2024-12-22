@@ -16,7 +16,7 @@ run_cmd yay -Rnsdd --noconfirm hyprutils >/dev/null 2>&1
 
 PACKAGES=(
   breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono
-  ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpolkitagent unzip
+  ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpolkitagent unzip hyprsunset
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync mpv hyprpicker eww pamixer hypridle
   network-manager-applet graphite-gtk-theme-nord-normal-git colloid-icon-theme-git pamixer brightnessctl hyprswitch avizo
 )
