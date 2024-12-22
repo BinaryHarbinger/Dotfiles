@@ -1,27 +1,27 @@
 {
     "label" : "lock",
-    "action" : "~/.config/hypr/scripts/playerctlock.sh --arturl&&hyprlock",
+    "action" : "~/.config/hypr/scripts/playerctlock.sh --arturl&hyprlock",
     "text" : "Lock",
     "keybind" : "l"
 }
 
 {
     "label" : "logout",
-    "action" : "hyprctl dispatch exit 0",
+    "action" : "notify-send Logging out...&hyprctl dispatch exit 0",
     "text" : "Logout",
     "keybind" : "e"
 }
 
 {
     "label" : "suspend",
-    "action" : "hyprlock -f && systemctl suspend",
+    "action" : "hyprlock -f & systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
 
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "notify-send Shuttingdown...&systemctl poweroff",
     "text" : "Shutdown",
     "keybind" : "s"
 }
