@@ -16,7 +16,7 @@
 @define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
 
 /* Background color for selections */
-@define-color bg_hover #26263d;
+@define-color bg_hover #30304d;
 /* Background color for active elements */
 @define-color bg_active rgba(100, 100, 100, 0.5);
 
@@ -141,9 +141,6 @@ tooltip label {
 #tray > widget {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#tray > widget:hover {
-    background: @bg_hover;
-}
 
 #tray menu {
 	font-family: "JetBrainsMono Nerd Font";
@@ -196,11 +193,6 @@ tooltip label {
     background-color: rgba(17, 17, 27, 1);
 }
 
-/* Hover effect for network and pulseaudio */
-#network:hover, #pulseaudio:hover {
-    background-color: @bg_hover;
-}
-
 /* Language widget styling */
 #language {
     background-color: rgba(17, 17, 27, 1);
@@ -223,18 +215,12 @@ tooltip label {
     border-radius: 0px 10px 10px 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#clock:hover {
-    background: @bg_hover;
-}
 
 /* Battery widget hover effect */
 #battery {
     background-color: rgba(17, 17, 27, 1);
     padding-left: 8px;
     padding-right: 8px;
-}
-#battery:hover {
-    background-color: @bg_hover;
 }
 
 /* Bluetooth widget styling */
@@ -268,9 +254,6 @@ tooltip label {
     padding-right: 13px; 
 }
 
-#custom-swaync:hover {
-    background-color: @bg_hover;
-}
 
 /* Power profile daemon widget styling */
 #power-profiles-daemon {
@@ -278,16 +261,12 @@ tooltip label {
     color: #b4befe;
     padding: 0px 10px;
     padding-right: 15px;
-    font-size: 20px;
+    font-size: 14px;
     border: 2px solid #b4befe;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#power-profiles-daemon:hover {
-    background-color: @bg_hover;
 }
 
 /* Backlight widget styling */
@@ -300,13 +279,11 @@ tooltip label {
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#backlight:hover {
-    background-color: @bg_hover;
-}
+
 
 /* Styling for memory, search, os button, etc. */
 #memory, #custom-search, #custom-os_button, #custom-runner, #mpris, #custom-cafein {
-    font-family: "Symbols Nerd Font";
+    font-family: "Symbols Nerd Font", "JetbrainsMono Nerd Font";
     background-color: rgba(17, 17, 27, 1);
     font-weight: bold;
     border-radius: 16px;
@@ -318,9 +295,9 @@ tooltip label {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Hover effect for the custom widgets */
-#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
-    background-color: #26263d;
+/* Hover effect for bar elements */
+#network:hover, #pulseaudio:hover,#clock:hover,#tray > widget:hover,#power-profiles-daemon:hover,#backlight:hover,#custom-swaync:hover,#battery:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
+    background-color: @bg_hover;
 }
 
 /* CPU widget styling */
@@ -337,4 +314,3 @@ tooltip label {
 #bluetooth, #network, #pulseaudio {
     font-size: 15px; /* Decrease icon size */
 }
-

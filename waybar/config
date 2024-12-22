@@ -47,7 +47,7 @@
     "format": "{player_icon}",
     "format-paused": "{status_icon}",
     "player-icons": {
-      "default": "▶  Playing",
+      "default": "▶ Playing",
       "mpv": "🎵"
     },
     "status-icons": {
@@ -130,12 +130,12 @@
   },
   "tray": {
     "icon-size": 18,
-    "spacing": 3
+    "spacing": 8
   },
   "clock": {
     "format": " {:%R}",
     "on-click": "eww open calendar --toggle --no-daemonize &",
-    "tooltip": false
+    "tooltip-format": " {:%d %B %Y}",
   },
   "network": {
     "format-wifi": "{icon}",

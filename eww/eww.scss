@@ -2,6 +2,7 @@
 * {
   all: unset; //Unsets everything so you can style everything from scratch
   font-weight: 600;
+  font-family: "JetbrainsMono Nerd Font";
 }
 
 //Global Styles
@@ -38,8 +39,8 @@
 }
 
 .topcenter{
-  font-family: "Fira Mono", "JetBrainsMono Nerd Font";
-  font-weight: 500;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: 600;
 }
 .middlecenter{
   margin-top: 10px;
@@ -185,10 +186,10 @@
 }
 
 .musictitle{
-  font-family: "Fira Mono", "JetBrainsMono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   margin-top: 5px;
   font-size:15px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .musicscale scale trough highlight {
   all: unset;
@@ -201,12 +202,13 @@
   all: unset;
   background-color: #25253b;
   border-radius: 50px;
-  min-height: 10px;
+  min-height: 5px;
   min-width: 170px;
   margin: 0px 10px;
 }
 .musicscale label{
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 800;
 }
 .musicart{
   border: 1px solid #b4befe;
@@ -221,7 +223,6 @@
 }
 
 .calendar {
-  font-family: Fira Mono;
   background: #1c1c2e;
   font-size: 15px;
   padding: 2px 5px;

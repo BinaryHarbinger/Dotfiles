@@ -30,6 +30,7 @@ prompt {
 }
 
 entry {
+	
     background-color:              inherit; /* Hide the entry box */
     text-color:                    inherit;
     placeholder-color:             inherit;
@@ -68,6 +69,7 @@ element-icon {
     vertical-align:                0.5;
     size:                          0px;
     border:                        0px;
+    
 }
 
 element {
@@ -90,8 +92,9 @@ element-text {
 
 element selected {
     text-align:                     center;
-    background-color:              @fg;
-    text-color:                    @bg;
-    border:                        0% 0% 0% 0%;
-    border-radius:                 6px;
+    background-color:              #30304d;
+    text-color:                    @fg;
+    border:                        2px;
+    border-radius:                 4px;
+    border-color:					@fg;
 }
