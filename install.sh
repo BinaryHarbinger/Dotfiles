@@ -4,8 +4,8 @@ echo "Binary Harbingers Dotfiles v2.0"
 
 # First, update the system, but skip already installed packages
 echo "Updating system..."
-yay -Syu --noconfirm --needed
-yay -Rnsdd --noconfirm hyprutils
+yay -Syu --noconfirm --needed >/dev/null 2>&1
+yay -Rnsdd --noconfirm hyprutils >/dev/null 2>&1
 
 # Install required packages, but skip already installed ones
 PACKAGES=(
@@ -16,14 +16,14 @@ PACKAGES=(
 )
 
 echo "Installing packages..."
-yay -S --noconfirm --needed "${PACKAGES[@]}"
+yay -S --noconfirm --needed "${PACKAGES[@]}" >/dev/null 2>&1
 
 echo "Setting up polkit agent"
-systemctl --user enable --now hyprpolkitagent.service
+systemctl --user enable --now hyprpolkitagent.service >/dev/null 2>&1
 
 # Install Spicetify
 echo "Installing Spicetify..."
-curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh >/dev/null 2>&1
 
 # Clone the dotfiles repository
 echo "Cloning dotfiles repository..."
@@ -32,28 +32,28 @@ cd dotfiles || { echo "Failed to enter the dotfiles directory!"; exit 1; }
 
 # Replace the username in the config files
 echo "Updating username in configs..."
-sed -i "s/kb_layout = tr/kb_layout = $(localectl status | grep "X11 Layout" | awk '{print $3}')/g" ./hypr/hyprland.conf
+sed -i "s/kb_layout = tr/kb_layout = $(localectl status | grep "X11 Layout" | awk '{print $3}')/g" ./hypr/hyprland.conf >/dev/null 2>&1
 
 # Move script files to the home directory, force overwrite
 echo "Moving script files..."
-cp -rf ./.scripts ~
-chmod +x ~/.scripts/*
+cp -rf ./.scripts ~ >/dev/null 2>&1
+chmod +x ~/.scripts/* >/dev/null 2>&1
 
 # Move configuration files to the .config directory, force overwrite
 echo "Moving configuration files..."
-rm -rf ./preview
-cp -rf ./* ~/.config/
-chmod +x ~/.config/hypr/scripts/*
-chmod +x ~/.config/eww/scripts/*
-ln -sf $HOME/.config/hypr/wallppr.jpg ~/.config/hypr/wallppr.png
+rm -rf ./preview >/dev/null 2>&1
+cp -rf ./* ~/.config/ >/dev/null 2>&1
+chmod +x ~/.config/hypr/scripts/* >/dev/null 2>&1
+chmod +x ~/.config/eww/scripts/* >/dev/null 2>&1
+ln -sf $HOME/.config/hypr/wallppr.jpg ~/.config/hypr/wallppr.png >/dev/null 2>&1
 
 # Apply Spicetify theme
 echo "Applying Spicetify theme..."
-spicetify restore backup apply
+spicetify restore backup apply >/dev/null 2>&1
 
 # Set Fish as the default shell
 echo "Changing default shell to fish..."
-sudo chsh -s /bin/fish $USER
+sudo chsh -s /bin/fish $USER >/dev/null 2>&1
 
 # Change default theme
 THEME_NAME="Materia-dark-compact"
@@ -99,7 +99,7 @@ fi
 
 # Cleanup the dotfiles repository
 cd ..
-rm -rf ./dotfiles
+rm -rf ./dotfiles >/dev/null 2>&1
 
 # Final message after installation
 echo "Installation complete!"
