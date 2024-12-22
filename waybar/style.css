@@ -280,6 +280,11 @@ tooltip label {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+#mpris {
+	margin: 0px -8px;
+	min-width: 80px;
+}
+
 /* Hover effect for bar elements */
 #network:hover, #pulseaudio:hover,#clock:hover,#tray > widget:hover,#power-profiles-daemon:hover,#backlight:hover,#custom-swaync:hover,#battery:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
     background-color: @bg_hover;
