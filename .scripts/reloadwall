@@ -1,6 +1,0 @@
-#!/bin/bash
-
-pkill hyprpaper
-
-nohup hyprpaper & 
-eww r & exit
