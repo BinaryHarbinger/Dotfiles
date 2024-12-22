@@ -9,7 +9,7 @@
 
 
 * {
-  font-family: "Fira Mono";
+  font-family: "Jetbrains Mono Nerd Font";
 }
 
 .testing {
@@ -76,7 +76,7 @@
   color: #b4befe;
   text-shadow: none;
   padding: 0;
-  border-radius: 100%;
+  border-radius: 5px;
   margin-top: 10px;
   margin-right: 10px;
   box-shadow: none;
@@ -211,6 +211,7 @@
 }
 .widget-title > button {
   font-size: 1rem;
+  font-weight: 700;
   margin: 4px;
   padding: 5px 4px;
   color: #C0CAF5;
@@ -233,16 +234,18 @@
   font-size: initial;
   border-radius: 700px;
   background: @noti-bg;
-  border: 1px solid #b4befe;
+  border: 2px solid #b4befe;
   box-shadow: none;
 }
 .widget-dnd > switch:checked {
-  background: @bg-selected;
+  background: #30304d;
   border-radius: 700px;
+  color: #b4befe;
 }
 .widget-dnd > switch slider {
   background: #C0CAF5;
   border-radius: 400px;
+  color: #b4befe;
 }
 
 /* Label widget */
