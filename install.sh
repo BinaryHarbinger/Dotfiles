@@ -89,7 +89,7 @@ fi
 
 if pgrep -x "hyprpaper" >/dev/null; then
     echo "Relaunching hyprpaper"
-    pkill hyprpaper >/dev/null &&hyprpaper >/dev/null& disown&
+    pkill hyprpaper >/dev/null 2>&1 &&hyprpaper >/dev/null 2>&1& disown&
 fi
 sleep 1
 if pgrep -x "eww" >/dev/null; then
