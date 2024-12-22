@@ -5,6 +5,7 @@ echo "Binary Harbingers Dotfiles v2.0"
 # First, update the system, but skip already installed packages
 echo "Updating system..."
 yay -Syu --noconfirm --needed
+yay -Rnsdd hyprutils
 
 # Install required packages, but skip already installed ones
 PACKAGES=(
