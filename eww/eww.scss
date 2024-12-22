@@ -89,12 +89,12 @@
   all: unset;
   background-color: #0b0b11;
   border-radius: 50px;
-  min-height: 20px;
+  min-height: 5px;
   min-width: 225px;
   margin-right: 5px;
 }
 .scalecenter label,.scalestat label{
-  font-size: 18px;
+  font-size: 16px;
   color: #b4befe;
   margin: 0px 20px 0px 0px;
 }
@@ -198,6 +198,7 @@
   border-radius: 10px;
   min-width: 10px;
 }
+
 .musicscale scale trough {
   all: unset;
   background-color: #25253b;
