@@ -84,17 +84,17 @@ echo "Applying changes..."
 
 if pgrep -x "waybar" >/dev/null; then
     echo "Relaunching waybar"
-    pkill waybar >/dev/null 2>&1 && waybar >/dev/null 2>&1 & disown
+    pkill waybar >/dev/null 2>&&1 && waybar >/dev/null 2>&1 & disown
 fi
 
 if pgrep -x "hyprpaper" >/dev/null; then
     echo "Relaunching hyprpaper"
-    pkill hyprpaper >/dev/null 2>&1 &&hyprpaper >/dev/null 2>&1& disown&
+    pkill hyprpaper >/dev/null 2>&&1 &&hyprpaper >/dev/null 2>&1& disown&
 fi
 sleep 1
 if pgrep -x "eww" >/dev/null; then
     echo "Relaunching eww"
-    killall eww&eww d&eww open-many stats desktopmusic >/dev/null& disown >/dev/null&
+    killall eww&&eww d&&eww open-many stats desktopmusic >/dev/null& disown >/dev/null&
 fi
 
 if pgrep xfce4-panel &>/dev/null; then
