@@ -84,7 +84,7 @@ echo "Applying changes..."
 
 if pgrep -x "waybar" >/dev/null; then
     echo "Relaunching waybar"
-    pkill waybar >/dev/null && waybar >/dev/null 2>&1 & disown
+    pkill waybar >/dev/null 2>&1 && waybar >/dev/null 2>&1 & disown
 fi
 
 if pgrep -x "hyprpaper" >/dev/null; then
