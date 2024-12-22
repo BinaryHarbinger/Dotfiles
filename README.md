@@ -23,7 +23,7 @@
 
 [**⚙️ Action Center**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/center.png)
 
-[**🎵 Player**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/Player.png)
+[**🎵 Player**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/player.png)
 
 [**🔔 Swaync**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/swaync.png)
 
