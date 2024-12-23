@@ -146,7 +146,7 @@
       (box :spacing 10
         (button :class { networkstatus != "" ? "testenabled" : "test"} :onclick {networkstatus != "" ? "rfkill block wifi &" : "rfkill unblock wifi"} "󰤨 ")
         (button :class { bluetoothstatus != "no" ? "testenabled" : "test"}  :onclick {bluetoothstatus != "no" ? "bluetoothctl power off" : "bluetoothctl power on"}  "")
-        (button :class { nighttoggle != false ? "testenabled" : "test"} :onclick {nighttoggle != false ? "wlsunset -t 0 & eww update nighttoggle=false" : "wlsunset -t 5200 -S 0:00 -s 0:00 & eww update nighttoggle=true"} " ")
+        (button :class { nighttoggle != false ? "testenabled" : "test"} :onclick {nighttoggle != false ? "bash $HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=false" : "$HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=true"} " ")
       )
       (box :spacing 10
         (button :class "test" :onclick "eww open actioncenter --toggle && hyprshot-gui &" "󰹑 ")
