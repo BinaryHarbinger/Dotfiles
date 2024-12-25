@@ -1,10 +1,8 @@
-
-
 * {
-  al:  #000000;
-  bg:   #11111b;
-  fg:   #b4befe;
-  ac:  #ffffff;
-  ex:  #1a1a29;
-  bc: #b4befe;
+    background:     #11111b;
+    background-alt: #26263d;
+    foreground:     #b4befe;
+    selected:       #30304d;
+    active:         #98C379FF;
+    urgent:         #E06B74FF;
 }

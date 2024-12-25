@@ -20,7 +20,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/colors.rasi"
+@import                          "colors.rasi"
 @import                          "shared/fonts.rasi"
 
 * {
@@ -37,7 +37,7 @@ configuration {
     active-foreground:           var(background);
     selected-normal-background:  #30304d;
     selected-normal-border: 	#b4befe;
-    selected-normal-foreground:  #b4befe;
+    selected-normal-foreground:  var(foreground);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
     selected-active-background:  var(urgent);
@@ -67,7 +67,7 @@ window {
     padding:                     0px;
     border:                      2px solid;
     border-radius:               10px;
-    border-color:                @border-colour;
+    border-color:                @foreground;
     cursor:                      "default";
     /* Backgroud Colors */
     background-color:            @background-colour;
