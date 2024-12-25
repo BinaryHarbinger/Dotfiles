@@ -1,11 +1,19 @@
 #!/bin/bash
 
-echo Arch Linux Update
-yay --noconfirm
-yay -Scc --noconfirm
+echo System Update
 echo
-echo Updating Flatpaks
+echo "Enter your sudo password to update."
+sudo echo >/dev/null 2>&1
+echo "Updating Pacman Packages..."
+yay --noconfirm >/dev/null 2>&1
+echo "Clearing yay Cache..."
+yay -Scc --noconfirm >/dev/null 2>&1
+echo "Completed."
+echo
+echo "Updating Flatpaks..."
 flatpak update
 echo
-echo Triming Disks
-sudo fstrim -Av
+echo Triming Disks..
+sudo fstrim -Av >/dev/null 2>&1
+echo
+echo "Update completed."
