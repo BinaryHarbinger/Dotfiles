@@ -60,6 +60,40 @@ custom_menu() {
     esac
 }
 
+system_menu() {
+    # Menu options displayed in rofi
+    options="X Clear Cache\nX Clear Clipboard\n Session Options\n Update System"
+
+    # Prompt user to choose an option
+    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/launcher.rasi -dmenu -p "Select an option:")
+
+    # Execute the corresponding command based on the selected option
+    case $chosen in
+        "X Clear Cache")
+             Clear Cache
+            ;;
+        "X Clear Clipboard")
+            rm -rf ~/.cache/cliphist
+            ;;
+        " Session Options")
+            wlogout
+            ;;
+        " Update System")
+            alacritty -e ~/.scripts/update
+            ;;
+        "")
+            xdg-open https://about:blank
+            ;;
+        "")
+            ~/.config/hypr/scripts/help
+            ;;
+        *)
+            echo "No option selected"
+            ;;
+    esac
+}
+
+
 # Check for flags and validate input
 if [[ $# -ne 1 ]]; then
     usage
@@ -76,6 +110,9 @@ case "$1" in
     --menu)
         custom_menu
         ;;
+    --system_menu)
+    	system_menu
+    	;;
     *)
         usage
         ;;

@@ -1,7 +1,6 @@
 @define-color bg_main #11111b;
 @define-color bg_main_tooltip rgb(17, 17, 27);
 
-
 /*base background color of selections */
 @define-color bg_hover #30304d;
 /*base background color of active elements */

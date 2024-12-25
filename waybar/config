@@ -39,7 +39,7 @@
       },
   "custom/runner": {
     "format": "",
-    "on-click": "~/.config/hypr/scripts/rofilaunch.sh --run",
+    "on-click": "~/.config/hypr/scripts/rofilaunch.sh --system_menu",
     "tooltip": false
   },
   "mpris": {
