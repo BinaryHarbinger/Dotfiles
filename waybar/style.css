@@ -44,10 +44,12 @@ tooltip label {
 #custom-swaync {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 1px;
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
+    min-width: 20px;
     padding-left: 12px;
     padding-right: 12px;
     margin-left: 10px;
+    margin-right: 5px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 2px solid #b4befe;
     border-radius: 10px;
@@ -59,24 +61,24 @@ tooltip label {
     margin-right: 1.5px;
     margin-left: 1.5px;
     border-radius: 20px;
-    border: 2px solid #b4befe;
-    background-color: rgba(17, 17, 27, 1);
+    border: 2px solid @border_main ;
+    background-color: @bg_main;
     padding: 0px 25px;
 }
 #workspaces button {
     border-radius: 3px;
-    color: #484872;
+    color: @content_alt;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     padding: 0px 8px;
     margin: 3px 4px;
-    background-color: #939cda;
+    background-color: @bg_alt;
     border-radius: 15px;
-    border-color: #11111b;
+    border-color: @bg_main;
 }
 #workspaces button.active {
-    color: #222236;
+    color: @bg_main;
     border-radius: 15px;
-    background: #b4befe;
+    background: @content_main;
     padding: 0px 16px;
 }
 #workspaces button.focused {
@@ -88,8 +90,8 @@ tooltip label {
     color: @warning_color;
 }
 #workspaces button:hover {
-    background: #b4bbeb;
-    color: @content_main;
+    background: @content_main;
+    color: @bg_main;
 }
 
 /* Styling for system info panels like CPU, Disk, Memory */
@@ -108,11 +110,11 @@ tooltip label {
 #tray {
     margin-left: 5px;
     margin-right: 5px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-radius: 10px;
     padding: 0px 10px;
     margin-right: 20px;
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
 }
 #tray > .passive {
     border-bottom: none;
@@ -129,37 +131,37 @@ tooltip label {
 
 #tray menu {
 	font-family: "JetBrainsMono Nerd Font";
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-radius: 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     padding: 5px 0px;
 }
 
 #tray menu > * {
-    border: 2px solid #b4befe;border-top:0px;border-bottom:0px;
+    border: 2px solid @content_main;border-top:0px;border-bottom:0px;
     border-radius: 3px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     padding: 0px 5px; /* Alt öğeler arasında boşluk */
 }
 
 #tray menu > *:hover {
-    background-color: rgba(34, 34, 50, 1); /* Alt öğe hover arka plan rengi */
+    background-color: @bg_alt2; /* Alt öğe hover arka plan rengi */
 	border: 2px solid #b4befe;border-top:0px;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #tray menu > *:active {
-    background-color: rgba(51, 51, 76, 1);
+    background-color: @bg_alt2;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* Network and Battery widget styling */
 #network, #battery {
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     padding-left: 3px;
     padding-right: 3px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -171,7 +173,7 @@ tooltip label {
     font-family: "JetBrainsMono Nerd Font";
     padding-left: 10px;
     padding-right: 3px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-right: 0px;
     border-radius: 10px 0px 0px 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -180,10 +182,10 @@ tooltip label {
 
 /* Language widget styling */
 #language {
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     padding-left: 5px;
     padding-right: 5px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -192,10 +194,10 @@ tooltip label {
 
 /* Clock widget styling */
 #clock {
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     padding-right: 15px;
     padding-left: 15px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-left: 0px;
     border-radius: 0px 10px 10px 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -203,7 +205,7 @@ tooltip label {
 
 /* Battery widget hover effect */
 #battery {
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     padding-left: 8px;
     padding-right: 8px;
 }
@@ -242,12 +244,12 @@ tooltip label {
 
 /* Power profile daemon widget styling */
 #power-profiles-daemon {
-    background-color: rgba(17, 17, 27, 1);
-    color: #b4befe;
+    background-color: @bg_main;
+    color: @content_main;
     padding: 0px 10px;
     padding-right: 15px;
     font-size: 14px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -256,9 +258,9 @@ tooltip label {
 
 /* Backlight widget styling */
 #backlight {
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     padding: 0px 10px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -269,11 +271,11 @@ tooltip label {
 /* Styling for memory, search, os button, etc. */
 #memory, #custom-search, #custom-os_button, #custom-runner, #mpris, #custom-cafein {
     font-family: "Symbols Nerd Font", "JetbrainsMono Nerd Font";
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     font-weight: bold;
     border-radius: 16px;
     padding: 0px 10px 0px 10px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -290,12 +292,16 @@ tooltip label {
     background-color: @bg_hover;
 }
 
+#custom-cafein {
+	padding-right: 8px;
+}
+
 /* CPU widget styling */
 #cpu {
-    background-color: rgba(17, 17, 27, 1);
+    background-color: @bg_main;
     font-weight: bold;
     padding: 0px 10px;
-    border: 2px solid #b4befe;
+    border: 2px solid @content_main;
     border-left: 0px;
     border-radius: 0px 10px 10px 0px;
 }
