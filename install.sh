@@ -22,7 +22,7 @@ PACKAGES=(
 )
 
 echo "Installing packages..."
-run_cmd yay -S --noconfirm --needed "${PACKAGES[@]}"
+yay -S --noconfirm --needed "${PACKAGES[@]}"
 
 echo "Setting up polkit agent..."
 run_cmd systemctl --user enable --now hyprpolkitagent.service
