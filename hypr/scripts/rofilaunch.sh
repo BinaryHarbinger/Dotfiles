@@ -26,6 +26,13 @@ run_launcher() {
         -theme ~/.config/rofi/launcher.rasi
 }
 
+# Function: CONFIRMATION Launcher
+conf_launcher() {
+    rofi \
+    -show run \
+    -theme ~/.config/rofi/confirm.rasi
+}
+
 # Function: Custom Menu
 custom_menu() {
     # Menu options displayed in rofi
@@ -70,7 +77,7 @@ system_menu() {
     # Execute the corresponding command based on the selected option
     case $chosen in
         "X Clear Cache")
-             Clear Cache
+         	find ~/.cache -mindepth 1 -maxdepth 1 ! -name "spotify" -exec rm -rf {} +
             ;;
         "X Clear Clipboard")
             rm -rf ~/.cache/cliphist
