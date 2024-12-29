@@ -69,7 +69,7 @@ custom_menu() {
 
 system_menu() {
     # Menu options displayed in rofi
-    options="X Clear Cache\nX Clear Clipboard\n Session Options\n Update System"
+    options="X Clear Cache\nX Clear Clipboard\n Session Options\n Update Rice\n Update System"
 
     # Prompt user to choose an option
     chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/launcher.rasi -dmenu -p "Select an option:")
@@ -88,12 +88,9 @@ system_menu() {
         " Update System")
             alacritty -e ~/.scripts/update
             ;;
-        "")
-            xdg-open https://about:blank
-            ;;
-        "")
-            ~/.config/hypr/scripts/help
-            ;;
+        " Update System")
+                    alacritty -e ~/.scripts/updaterice
+                    ;;
         *)
             echo "No option selected"
             ;;
