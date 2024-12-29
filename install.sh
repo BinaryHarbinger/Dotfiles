@@ -12,7 +12,6 @@ run_cmd() {
 
 echo "Updating system..."
 run_cmd yay -Syu --noconfirm --needed >/dev/null 2>&1
-run_cmd yay -Rnsdd --noconfirm hyprutils >/dev/null 2>&1
 
 PACKAGES=(
   breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono
