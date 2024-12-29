@@ -36,7 +36,7 @@ configuration {
     active-background:           var(active);
     active-foreground:           var(background);
     selected-normal-background:  #30304d;
-    selected-normal-border: 	#b4befe;
+    selected-normal-border: 	var(foreground);
     selected-normal-foreground:  var(foreground);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
@@ -90,7 +90,7 @@ mainbox {
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
-    background-color:          #11111b;
+    background-color:          @background;
     children:                    [ "inputbar", "message", "listview" ];
 }
 
