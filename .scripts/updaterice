@@ -1,6 +1,9 @@
 #!/bin/bash
 
-if [[ -d "dotfiles" ]]; then
+CHECK=$(ls |grep dotfiles)
+
+if [ -n "$CHECK" ]; then
+	echo deleting
     rm -rf dotfiles  # Remove the folder if it exists
 fi
 
