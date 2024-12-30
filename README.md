@@ -82,25 +82,29 @@ _If you get errors during and after installation try to enable multilib repistor
 - **SUPER + F**: Toggle fullscreen mode for the active window
 - **SUPER + X**: Open clipboard
 
-## Application Shortcuts
-- **SUPER + N**: Launch `swaync-client` in system tray mode
-- **SUPER + T**: Open terminal (`alacritty`)
-- **SUPER + Q**: Open application menu (`rofi` submenu)
-- **SUPER + E**: Open file manager (`yazi`)
-- **SUPER + B**: Open web browser with a blank page (`xdg-open`)
-- **SUPER + L**: Lock screen (`Wlogout`)
-- **SUPER + O**: Color Picker (alternative with `Hyprpicker`)
-- **SUPER + W**: Launch `waybar`
-- **SUPER + H**: Launch `Help.txt`
-- **SUPER + PRINT**: Take a screenshot (`hyprshot-gui`)
-- **SUPER + S**: Open application menu (`rofi` dmenu)
-- **SUPER + R**: Open application menu (`rofi` run)
-- **SUPER + TAB**: Switch between applications (`hyprswitch`)
-- **SUPER + X**: Launch rofi with cliphist (`Clipboard`)
+## Application Shortcuts:
+- SUPER + N: Launch swaync-client in system tray mode
+- SUPER + T: Open terminal (Alacritty)
+- SUPER + Q: Open application menu (rofi submenu)
+- SUPER + E: Open file manager (thunar)
+- SUPER + B: Open web browser with a blank page (xdg-open)
+- SUPER + L: Session options (Wlogout)
+- SUPER + O: Color Picker (alternative with wlogout)
+- SUPER + W: Launch or close waybar
+- SUPER + H: Launch help menu
+- SUPER + PRINT: Take a screenshot (hyprshot-gui)
+- SUPER + S: Open application menu (rofi dmenu)
+- SUPER + R: Open application menu (rofi run)
+- SUPER + Q: Open quick menu (rofi)
+- SUPER + X: Open clipboard (rofi)
+- SUPER + L: Open system menu (rofi)
+- SUPER + L: Launch Emoji Picker (rofimoji)
+- SUPER + TAB: Switch between applications (Hyprswitch)
 
-## Media and Brightness Control
-- ** Function buttons on your keyboard will work.
+## Media and Brightness Controls:
+- The function keys on keyboard will work =)
 
+- 
 ## Window Focus and Movement
 - **SUPER + LEFT/RIGHT/UP/DOWN**: Move window focus in the specified direction
 - **SUPER + SHIFT + 1-0**: Move the active window to the corresponding workspace (1-10)
