@@ -6,7 +6,7 @@
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
 @define-color mpris-album-art-overlay rgba(0, 0, 0, 0.55);
 @define-color bg-selected rgb(0, 128, 255);
-
+@define-color noti-bg-hover #30304d;
 
 * {
   font-family: "Jetbrains Mono Nerd Font";
@@ -48,8 +48,8 @@
 
 .notification {
   /* font-size: 2rem; */
-  transition: all 200ms ease;
-  border-radius: 12px;
+  transition: all 100ms ease;
+  border-radius: 5px;
   /* margin: 6px 6px; */
   margin-top: 0px;
   margin-bottom: 0px;
@@ -62,12 +62,12 @@
 /* poi_1 */
 .notification-content {
   background: 	 #1a1a29;
-  border: 1.4px solid #b4befe;
+  /*border: 0px solid #11111b;*/
   /* margin-top: 10px; */
   /* margin-bottom: 10px; */
   font-size: 0.5rem;
   padding: 18px;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #C0CAF5;
 }
 
@@ -210,16 +210,16 @@
   font-size: 1.2rem;
 }
 .widget-title > button {
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 700;
-  margin: 4px;
-  padding: 5px 4px;
+  margin: 4px 0px;
+  padding: 0px 3px;
   color: #C0CAF5;
   text-shadow: none;
   background: #1b1b2b;
-  border: 0.5px solid #b4befe;
+  border: 1px solid #b4befe;
   box-shadow: none;
-  border-radius: 12px;
+  border-radius: 7px;
 }
 .widget-title > button:hover {
   background: @noti-bg-hover;
