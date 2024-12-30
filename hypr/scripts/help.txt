@@ -1,0 +1,44 @@
+General Management:
+- SUPER + M: Exit Hyprland
+- SUPER + V: Toggle floating mode for the active window
+- SUPER + C: Close (kill) the active window
+- ALT + F4: Close (kill) the active window (alternative)
+- SUPER + P: Toggle pseudo-tile layout (Dwindle mode)
+- SUPER + J: Toggle split mode (Dwindle mode)
+- SUPER + F: Toggle fullscreen mode for the active window
+
+Application Shortcuts:
+- SUPER + N: Launch swaync-client in system tray mode
+- SUPER + T: Open terminal (Alacritty)
+- SUPER + Q: Open application menu (rofi submenu)
+- SUPER + E: Open file manager (thunar)
+- SUPER + B: Open web browser with a blank page (xdg-open)
+- SUPER + L: Session options (Wlogout)
+- SUPER + O: Color Picker (alternative with wlogout)
+- SUPER + W: Launch or close waybar
+- SUPER + H: Launch help menu
+- SUPER + PRINT: Take a screenshot (hyprshot-gui)
+- SUPER + S: Open application menu (rofi dmenu)
+- SUPER + R: Open application menu (rofi run)
+- SUPER + Q: Open quick menu (rofi)
+- SUPER + X: Open clipboard (rofi)
+- SUPER + L: Open system menu (rofi)
+- SUPER + L: Launch Emoji Picker (rofimoji)
+- SUPER + TAB: Switch between applications (Hyprswitch)
+
+Media and Brightness Controls:
+- The function keys on keyboard will work =)
+
+Window Focus and Movement:
+- SUPER + LEFT/RIGHT/UP/DOWN: Move window focus in the specified direction
+- SUPER + SHIFT + 1-0: Move the active window to the corresponding workspace (1-10)
+- SUPER + TAB: Switch to the next workspace
+
+Workspace Management:
+- SUPER + 1-9, 0: Switch to the corresponding workspace (1-10)
+- SUPER + MOUSE_UP: Scroll up through existing workspaces
+- SUPER + MOUSE_DOWN: Scroll down through existing workspaces
+
+Window Move/Resize:
+- SUPER + LEFT_MOUSE_BUTTON: Move window
+- SUPER + RIGHT_MOUSE_BUTTON: Resize window
