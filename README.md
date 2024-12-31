@@ -35,6 +35,8 @@
 
 [**💻 Desktop Widgets**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/desktop.png)
 
+[**🚪 Session Options**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/wlogout.png)
+
 [**🔒 Lock Screen**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/hyprlock.png)
 
 ----------------------------------------------------------------------------------------
