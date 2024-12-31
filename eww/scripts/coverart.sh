@@ -6,8 +6,20 @@ COVER_ART_FILE="$CONFIG_DIR/coverart.png"
 INFO_FILE="$CONFIG_DIR/info.txt"
 
 # Çalınan parçanın bilgilerini al
-current_title=$(playerctl metadata --format "{{ title }}")
-url=$(playerctl metadata --format "{{ mpris:artUrl }}" | sed 's/b273/1e02/')
+current_title=$(playerctl metadata --format "{{ title }}" 2>/dev/null)
+url=$(playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null | sed 's/b273/1e02/')
+
+# Eğer çalınan parça yoksa "0" döndür
+if [[ -z "$current_title" ]]; then
+    playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null | sed 's/b273/1e02/'
+    exit 0
+fi
+
+# Eğer çalınan parça yoksa veya URL boşsa ve içinde https:// yoksa doğrudan playerctl çıktısını echo ile döndür
+if [[ -z "$current_title" || ! "$url" =~ ^https:// ]]; then
+    echo "$url"  # URL içinde https:// yoksa doğrudan çıktıyı echo ile döndür
+    exit 0
+fi
 
 # Eski şarkı bilgisini oku
 if [[ -f "$INFO_FILE" ]]; then
