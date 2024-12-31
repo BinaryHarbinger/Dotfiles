@@ -63,22 +63,6 @@ else
     echo "GSettings not available, skipping."
 fi
 
-GTK3_CONFIG="$HOME/.config/gtk-3.0/settings.ini"
-mkdir -p "$(dirname "$GTK3_CONFIG")" >/dev/null 2>&1
-cat >"$GTK3_CONFIG" <<EOL
-[Settings]
-gtk-theme-name=$THEME_NAME
-gtk-icon-theme-name=Papirus-Dark
-gtk-font-name=Noto Sans 10
-EOL
-
-GTK2_CONFIG="$HOME/.gtkrc-2.0"
-cat >"$GTK2_CONFIG" <<EOL
-gtk-theme-name="$THEME_NAME"
-gtk-icon-theme-name="Papirus-Dark"
-gtk-font-name="Noto Sans 10"
-EOL
-
 echo "Applying changes..."
 
 if pgrep -x "waybar" >/dev/null; then
@@ -88,7 +72,7 @@ fi
 
 if pgrep -x "hyprpaper" >/dev/null; then
     echo "Relaunching hyprpaper"
-    pkill hyprpaper >/dev/null 2>&&1 &&hyprpaper >/dev/null 2>&1& disown& >/dev/null&
+    run_cmd pkill hyprpaper >/dev/null 2>&&1 &&hyprpaper >/dev/null 2>&1& disown& >/dev/null&
 fi
 sleep 1
 if pgrep -x "eww" >/dev/null; then
@@ -96,11 +80,8 @@ if pgrep -x "eww" >/dev/null; then
     killall eww&&eww d&&eww open-many stats desktopmusic >/dev/null& disown >/dev/null&
 fi
 
-if pgrep xfce4-panel &>/dev/null; then
-    run_cmd xfsettingsd --replace &
-else
-    echo "Restart your session to apply changes."
-fi
+
+echo "Restart your session to apply changes."
 
 echo "Cleaning up..."
 cd ..
