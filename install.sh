@@ -67,17 +67,17 @@ echo "Applying changes..."
 
 if pgrep -x "waybar" >/dev/null; then
     echo "Relaunching waybar"
-    run_cmd pkill waybar &&run_cmd waybar & disown
+    run_cmd pkill waybar &&run_cmd waybar &run_cmd disown
 fi
 
 if pgrep -x "hyprpaper" >/dev/null; then
     echo "Relaunching hyprpaper"
-    run_cmd pkill hyprpaper >/dev/null 2>&&1 &&hyprpaper >/dev/null 2>&1& disown& >/dev/null&
+    run_cmd pkill hyprpaper&& run_cmd hyprpaper& run_cmd disown
 fi
 sleep 1
 if pgrep -x "eww" >/dev/null; then
     echo "Relaunching eww"
-    killall eww&&eww d&&eww open-many stats desktopmusic >/dev/null& disown >/dev/null&
+    run_cmd killall eww&&run_cmd eww d&&run_cmd eww open-many stats desktopmusic
 fi
 
 
