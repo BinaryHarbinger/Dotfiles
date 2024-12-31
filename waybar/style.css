@@ -75,6 +75,7 @@ tooltip label {
     border-radius: 15px;
     border-color: @bg_main;
 }
+
 #workspaces button.active {
     color: @bg_main;
     border-radius: 15px;
@@ -283,17 +284,12 @@ tooltip label {
 }
 
 #mpris {
-	margin: 0px -8px;
 	min-width: 80px;
 }
 
 /* Hover effect for bar elements */
 #network:hover, #pulseaudio:hover,#clock:hover,#tray > widget:hover,#power-profiles-daemon:hover,#backlight:hover,#custom-swaync:hover,#battery:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
     background-color: @bg_hover;
-}
-
-#custom-cafein {
-	padding-right: 8px;
 }
 
 /* CPU widget styling */
