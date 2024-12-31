@@ -20,12 +20,14 @@ case $1 in
         echo "Wallpaper set to $filepath."
 		pkill hyprpaper
         nohup hyprpaper > /dev/null 2>&1 &
+		sleep 2
         eww reload > /dev/null 2>&1
         echo "Hyprpaper and Eww reloaded."
         ;;
     --reload|-r)
         pkill hyprpaper
         nohup hyprpaper > /dev/null 2>&1 &
+		sleep 2
         eww reload > /dev/null 2>&1
         echo "Hyprpaper and Eww reloaded."
         ;;

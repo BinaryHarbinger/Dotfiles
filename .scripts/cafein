@@ -47,12 +47,12 @@ case $1 in
     toggle)
         if [ -z "$PID" ]; then
             echo "hypridle activating."
-            hypridle& disown& notify-send "Cafein disabled."
+            hypridle& disown& notify-send '☕Cafein' 'Cafein disabled.'
         else
             echo "hypridle is running with PID: $PID."
             echo "Killing process '$PROCESS_NAME' (PID: $PID)..."
             kill -9 $PID # Send the KILL signal to terminate the process
-            echo "Process killed."& notify-send "Cafein activated."
+            echo "Process killed."& notify-send '☕Cafein' 'Cafein activated.'
         fi
         ;;
     start)
