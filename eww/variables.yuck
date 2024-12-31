@@ -18,7 +18,7 @@
 
 
 (defpoll musicartlink :interval "1s"
-  `playerctl metadata --format "{{ mpris:artUrl }}" | sed 's/b273/1e02/'`)
+  "./scripts/coverart.sh")
 (defpoll musicposition :interval "1s"
   `playerctl metadata --format "{{ duration(position) }}"`)
 (defpoll musiclength :interval "10s"
