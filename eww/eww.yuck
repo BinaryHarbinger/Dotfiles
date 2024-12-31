@@ -28,27 +28,6 @@
     )
   )
   
-  (defwidget meters []
-    (box :class "meters" :orientation "h" :halign "end" :spacing 12 :space-evenly "false"
-      (metric :label "󰍛"
-              :value "󱃃 ${temp}C"
-              :onchange ""
-              :onclick "")
-      (metric :label "󰍛"
-              :value "󰍛  ${memoryusage}%"
-              :onchange ""
-              :onclick "")
-      (metric :label "󰻠"
-              :value "󰻠  ${cpusage}%"
-              :onchange ""
-              :onclick "")
-      (metric :label ""
-              :value {volume != "0" ? "󰕾  ${volume}%" : "󰝟 "}
-              :onchange "pamixer --set-volume {} &"
-              :onclick "bash ~/.config/scripts/volume mute &")
-    )
-  )
-  
   (defwidget connectivity []
     (box :class "connectivity"
       :spacing 10

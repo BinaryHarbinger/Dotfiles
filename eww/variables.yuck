@@ -1,14 +1,10 @@
 
-(defpoll networkstatus :interval "1s"
+(defpoll networkstatus :interval "5s"
   `nmcli -t -f active,ssid dev wifi | grep "yes" | cut -c5-`)
 (defpoll bluetoothstatus :interval "1s"
   `bluetoothctl show | grep "Powered" | cut -c11-`)
-(defpoll temp :interval "1s"
+(defpoll temp :interval "5s"
   "sensors | grep -A 0 'temp1' | cut -c16-17")
-(defpoll cpusage :interval "1s"
-  "vmstat 1 2 | awk 'END { print 100 - $15 }'")
-(defpoll memoryusage :interval "1s"
-  `free -m | awk 'NR==2{printf "%.f", $3*100/$2 }'`)
 
 
 (defpoll uptime :interval "60s"
@@ -25,13 +21,13 @@
   `playerctl metadata --format "{{ duration(mpris:length)}}"`)
 (defpoll musicpositionpercentage :interval "1s"
   `playerctl metadata --format "{{ position / (mpris:length / 100)  }}"`)
-(defpoll playingorpaused :interval "0" 
+(defpoll playingorpaused :interval "1s" 
   `playerctl status`)
 (defpoll music :interval "1s"
   "playerctl metadata --format '{{ title }} - {{ artist }}' || true")
 (defpoll musicshort :interval "1s"
   `playerctl metadata --format '{{ title }}' | cut -c1-30`)
-(defpoll volume :interval "0s"
+(defpoll volume :interval "1s"
   "scripts/getVol.sh")
 
 (defvar ismusicopenornot false)
