@@ -61,17 +61,18 @@
   min-width: 80px;
   min-height: 80px;
   border-radius: 10px;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
 .musicartdesk {
   min-width: 10px;
   min-height: 10px;
-  border-radius: 10px;
-  background-size: 280px;
+  border-radius: 20px;
+  background-size: contain;
+  background-repeat: repeat;
   background-position: center;
-  border: 2px solid #b4befe;
+  border: 3px solid #30304d;
   padding: 0px;
   padding-top: 0px;
   margin: 0px 10px;
@@ -87,7 +88,7 @@
 
 .scalecenter scale trough,.scalestat scale trough {
   all: unset;
-  background-color: #0b0b11;
+  background-color: #30304d;
   border-radius: 50px;
   min-height: 5px;
   min-width: 225px;
@@ -204,12 +205,13 @@
   background-color: #25253b;
   border-radius: 50px;
   min-height: 5px;
-  min-width: 165px;
+  min-width: 160px;
   margin: 0px 10px;
 }
 .musicscale label{
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
+  padding: 0px;
 }
 .musicart{
   border: 1px solid #b4befe;
