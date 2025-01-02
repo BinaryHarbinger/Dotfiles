@@ -4,7 +4,7 @@
   :windowtype "normal"
   :stacking "bg"
   :geometry (geometry :x "20"
-                      :y "140"
+                      :y "135"
                       :width "310px"
                       :height "200px"
                       :anchor "bottom left")
@@ -23,7 +23,7 @@
               :value musicpositionpercentage)
         (box :class "label" {musiclength})
       )
-      (box :class "musicbuttons" :orientation "h" :halign "center" :spacing 30
+      (box :class "musicbuttons" :orientation "h" :halign "center" :spacing 32
         (button :class "musicbutton" :onclick "playerctl previous &" "󰒮")
         (button :class "playbutton" :onclick "playerctl play-pause &" {playingorpaused != "Paused" ? "󰏤" : "󰐊" })
         (button :class "musicbutton" :onclick "playerctl next &" "󰒭")
@@ -33,7 +33,7 @@
 )
 
 (defwidget status []
-(box :class "status" :orientation "v" :valign "center" :halign "center" :spacing 8
+(box :class "status" :orientation "v" :valign "center" :halign "center" :spacing 5
   (scalestat :label ""
       :value "${volume}"
       :onchange "pamixer --set-volume {}")

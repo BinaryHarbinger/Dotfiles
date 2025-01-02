@@ -9,14 +9,8 @@ INFO_FILE="$CONFIG_DIR/info.txt"
 current_title=$(playerctl metadata --format "{{ title }}" 2>/dev/null)
 url=$(playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null | sed 's/b273/1e02/')
 
-# Eğer çalınan parça yoksa "0" döndür
-if [[ -z "$current_title" ]]; then
-    playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null | sed 's/b273/1e02/'
-    exit 0
-fi
-
 # Eğer çalınan parça yoksa veya URL boşsa ve içinde https:// yoksa doğrudan playerctl çıktısını echo ile döndür
-if [[ -z "$current_title" || ! "$url" =~ ^https:// ]]; then
+if [[ -z "$current_title" || -z "$url" || ! "$url" =~ ^https:// ]]; then
     echo "$url"  # URL içinde https:// yoksa doğrudan çıktıyı echo ile döndür
     exit 0
 fi
@@ -33,12 +27,8 @@ if [[ "$current_title" != "$last_title" ]]; then
     echo "$current_title" > "$INFO_FILE" # Yeni şarkı adını kaydet
 
     # URL geçerliyse resmi indir
-    if [[ "$url" == https* ]]; then
-        curl -s -o "$COVER_ART_FILE" "$url"
-        echo "file://$COVER_ART_FILE"
-    else
-        echo "$url"
-    fi
+    wget -q -O "$COVER_ART_FILE" "$url"
+    echo "file://$COVER_ART_FILE"
 else
     # Şarkı değişmediyse mevcut resim dosyasını döndür
     echo "file://$COVER_ART_FILE"

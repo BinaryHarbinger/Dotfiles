@@ -13,8 +13,8 @@
   "brightnessctl -m echo 'text|jdbc' | sed -e 's/,/\ /g' | awk '{print $3/$5*100}'")
 
 
-(defpoll musicartlink :interval "1s"
-  "./scripts/coverart.sh")
+(defpoll musicartlink :interval "3s"
+  `scripts/coverart.sh`)
 (defpoll musicposition :interval "1s"
   `playerctl metadata --format "{{ duration(position) }}"`)
 (defpoll musiclength :interval "10s"
