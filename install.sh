@@ -44,9 +44,6 @@ run_cmd chmod +x ~/.config/hypr/scripts/*
 run_cmd chmod +x ~/.config/eww/scripts/*
 run_cmd ln -sf "$HOME/.config/hypr/wallpapers/lines.jpg" "$HOME/.config/hypr/wallppr.png"
 
-echo "Applying Spicetify theme..."
-run_cmd spicetify restore backup apply
-
 echo "Changing default shell to fish..."
 run_cmd sudo chsh -s /bin/fish "$USER"
 
