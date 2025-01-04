@@ -1,19 +1,40 @@
 #!/bin/bash
 
-echo System Update
-echo
-echo "Enter your sudo password to update."
-sudo echo >/dev/null 2>&1
-echo "Updating Pacman Packages..."
-yay --noconfirm >/dev/null 2>&1
-echo "Clearing yay Cache..."
-yay -Scc --noconfirm >/dev/null 2>&1
-echo "Completed."
-echo
-echo "Updating Flatpaks..."
-flatpak update
-echo
-echo Triming Disks..
-sudo fstrim -Av >/dev/null 2>&1
-echo
-echo "Update completed."
+# Script to update pacman packages via yay and Flatpak packages
+
+# Colors for output
+GREEN="\e[32m"
+RED="\e[31m"
+BLUE="\e[34m"
+RESET="\e[0m"
+
+echo -e "${BLUE}System Update${RESET}"
+
+# Prompt the user for confirmation
+echo -e "${RESET}Do you want to update the system? (y/N)${RESET}"
+read -r choice
+
+if [[ "$choice" != "y" && "$choice" != "Y" ]]; then
+    echo -e "${RED}Update process aborted by the user.${RESET}"
+    exit 0
+fi
+
+# Update pacman packages via yay
+echo -e "${BLUE}Updating pacman and AUR packages...${RESET}"
+if yay -Syu --noconfirm; then
+    echo -e "${GREEN}System packages updated.${RESET}"
+else
+    echo -e "${RED}Failed to update pacman and AUR packages.${RESET}"
+    exit 1
+fi
+
+# Update Flatpak packages
+echo -e "${BLUE}Updating Flatpak packages...${RESET}"
+if flatpak update -y; then
+    echo -e "${GREEN}Flatpak packages updated successfully.${RESET}"
+else
+    echo -e "${RED}Failed to update Flatpak packages.${RESET}"
+    exit 1
+fi
+
+echo -e "${GREEN}System update completed successfully!${RESET}"
