@@ -1,8 +1,13 @@
 #!/bin/bash
 
-echo Clearing Cache...
+GREEN="\e[32m"
+RED="\e[31m"
+BLUE="\e[34m"
+RESET="\e[0m"
 
-yay -Scc --noconfirm
+echo -e "${BLUE}Clearing Cache...${RESET}"
+
+yay -Scc --noconfirm >/dev/null 2>&1
 
 find ~/.cache -mindepth 1 -maxdepth 1 \
   ! -name "spotify" \
@@ -12,5 +17,5 @@ find ~/.cache -mindepth 1 -maxdepth 1 \
   ! -name "spotube" \
   ! -name "oss.krtirtho.spotube" \
   -exec rm -rf {} +
-echo Cache Cleared.
+echo -e "${GREEN}Cache Cleared.${RESET}"
 

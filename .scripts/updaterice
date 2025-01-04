@@ -3,7 +3,7 @@
 CHECK=$(ls |grep dotfiles)
 
 if [ -n "$CHECK" ]; then
-	echo deleting
+	echo Deleting old files.
     rm -rf dotfiles  # Remove the folder if it exists
 fi
 

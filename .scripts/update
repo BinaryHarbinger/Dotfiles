@@ -22,13 +22,16 @@ fi
 # Update pacman packages via yay
 echo -e "${BLUE}Updating pacman and AUR packages...${RESET}"
 if yay -Syu --noconfirm; then
+	echo
     echo -e "${GREEN}System packages updated.${RESET}"
 else
+	echo
     echo -e "${RED}Failed to update pacman and AUR packages.${RESET}"
     exit 1
 fi
 
 # Update Flatpak packages
+echo
 echo -e "${BLUE}Updating Flatpak packages...${RESET}"
 if flatpak update -y; then
     echo -e "${GREEN}Flatpak packages updated successfully.${RESET}"
@@ -36,5 +39,5 @@ else
     echo -e "${RED}Failed to update Flatpak packages.${RESET}"
     exit 1
 fi
-
+echo
 echo -e "${GREEN}System update completed successfully!${RESET}"
