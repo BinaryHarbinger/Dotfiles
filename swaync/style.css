@@ -15,6 +15,10 @@
 @define-color text-color-disabled @ply-act;
 @define-color bg-selected @ply-main;
 
+*{
+	font-family: "JetBrainsMono Nerd Font","Fira Mono";
+}
+
 .notification-row {
   outline: none;
 }
@@ -356,11 +360,12 @@
   font-size: 20px;
 }
 .widget-title > button {
-  font-size: 20px;
-  font-weight: 700;
+  all: unset;
+  font-size: 22px;
+  font-weight: 900;
   margin: 4px 0px;
-  padding: 0px 3px;
-  color: #C0CAF5;
+  padding: 0px;
+  color: @text-color;
   text-shadow: none;
   background: @bg-selected;
   border: 2px solid @content_alt;
