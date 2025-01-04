@@ -19,8 +19,6 @@
 
 [**🔍 Rofi**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/rofi.png)
 
-[**🎧 Spicetify**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/spicetify.png)
-
 [**⚙️ Action Center**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/center.png)
 
 [**🎵 Player**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/player.png)
