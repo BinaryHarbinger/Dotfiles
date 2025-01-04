@@ -77,8 +77,14 @@ system_menu() {
     # Execute the corresponding command based on the selected option
     case $chosen in
         "X Clear Cache")
-         	find ~/.cache -mindepth 1 -maxdepth 1 ! -name "spotify" -exec rm -rf {} +
-            ;;
+         	find ~/.cache -mindepth 1 -maxdepth 1 \
+         	  ! -name "spotify" \
+         	  ! -name "cliphist" \
+         	  ! -name "yay" \
+         	  ! -name "Hyprland Polkit Agent" \
+         	  ! -name "spotube" \
+         	  ! -name "oss.krtirtho.spotube" \
+         	  -exec rm -rf {} +;;
         "X Clear Clipboard")
             rm -rf ~/.cache/cliphist
             ;;
