@@ -67,6 +67,13 @@ _If you get errors during and after installation try to enable multilib repistor
 
 ***
 
+## Check other Binary themes
+
+[SDDM](https://github.com/BinaryHarbinger/sddm-binary-theme)
+[Heroic Games Launcher](https://github.com/BinaryHarbinger/Heroic-Games-Launcher-Binary-Theme)
+
+
+
 
 ----------------------------------------------------------------------------------------
 
