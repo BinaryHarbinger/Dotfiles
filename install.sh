@@ -14,7 +14,7 @@ echo "Updating system..."
 run_cmd yay -Syu --noconfirm --needed >/dev/null 2>&1
 
 PACKAGES=(
-  breeze cliphist spicetify-cli-git git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono
+  breeze cliphist git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpolkitagent unzip hyprsunset rofimoji
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync mpv hyprpicker eww pamixer hypridle
   network-manager-applet pamixer brightnessctl hyprswitch avizo
@@ -25,9 +25,6 @@ yay -S --noconfirm --needed "${PACKAGES[@]}"
 
 echo "Setting up polkit agent..."
 run_cmd systemctl --user enable --now hyprpolkitagent.service
-
-echo "Installing Spicetify..."
-run_cmd curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 
 echo "Cloning dotfiles repository..."
 run_cmd git clone https://github.com/BinaryHarbinger/dotfiles.git
@@ -52,16 +49,6 @@ run_cmd spicetify restore backup apply
 
 echo "Changing default shell to fish..."
 run_cmd sudo chsh -s /bin/fish "$USER"
-
-THEME_NAME="Materia-dark-compact"
-echo "Setting GTK theme to $THEME_NAME..."
-if command -v gsettings &>/dev/null; then
-    echo "Configuring GNOME settings..."
-    run_cmd gsettings set org.gnome.desktop.interface gtk-theme "$THEME_NAME"
-    run_cmd gsettings set org.gnome.desktop.wm.preferences theme "$THEME_NAME"
-else
-    echo "GSettings not available, skipping."
-fi
 
 echo "Applying changes..."
 
