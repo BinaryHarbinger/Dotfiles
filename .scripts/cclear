@@ -1,5 +1,17 @@
 #!/bin/bash
 
 echo Clearing Cache...
-find ~/.cache -mindepth 1 -maxdepth 1 ! -name "spotify" -exec rm -rf {} +
+
+yay -Scc --noconfirm
+
+find ~/.cache -mindepth 1 -maxdepth 1 \
+  ! -name "spotify" \
+  ! -name "cliphist" \
+  ! -name "yay" \
+  ! -name "Hyprland Polkit Agent" \
+  ! -name "spotube" \
+  ! -name "oss" \
+  ! -name "oss.krtirtho.spotube" \
+  -exec rm -rf {} +
 echo Cache Cleared.
+
