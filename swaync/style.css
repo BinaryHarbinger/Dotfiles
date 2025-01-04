@@ -9,7 +9,7 @@
 @define-color noti-bg-hover @bg_main_tooltip;
 @define-color noti-bg-hover-opaque @bg_main_tooltip;
 @define-color noti-bg-focus rgba(68, 68, 68, 0.6);
-@define-color noti-close-bg rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg @bg_alt2;
 @define-color noti-close-bg-hover @bg_hover;
 @define-color text-color @content_main;
 @define-color text-color-disabled @ply-act;
@@ -117,7 +117,7 @@
 .notification-row .notification-background .notification .notification-default-action .notification-content .app-icon {
   /* Notification app icon (only visible when the primary image is set) */
   -gtk-icon-effect: none;
-  -gtk-icon-shadow: 0 1px 4px black;
+  -gtk-icon-shadow: none;
   margin: 6px;
 }
 
@@ -285,10 +285,6 @@
   background: transparent;
 }
 
-.control-center .control-center-list .notification {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
-}
-
 .control-center .control-center-list .notification .notification-default-action,
 .control-center .control-center-list .notification .notification-action {
   transition: opacity 400ms ease-in-out, background 0.15s ease-in-out;
@@ -367,7 +363,7 @@
   padding: 0px;
   color: @text-color;
   text-shadow: none;
-  background: @bg-selected;
+  background: @bg_hover;
   border: 2px solid @content_alt;
   box-shadow: none;
   border-radius: 5px;
