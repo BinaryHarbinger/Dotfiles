@@ -40,8 +40,9 @@
     },
     "widgets": [
 
-      "title",
+      
       "dnd",
+      "title",
       "notifications"
     ],
     "widget-config": {
@@ -51,7 +52,7 @@
         "button-text": " 󰎟 "
       },
       "dnd": {
-        "text": "Do not disturb"
+        "text": "Do Not Disturb"
       },
       "label": {
         "max-lines": 1,
@@ -67,27 +68,7 @@
       },
       "buttons-grid": {
         "actions": [
-          {
-            "label": " ",
-            "command": "amixer set Master toggle"
-          },
-          {
-            "label": "",
-            "command": "amixer set Capture toggle"
-          },
-          {
-            "label": " ",
-            "command": "nm-connection-editor"
-          },
-          {
-            "label": "󰂯",
-            "command": "blueman-manager"
-          },
-          {
-            "label": "󰏘",
-            "command": "nwg-look"
-          }
-          
+                    
         ]
       }
     }
