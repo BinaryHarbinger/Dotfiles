@@ -6,6 +6,12 @@
 (defpoll temp :interval "5s"
   "sensors | grep -A 0 'temp1' | cut -c16-17")
 
+(defpoll mscloop :interval "1.5s"
+  "playerctl loop")
+
+  (defpoll mscshuffle :interval "1.5s"
+  "playerctl shuffle")
+
 
 (defpoll uptime :interval "60s"
   "uptime -p | cut -c3-")
