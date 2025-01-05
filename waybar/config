@@ -77,7 +77,7 @@
     }
   },
   "backlight": {
-    "on-click": "eww open actioncenter --toggle --no-daemonize &",
+    "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
@@ -146,7 +146,7 @@
   },
   "clock": {
     "format": " {:%R}",
-    "on-click": "eww open calendar --toggle --no-daemonize &",
+    "on-click": "eww open calendar --toggle --no-daemonize & eww close volumewidget actioncenter",
     "tooltip-format": " {:%d %B %Y}",
   },
   "network": {
@@ -157,11 +157,11 @@
     "format-icons": [
       "󰤯", "󰤟", "󰤢", "󰤢", "󰤨"
     ],
-    "on-click": "eww open actioncenter --toggle --no-daemonize &",
+    "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
     "on-click-right": "kitty -e 'nmtui'"
   },
   "battery": {
-    "on-click": "eww open actioncenter --toggle --no-daemonize &",
+    "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
     "states": {
       "good": 95,
       "warning": 30,
@@ -188,7 +188,7 @@
         "", "", ""
       ]
     },
-    "on-click": "eww open actioncenter --toggle --no-daemonize &",
+    "on-click": "eww open volumewidget --toggle --no-daemonize & eww close actioncenter calendar",
     "on-click-right": "pavucontrol"
   },
   "memory": {

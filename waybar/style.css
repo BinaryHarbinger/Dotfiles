@@ -15,10 +15,6 @@
 
 * {
 	all: unset; /*Remove the useless GTK theme rules*/
-    text-shadow: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font","Fira Mono";
     font-weight: 600;
     font-size: 12.7px;    

@@ -166,6 +166,7 @@
   )
   
   (include "./music_center.yuck")
+  (include "./barwidget.yuck")
   (include "./desktop.yuck")
   (include "./calendar.yuck")
   (include "./variables.yuck")

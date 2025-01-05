@@ -238,6 +238,26 @@
   padding: 0px 20px;
 }
 
+.volumewidget{
+  margin-top: 0px;
+  min-width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid c.$content-main;
+  background-color: c.$bg-alt2;
+  border-radius: 10px;
+}
+
+.volumewidgetsc{
+  margin-top: 0px;
+  min-width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  border: 0px solid c.$content-main;
+  background-color: c.$bg-alt2;
+  border-radius: 10px;
+}
+
 .summary{
   font-size: 20px;
   font-weight: 700;

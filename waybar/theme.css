@@ -7,7 +7,7 @@
 @define-color bg_active rgba(51, 51, 76, 0.8);
 /*Alternative background colors*/
 @define-color bg_alt #939cda;
-@define-color bg_alt2 rgba(34, 34, 50, 1);
+@define-color bg_alt2 #191929;
 /*base border color*/
 @define-color border_main #b4befe;
 
@@ -15,5 +15,12 @@
 @define-color content_main #b4befe;
 @define-color content_hover #b4befe;
 @define-color content_alt #484872;
+@define-color content-act #cdd4ff;
 /*text color for entries that are unselected */
 @define-color content_inactive rgba(180, 190, 254, 0.514);
+
+/* Player colors */
+@define-color ply-main #25253b;
+@define-color ply-hover #363657;
+@define-color ply-act #515181;
+@define-color msc-act #424268;

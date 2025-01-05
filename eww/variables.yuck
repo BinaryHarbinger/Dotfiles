@@ -15,6 +15,8 @@
 
 (defpoll uptime :interval "60s"
   "uptime -p | cut -c3-")
+(defpoll hyprsunset :interval "30s"
+  "scripts/sunset.sh --isActive")
 (defpoll brightness :interval "5"
   "brightnessctl -m echo 'text|jdbc' | sed -e 's/,/\ /g' | awk '{print $3/$5*100}'")
 
@@ -35,6 +37,9 @@
   `playerctl metadata --format '{{ title }}' | cut -c1-30`)
 (defpoll volume :interval "1s"
   "scripts/getVol.sh")
+
+(defpoll mic_percent :interval "3s" 
+"amixer -D pulse sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
 
 (defvar ismusicopenornot false)
 (defvar bluetoggle false)
