@@ -217,5 +217,5 @@
   (defwindow activate-linux
     :monitor 0
     :stacking "fg"
-    :geometry (geometry :x "8px" :y "32px" :width "250px" :anchor "bottom right")
+    :geometry (geometry :x "8px" :y "32px" :width "285px" :anchor "bottom right")
     (activate-linux))
