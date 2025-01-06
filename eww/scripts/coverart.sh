@@ -11,7 +11,7 @@ url=$(playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null | sed 's/b273
 
 # Eğer çalınan parça yoksa veya URL boşsa doğrudan playerctl çıktısını echo ile döndür
 if [[ -z "$current_title" || -z "$url" ]]; then
-    echo "No track playing or missing metadata."
+    echo ""
     exit 0
 fi
 
