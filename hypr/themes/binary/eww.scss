@@ -1,0 +1,29 @@
+// Main background colors
+$bg-main: #11111b;
+$bg-main-tooltip: rgb(17, 17, 27);
+
+// Base background color of selections
+$bg-hover: #30304d;
+// Base background color of active elements
+$bg-active: rgba(51, 51, 76, 0.8);
+// Alternative background colors
+$bg-alt: #939cda;
+$bg-alt2: #191929;
+
+// Base border color
+$border-main: #b4befe;
+$border-alt: #30304d;
+
+// Text colors
+$content-main: #b4befe;
+$content-hover: #b4befe;
+$content-alt: #484872;
+$content-act: #cdd4ff;
+// Text color for entries that are unselected
+$content-inactive: rgba(180, 190, 254, 0.514);
+
+// Player colors
+$ply-main: #25253b;
+$ply-hover: #363657;
+$ply-act: #515181;
+$msc-act: #424268;

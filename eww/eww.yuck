@@ -130,7 +130,7 @@
       (box :spacing 10
         (button :class "test" :onclick "eww open actioncenter --toggle && hyprshot-gui &" "󰹑 ")
         (button :class "test" :onclick "thunar ~ & eww open actioncenter --toggle &" " ")
-        (button :class "test" :onclick "bash $HOME/.config/eww/scripts/sunset.sh" "")
+        (button :class { cafein != 'false' ? "testenabled" : "test"} :onclick {cafein != false ? "bash $HOME/.config/hypr/scripts/cafein toggle & eww update cafein='false'" : "$HOME/.config/hypr/scripts/cafein toggle & eww update cafein='true'"} " ")
       )
     )
   )

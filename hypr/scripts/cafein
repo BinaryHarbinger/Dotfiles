@@ -17,6 +17,13 @@ fi
 
 # Perform the requested action based on the argument
 case $1 in
+	state)
+    if [ -z "$PID" ]; then
+        echo "true"
+    else
+		echo "false"
+	fi
+	;;
     stop)
         if [ -z "$PID" ]; then
             echo "Process '$PROCESS_NAME' is not running."
@@ -47,12 +54,12 @@ case $1 in
     toggle)
         if [ -z "$PID" ]; then
             echo "hypridle activating."
-            hypridle& disown& notify-send '☕Cafein' 'Cafein disabled.'
+            hypridle& disown #& notify-send '☕Cafein' 'Cafein disabled.'
         else
             echo "hypridle is running with PID: $PID."
             echo "Killing process '$PROCESS_NAME' (PID: $PID)..."
             kill -9 $PID # Send the KILL signal to terminate the process
-            echo "Process killed."& notify-send '☕Cafein' 'Cafein activated.'
+            echo "Process killed." #& notify-send '☕Cafein' 'Cafein activated.'
         fi
         ;;
     start)

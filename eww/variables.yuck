@@ -44,6 +44,9 @@
 (defvar ismusicopenornot false)
 (defvar bluetoggle false)
 (defvar nighttoggle false)
+(defpoll cafein :interval "1s"
+  "$HOME/.config/hypr/scripts/cafein state")
+
 
 (defvar notification ``)
 (defvar notificationreveal false)

@@ -19,7 +19,7 @@
   "passthrough": false,
   "height": 0,
   "modules-left": [
-    "custom/search", "custom/runner", "custom/os_button", "custom/cafein", "mpris",
+    "custom/search", "custom/runner", "custom/os_button", "mpris",
     "memory", "cpu"
   ],
   "modules-center": ["hyprland/workspaces"],
@@ -48,7 +48,7 @@
     "format-paused": "{status_icon}",
     "player-icons": {
       "default": "▶ Playing",
-      "mpv": "🎵"
+      "mpv": "▶ Playing (MPV)"
     },
     "status-icons": {
       "paused": "⏸ Paused"
@@ -124,11 +124,6 @@
   "custom/os_button": {
     "format": "",
     "on-click": "~/.config/hypr/scripts/rofilaunch.sh --menu",
-    "tooltip": false
-  },
-  "custom/cafein": {
-    "format": "",
-    "on-click": "~/.config/hypr/scripts/cafein toggle",
     "tooltip": false
   },
   "wlr/taskbar": {
