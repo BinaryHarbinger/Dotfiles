@@ -47,7 +47,7 @@ tooltip label {
     margin-left: 10px;
     margin-right: 5px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 2px solid #b4befe;
+    border: 2px solid @border_main;
     border-radius: 10px;
 }
 
@@ -62,13 +62,12 @@ tooltip label {
     padding: 0px 25px;
 }
 #workspaces button {
-    border-radius: 3px;
     color: @content_alt;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     padding: 0px 8px;
     margin: 3px 4px;
     background-color: @bg_alt;
-    border-radius: 15px;
+    border-radius: 10px;
     border-color: @bg_main;
 }
 
@@ -107,7 +106,7 @@ tooltip label {
 #tray {
     margin-left: 5px;
     margin-right: 5px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-radius: 10px;
     padding: 0px 10px;
     margin-right: 20px;
@@ -128,7 +127,7 @@ tooltip label {
 
 #tray menu {
 	font-family: "JetBrainsMono Nerd Font";
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-radius: 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: @bg_main;
@@ -136,15 +135,16 @@ tooltip label {
 }
 
 #tray menu > * {
-    border: 2px solid @content_main;border-top:0px;border-bottom:0px;
-    border-radius: 3px;
+	border: 2px solid transparent;
+    border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    padding: 0px 5px; /* Alt öğeler arasında boşluk */
+    padding: 0px 4px; /* Alt öğeler arasında boşluk */
 }
 
 #tray menu > *:hover {
+	border: 2px solid @border_main;
     background-color: @bg_alt2; /* Alt öğe hover arka plan rengi */
-	border: 2px solid #b4befe;border-top:0px;
+    border-top: 2px solid transparent;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -158,7 +158,7 @@ tooltip label {
     background-color: @bg_main;
     padding-left: 3px;
     padding-right: 3px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -170,7 +170,7 @@ tooltip label {
     font-family: "JetBrainsMono Nerd Font";
     padding-left: 10px;
     padding-right: 3px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-right: 0px;
     border-radius: 10px 0px 0px 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -182,7 +182,7 @@ tooltip label {
     background-color: @bg_main;
     padding-left: 5px;
     padding-right: 5px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -194,7 +194,7 @@ tooltip label {
     background-color: @bg_main;
     padding-right: 15px;
     padding-left: 15px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-left: 0px;
     border-radius: 0px 10px 10px 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -246,7 +246,7 @@ tooltip label {
     padding: 0px 10px;
     padding-right: 15px;
     font-size: 14px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -257,7 +257,7 @@ tooltip label {
 #backlight {
     background-color: @bg_main;
     padding: 0px 10px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -272,7 +272,7 @@ tooltip label {
     font-weight: bold;
     border-radius: 16px;
     padding: 0px 10px 0px 10px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;
@@ -280,11 +280,15 @@ tooltip label {
 }
 
 #mpris {
-	min-width: 80px;
+	min-width: 135px;
+}
+
+#mpris.paused {
+	color: @bg_alt;
 }
 
 /* Hover effect for bar elements */
-#network:hover, #pulseaudio:hover,#clock:hover,#tray > widget:hover,#power-profiles-daemon:hover,#backlight:hover,#custom-swaync:hover,#battery:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
+#custom-swaync:hover,#tray > widget:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
     background-color: @bg_hover;
 }
 
@@ -293,7 +297,7 @@ tooltip label {
     background-color: @bg_main;
     font-weight: bold;
     padding: 0px 10px;
-    border: 2px solid @content_main;
+    border: 2px solid @border_main;
     border-left: 0px;
     border-radius: 0px 10px 10px 0px;
 }
@@ -302,3 +306,4 @@ tooltip label {
 #bluetooth, #network, #pulseaudio {
     font-size: 15px; /* Decrease icon size */
 }
+

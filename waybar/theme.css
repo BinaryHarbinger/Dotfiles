@@ -9,7 +9,7 @@
 @define-color bg_alt #939cda;
 @define-color bg_alt2 #191929;
 /*base border color*/
-@define-color border_main #b4befe;
+@define-color border_main @content_main;
 
 /*text color for entries, views and content in general */
 @define-color content_main #b4befe;

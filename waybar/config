@@ -44,14 +44,13 @@
   },
   "mpris": {
     "on-click-right": "eww open musiccenter --toggle --no-daemonize &",
-    "format": "{player_icon}",
-    "format-paused": "{status_icon}",
+    "format": "<small>{title}</small>",
     "player-icons": {
       "default": "▶ Playing",
-      "mpv": "▶ Playing (MPV)"
     },
     "status-icons": {
-      "paused": "⏸ Paused"
+      "paused": "⏸ Paused",
+      "playing": "▶ Playing",
     },
     "tooltip": false
   },
