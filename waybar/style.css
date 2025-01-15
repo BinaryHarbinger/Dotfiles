@@ -16,8 +16,8 @@
 * {
 	all: unset; /*Remove the useless GTK theme rules*/
     font-family: "JetBrainsMono Nerd Font","Fira Mono";
-    font-weight: 600;
-    font-size: 12.7px;    
+    font-weight: 700;
+    font-size: 12.5px;    
 }
 
 window#waybar {
@@ -266,7 +266,7 @@ tooltip label {
 
 
 /* Styling for memory, search, os button, etc. */
-#memory, #custom-search, #custom-os_button, #custom-runner, #mpris, #custom-cafein {
+#memory, #custom-search, #custom-os_button, #custom-runner, #mpris, #custom-cafein, #cava {
     font-family: "Symbols Nerd Font", "JetbrainsMono Nerd Font";
     background-color: @bg_main;
     font-weight: bold;
@@ -280,7 +280,8 @@ tooltip label {
 }
 
 #mpris {
-	min-width: 135px;
+	padding: 0px;
+	min-width: 90px;
 }
 
 #mpris.paused {
