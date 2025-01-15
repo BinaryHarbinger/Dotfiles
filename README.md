@@ -17,26 +17,84 @@
 
 ## *Example Photos*
 
-[**🔍 Rofi**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/rofi.png)
+<details><summary>
+🔍 Rofi
+</summary></p>
 
-[**⚙️ Action Center**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/center.png)
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/rofi.png)
 
-[**🎵 Player**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/player.png)
+<p></details>
 
-[**🔔 Swaync**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/swaync.png)
+<details><summary>
+⚙️ Action Center
+</summary></p>
 
-[**⌨️ Terminal Applications**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/terminal.png)
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/center.png)
 
-[**❗On Screen Display**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/osd.png)
+<p></details>
 
-[**🔄 Window Switcher**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/switcher.png)
+<details><summary>
+🎵 Player
+</summary></p>
 
-[**💻 Desktop Widgets**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/desktop.png)
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/player.png)
 
-[**🚪 Session Options**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/wlogout.png)
+<p></details>
 
-[**🔒 Lock Screen**](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/hyprlock.png)
+<details><summary>
+🔔 SwayNC
+</summary></p>
 
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/swaync.png)
+
+<p></details>
+
+<details><summary>
+⌨️ Terminal Applications
+</summary></p>
+
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/terminal.png)
+
+<p></details>
+<details><summary>
+❗On Screen Display
+</summary></p>
+
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/osd.png)
+
+<p></details>
+
+<details><summary>
+🔄 Window Switcher
+</summary></p>
+
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/switcher.png)
+
+<p></details>
+
+<details><summary>
+💻 Desktop Widgets
+</summary></p>
+
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/desktop.png)
+
+<p></details>
+
+<details><summary>
+🚪 Session Options
+</summary></p>
+
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/wlogout.png)
+
+<p></details>
+
+<details><summary>
+🔒 Lock Screen
+</summary></p>
+
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/hyprlock.png)
+
+<p></details>
 ----------------------------------------------------------------------------------------
 
 ## How to install?
