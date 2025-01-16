@@ -51,6 +51,7 @@
     "status-icons": {
       "paused": "  Paused",
       "playing": "  Playing",
+      "stopped": " Stopped",
     },
     "tooltip": false
   },
@@ -179,7 +180,7 @@
     "headphone": "",
       "format-muted": "",
       "default": [
-        "", "", ""
+        " ", " "
       ]
     },
     "on-click": "eww open volumewidget --toggle --no-daemonize & eww close actioncenter calendar",

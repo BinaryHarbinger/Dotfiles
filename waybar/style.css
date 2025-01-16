@@ -17,7 +17,7 @@
 	all: unset; /*Remove the useless GTK theme rules*/
     font-family: "JetBrainsMono Nerd Font","Fira Mono";
     font-weight: 700;
-    font-size: 12.5px;    
+    font-size: 12.5px;
 }
 
 window#waybar {
@@ -308,3 +308,7 @@ tooltip label {
     font-size: 15px; /* Decrease icon size */
 }
 
+#pulseaudio {
+	padding: 0px 5px;
+	padding-left: 14px;
+}
