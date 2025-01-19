@@ -71,20 +71,7 @@
     )
   )
   
-  (defwidget workspaces [array]
-    (box :class "workspaces"
-         :orientation "h"
-         :space-evenly false
-         :spacing 1
-         :halign "start"
-      (for entry in array
-        (button :onclick `swaymsg workspace "${entry.name}"`
-                :class {entry.focused ? "focused" : ""}
-                `${entry.name}`
-        )
-      )
-    )
-  )
+  
   
   (defwidget metric [label value onchange onclick]
     (box :orientation "h" 

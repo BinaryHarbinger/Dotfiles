@@ -34,7 +34,7 @@
 }
 
 .actioncenter{
-  border: solid 2px c.$content-main;
+  border: solid 2px c.$border_main;
   background-color: c.$bg-main;
   border-radius: 10px;
   padding: 10px;
@@ -90,9 +90,9 @@
 
 .scalecenter scale trough,.scalestat scale trough {
   all: unset;
-  background-color: c.$border-alt;
+  background-color: c.$ply-main;
   border-radius: 50px;
-  min-height: 5px;
+  min-height: 8px;
   min-width: 225px;
   margin-right: 5px;
 }
@@ -105,6 +105,21 @@
 .scalecenter scale trough,.scalestat scale trough {
  min-width: 240px;
  }
+
+ /*.scalecenter scale trough slider, .scalestat scale trough slider {
+  background-color: c.$ply-act;
+  padding: 4px;
+  border: 2px solid c.$ply-act;
+  border-left-color: c.$content-main;
+  border-radius: 50% 30% 30% 50%;
+}
+
+.scalecenter scale trough slider:active, .scalestat scale trough slider:active{
+  background-color: c.$ply-hover ;
+  border-color: c.$ply-hover;
+  border-radius: 50% 30% 30% 50%;
+}*/
+
 
 .test, .testenabled{
   min-width: 80px;
@@ -146,7 +161,7 @@
 
 .musiccenter{
   border-radius: 10px ;
-  border: 2px solid c.$content-main;
+  border: 2px solid c.$border_main;
   background-color: c.$bg-main;
   padding: 10px 10px 5px 10px;
   color:white;
@@ -154,7 +169,7 @@
 
 .desktopmusic{
   border-radius: 10px ;
-  border: 2px solid c.$content-main;
+  border: 2px solid c.$border_main;
   background-color: c.$bg-main;
   padding: 10px 10px 5px 10px;
   color:white;
@@ -232,7 +247,7 @@
   padding: 0px;
 }
 .musicart{
-  border: 1px solid c.$content-main;
+  border: 1px solid c.$border_main;
   background-image: unset;
   margin: 0px 0px;
   padding: 0px 20px;
@@ -243,7 +258,7 @@
   min-width: 200px;
   font-size: 20px;
   padding: 10px;
-  border: 2px solid c.$content-main;
+  border: 2px solid c.$border_main;
   background-color: c.$bg-alt2;
   border-radius: 10px;
 }
@@ -253,7 +268,7 @@
   min-width: 200px;
   font-size: 20px;
   padding: 10px;
-  border: 0px solid c.$content-main;
+  border: 0px solid c.$border_main;
   background-color: c.$bg-alt2;
   border-radius: 10px;
 }
@@ -267,7 +282,7 @@
   background: c.$bg-alt2;
   font-size: 15px;
   padding: 2px 5px;
-  border:2px solid c.$content-main ;
+  border:2px solid c.$border_main ;
   border-radius: 10px;
 
   &.view {
@@ -310,7 +325,7 @@
   margin: 0px;
   padding: 0px;
   border-radius: 10px;
-  border: 2px solid c.$content-main;
+  border: 2px solid c.$border_main;
 }
 
 .activate-linux {
