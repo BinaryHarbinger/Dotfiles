@@ -203,6 +203,7 @@
   
   (defwindow activate-linux
     :monitor 0
-    :stacking "fg"
+    :wm-ignore true
+    :stacking "overlay"
     :geometry (geometry :x "8px" :y "32px" :width "285px" :anchor "bottom right")
     (activate-linux))

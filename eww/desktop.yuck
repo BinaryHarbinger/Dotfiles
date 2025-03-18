@@ -12,7 +12,7 @@
   (box :orientation "v" :space-evenly "false"
     (box :class "musicartdesk" :style {musicartlink != "" ? `background-image: url("${musicartlink}"); min-height:260px; min-width: 30px; margin-bottom: 10px;` :  `min-height:0px; min-width: 0px; border:unset;`})
     (box :class "musiccontrols" :orientation "v" :space-evenly "false" :spacing 5
-      (label :class "musictitle" :text {music} :valign "start" :halign "center")
+      (label :class "musictitle" :text {musicshort} :valign "start" :halign "center")
       (box :orientation "h"
           :class "musicscale"
           :space-evenly false
@@ -104,3 +104,17 @@
     (deskbuttons)
   )
   )
+
+    (defwidget deskclock []
+    (box :class "deskclock"
+      :orientation "v"
+      :halign "start"
+      :valign "start"
+      (label :xalign 0 :text clock)))
+  
+  (defwindow deskclockwin
+    :monitor 0
+    :wm-ignore true
+    :stacking "bg"
+    :geometry (geometry :x "0px" :y "20px" :width "350px" :anchor "bottom right")
+    (deskclock))

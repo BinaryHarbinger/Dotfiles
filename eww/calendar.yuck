@@ -1,5 +1,5 @@
 (defwindow calendar
-    :monitor 0
+    :monitor "0"
     :windowtype "normal"
     :wm-ignore true
     :geometry (geometry :anchor "top right" :x 60 :y 8 :width "312px" :height "220px")

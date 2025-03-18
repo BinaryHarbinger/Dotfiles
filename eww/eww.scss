@@ -335,3 +335,13 @@
     background: none;
   }
 }
+
+.deskclock  {
+  font-size: 100px;
+  color: c.$content-main;
+  background-color: c.$bg-main;
+  border-radius: 20px;
+  padding: 0px 10px;
+  text-shadow: 3px 3px 3px c.$bg-alt ;
+  border: 2px solid c.$border_main;
+}

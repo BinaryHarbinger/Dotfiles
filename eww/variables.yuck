@@ -12,6 +12,8 @@
   (defpoll mscshuffle :interval "1.5s"
   "playerctl shuffle")
 
+(defpoll monitor :interval "2s"
+  "scripts/activeworkspace.sh")
 
 (defpoll uptime :interval "60s"
   "uptime -p | cut -c3-")
@@ -36,10 +38,10 @@
 (defpoll musicshort :interval "1s"
   `playerctl metadata --format '{{ title }}' | cut -c1-30`)
 (defpoll volume :interval "1s"
-  "scripts/getVol.sh")
+  "scripts/getVol.sh speaker")
 
 (defpoll mic_percent :interval "3s" 
-"amixer -D pulse sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+"scripts/getVol.sh mic")
 
 (defvar ismusicopenornot false)
 (defvar bluetoggle false)
@@ -54,4 +56,9 @@
 
 (defpoll monthname :interval "2s"
   "date +%B"
+)
+
+
+(defpoll clock :interval "60s"
+  "date +'%H:%M'"
 )
