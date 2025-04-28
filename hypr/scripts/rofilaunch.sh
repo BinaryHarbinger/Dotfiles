@@ -72,11 +72,12 @@ system_menu() {
     options="X Clear Cache\nX Clear Clipboard\n Session Options\n Update Rice\n Update System"
 
     # Prompt user to choose an option
-    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/launcher.rasi -dmenu -p "Select an option:")
+    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
 
     # Execute the corresponding command based on the selected option
     case $chosen in
         "X Clear Cache")
+            yay -Scc --no-confirm
          	find ~/.cache -mindepth 1 -maxdepth 1 \
          	  ! -name "spotify" \
          	  ! -name "cliphist" \
@@ -120,7 +121,7 @@ case "$1" in
     --menu)
         custom_menu
         ;;
-    --system_menu)
+    --system_menu|-sm)
     	system_menu
     	;;
     *)

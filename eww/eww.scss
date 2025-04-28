@@ -263,6 +263,16 @@
   border-radius: 10px;
 }
 
+.volumeButton{
+  margin-top: 0px;
+  min-width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid c.$border_main;
+  background-color: c.$bg-alt2;
+  border-radius: 10px;
+}
+
 .volumewidgetsc{
   margin-top: 0px;
   min-width: 200px;
@@ -340,8 +350,8 @@
   font-size: 100px;
   color: c.$content-main;
   background-color: c.$bg-main;
-  border-radius: 20px;
-  padding: 0px 10px;
-  text-shadow: 3px 3px 3px c.$bg-alt ;
+  border-radius: 30px;
+  padding: 0px 14px;
+  text-shadow: 5px 3px 1px c.$ply-act ;
   border: 2px solid c.$border_main;
 }
