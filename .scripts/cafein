@@ -24,6 +24,13 @@ fi
 
 # Perform the requested action based on the argument
 case $1 in
+	state)
+	        if [ -z "$PID" ]; then
+	            echo "not"
+	        else
+				echo "true"
+	        fi
+	        ;;
     stop)
         if [ -z "$PID" ]; then
             echo "Process '$PROCESS_NAME' is not running."
