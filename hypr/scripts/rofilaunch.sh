@@ -67,9 +67,64 @@ custom_menu() {
     esac
 }
 
+widget_settings() {
+    # Menu options displayed in rofi
+    options=" Desk Clock\n Change Stats\n▶ Change Music\n Reload Widgets\n Initalize"
+
+    # Prompt user to choose an option
+    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
+
+    # Execute the corresponding command based on the selected option
+    case $chosen in
+        " Desk Clock")
+            bash ~/.config/hypr/scripts/widgets.sh three
+            bash ~/.config/hypr/scripts/widgets.sh r
+            ;;
+        " Change Stats")
+            bash ~/.config/hypr/scripts/widgets.sh one
+            bash ~/.config/hypr/scripts/widgets.sh r
+            ;;
+        "▶ Change Music")
+            bash ~/.config/hypr/scripts/widgets.sh two
+            bash ~/.config/hypr/scripts/widgets.sh r
+            ;;
+        " Reload Widgets")
+            bash ~/.config/hypr/scripts/widgets.sh r
+            ;;
+        " Initalize Widgets")
+            bash ~/.config/hypr/scripts/widgets.sh r
+            ;;
+        *)
+            echo "No option selected"
+            ;;
+    esac
+}
+
+rice_settings() {
+    # Menu options displayed in rofi
+    options=" Widgets\n Themes"
+
+    # Prompt user to choose an option
+    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
+
+    # Execute the corresponding command based on the selected option
+    case $chosen in
+        " Widgets")
+            bash ~/.config/hypr/scripts/rofilaunch.sh --widget_settings
+            ;;
+        " Themes")
+            bash ~/.config/hypr/scripts/widgets.sh one
+            bash ~/.config/hypr/scripts/widgets.sh r
+            ;;
+        *)
+            echo "No option selected"
+            ;;
+    esac
+}
+
 system_menu() {
     # Menu options displayed in rofi
-    options="X Clear Cache\nX Clear Clipboard\n Session Options\n Update Rice\n Update System"
+    options="X Clear Cache\nX Clear Clipboard\n Session Options\n Rice Settings\n Update System"
 
     # Prompt user to choose an option
     chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
@@ -82,6 +137,7 @@ system_menu() {
          	  ! -name "spotify" \
          	  ! -name "cliphist" \
          	  ! -name "yay" \
+         	  ! -name "rofi-entry-history.txt" \
          	  ! -name "Hyprland Polkit Agent" \
          	  ! -name "spotube" \
          	  ! -name "oss.krtirtho.spotube" \
@@ -95,8 +151,8 @@ system_menu() {
         " Update System")
             alacritty -e ~/.scripts/update
             ;;
-        " Update System")
-                    alacritty -e ~/.scripts/updaterice
+        " Rice Settings")
+                    bash ~/.config/hypr/scripts/rofilaunch.sh --rice_settings
                     ;;
         *)
             echo "No option selected"
@@ -121,9 +177,15 @@ case "$1" in
     --menu)
         custom_menu
         ;;
-    --system_menu|-sm)
-    	system_menu
+    --widget_settings)
+    	widget_settings
     	;;
+     --rice_settings)
+     	rice_settings
+     	;;
+     --system_menu)
+     	system_menu
+     	;;
     *)
         usage
         ;;
