@@ -26,6 +26,14 @@
 <p></details>
 
 <details><summary>
+⚙️ Rofi Menu
+</summary></p>
+
+![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/rofiMenu.png)
+
+<p></details>
+
+<details><summary>
 ⚙️ Action Center
 </summary></p>
 
