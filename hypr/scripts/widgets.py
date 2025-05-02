@@ -74,5 +74,4 @@ for argument in arguments:
             command = ["eww", "r"]
             print(data)
 
-
 exit()
