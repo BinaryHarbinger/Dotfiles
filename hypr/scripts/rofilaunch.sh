@@ -69,7 +69,7 @@ custom_menu() {
 
 widget_settings() {
     # Menu options displayed in rofi
-    options=" Desk Clock\n Change Stats\n▶ Change Music\n Reload Widgets\n Initalize"
+    options=" Desk Clock\n Change Stats\n Change Music\n Reload Widgets\n Initalize"
 
     # Prompt user to choose an option
     chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
@@ -84,7 +84,7 @@ widget_settings() {
             bash ~/.config/hypr/scripts/widgets.sh one
             bash ~/.config/hypr/scripts/widgets.sh r
             ;;
-        "▶ Change Music")
+        " Change Music")
             bash ~/.config/hypr/scripts/widgets.sh two
             bash ~/.config/hypr/scripts/widgets.sh r
             ;;
@@ -102,7 +102,7 @@ widget_settings() {
 
 rice_settings() {
     # Menu options displayed in rofi
-    options=" Widgets\n Themes"
+    options=" Widgets\n Wallpaper\n Themes"
 
     # Prompt user to choose an option
     chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
@@ -115,6 +115,33 @@ rice_settings() {
         " Themes")
             bash ~/.config/hypr/scripts/widgets.sh one
             bash ~/.config/hypr/scripts/widgets.sh r
+            ;;
+        " Wallpaper")
+            wallpaper_settings
+            ;;
+        *)
+            echo "No option selected"
+            ;;
+    esac
+}
+
+wallpaper_settings() {
+    # Menu options displayed in rofi
+    options=" Lines\n Waves\n Patterns"
+
+    # Prompt user to choose an option
+    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
+
+    # Execute the corresponding command based on the selected option
+    case $chosen in
+        " Lines")
+            bash ~/.config/hypr/scripts/wallpaper.sh -s ~/.config/hypr/wallpapers/lines.png
+            ;;
+        " Waves")
+        bash ~/.config/hypr/scripts/wallpaper.sh -s ~/.config/hypr/wallpapers/waves.png
+            ;;
+        " Patterns")
+        bash ~/.config/hypr/scripts/wallpaper.sh -s .config/hypr/wallpapers/bgpatternblue.jpg
             ;;
         *)
             echo "No option selected"
