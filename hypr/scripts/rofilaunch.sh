@@ -117,7 +117,7 @@ rice_settings() {
             bash ~/.config/hypr/scripts/widgets.sh r
             ;;
         " Wallpaper")
-            wallpaper_settings
+            set_wallpaper
             ;;
         *)
             echo "No option selected"
@@ -130,7 +130,7 @@ wallpaper_settings() {
     options=" Lines\n Waves\n Patterns"
 
     # Prompt user to choose an option
-    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
+    chosen=$(python ~/.config/hypr/scripts/wallpapers.py | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
 
     # Execute the corresponding command based on the selected option
     case $chosen in
@@ -147,6 +147,15 @@ wallpaper_settings() {
             echo "No option selected"
             ;;
     esac
+}
+
+set_wallpaper() {
+
+    # Prompt user to choose an option
+    chosen=$(python ~/.config/hypr/scripts/wallpapers.py echoImageNames | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
+    # Execute the corresponding command based on the selected option
+    echo $chosen
+    python ~/.config/hypr/scripts/wallpapers.py changeWallpaper $chosen
 }
 
 system_menu() {
