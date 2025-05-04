@@ -100,9 +100,42 @@ widget_settings() {
     esac
 }
 
+waybar_settings() {
+    # Menu options displayed in rofi
+    options=" Single Bar\n Binary Bar\n Floating Bar\n Reload Bar"
+
+    # Prompt user to choose an option
+    chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
+
+    # Execute the corresponding command based on the selected option
+    case $chosen in
+        " Single Bar")
+            cp -r ~/.config/hypr/themes/waybar/bar.css ~/.config/waybar/style.css
+            ;;
+        " Binary Bar")
+            cp -r ~/.config/hypr/themes/waybar/default.css ~/.config/waybar/style.css
+            ;;
+        " Floating Bar")
+        cp -r ~/.config/hypr/themes/waybar/default.css ~/.config/waybar/style.css
+            ;;
+        " Reload Bar")
+        pkill waybar
+        waybar& disown
+            ;;
+        *)
+            echo "No option selected"
+            ;;
+        esac
+
+        if [[ -n "$chosen" ]]; then
+            pkill waybar
+            waybar & disown
+        fi
+}
+
 rice_settings() {
     # Menu options displayed in rofi
-    options=" Widgets\n Wallpaper\n Themes"
+    options=" Widgets\n Waybar Themes\n Wallpaper\n Themes"
 
     # Prompt user to choose an option
     chosen=$(echo -e "$options" | rofi -config ~/.config/rofi/sysmenu.rasi -dmenu -p "Select an option:")
@@ -110,11 +143,14 @@ rice_settings() {
     # Execute the corresponding command based on the selected option
     case $chosen in
         " Widgets")
-            bash ~/.config/hypr/scripts/rofilaunch.sh --widget_settings
+            widget_settings
             ;;
+        " Waybar Themes")
+            waybar_settings
+            ;;
+
         " Themes")
-            bash ~/.config/hypr/scripts/widgets.sh one
-            bash ~/.config/hypr/scripts/widgets.sh r
+            echo Not ready yet
             ;;
         " Wallpaper")
             set_wallpaper
@@ -188,7 +224,7 @@ system_menu() {
             alacritty -e ~/.scripts/update
             ;;
         " Rice Settings")
-                    bash ~/.config/hypr/scripts/rofilaunch.sh --rice_settings
+            rice_settings
                     ;;
         *)
             echo "No option selected"
