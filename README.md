@@ -9,9 +9,9 @@
 
 » Simple and effective style.
 
-» Easy to configure.
-
 » Optimized.
+
+» Python based customization options. (Rofi as GUI)
 
 » Auto installable. (On Arch *(based distros)*)
 
