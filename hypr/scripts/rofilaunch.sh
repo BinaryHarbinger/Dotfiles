@@ -111,12 +111,15 @@ waybar_settings() {
     case $chosen in
         " Single Bar")
             cp -r ~/.config/hypr/themes/waybar/bar.css ~/.config/waybar/style.css
+            cp -r ~/.config/hypr/themes/waybar/defaultConfig ~/.config/waybar/config
             ;;
         " Binary Bar")
             cp -r ~/.config/hypr/themes/waybar/default.css ~/.config/waybar/style.css
+            cp -r ~/.config/hypr/themes/waybar/defaultConfig ~/.config/waybar/config
             ;;
         " Floating Bar")
-        cp -r ~/.config/hypr/themes/waybar/default.css ~/.config/waybar/style.css
+        cp -r ~/.config/hypr/themes/waybar/floating.css ~/.config/waybar/style.css
+        cp -r ~/.config/hypr/themes/waybar/floatConfig ~/.config/waybar/config
             ;;
         " Reload Bar")
         pkill waybar
