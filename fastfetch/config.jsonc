@@ -3,7 +3,7 @@
     "logo": {
       "type": "small",
       "padding": {
-        "top": 3,
+        "top": 4,
         "right": 4,
         "left": 4,
       }
@@ -16,42 +16,55 @@
         "break",
         {
         "type": "title",
-        "keyWidth": 10
+        "format": "‎‎‎‎  ‎‎‎‎  ‎‎‎‎  {#1;34}{}{#}@{#1;34}{}{#}"
       },
+      {
+            "type": "custom",
+            "key": "┌──────────────────────────────────┐",
+            "value": ""
+          },
       "break",
       {
         "type": "os",
-        "key": " ",
+        "format": "‎‎‎‎{3} {12}",
+        "key": "‎‎‎‎  ‎‎‎‎‎‎‎‎‎‎ ",
         "keyColor": "cyan"
       },
       {
         "type": "kernel",
-        "key": " ",
+        "key": "‎‎‎‎   ",
         "keyColor": "33"
       },
       {
         "type": "shell",
-        "key": " ",
+        "key": "‎‎‎‎   ",
         "keyColor": "1"
       },
       {
         "type": "uptime",
-        "key": " ",
+        "key": "‎‎‎‎   ",
         "keyColor": "32"
       },
       {
         "type": "packages",
-        "format": "{} (pacman)",
-        "key": " ",
+        "format": "{2} (pacman), {14} (flatpak)",
+        "key": "‎‎‎‎   ",
         "keyColor": "33"
       },
       {
         "type": "memory",
-        "key": " ",
+        "key": "‎‎‎‎   ",
         "keyColor": "34"
       },
       "break",
+
       {
+            "type": "custom",
+            "key": "└─────────────────────────────────┘",
+            "value": ""
+          },
+      {
+      	"paddingLeft": 10,
         "type": "colors",
         "symbol": "circle"
       },
