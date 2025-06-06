@@ -53,7 +53,7 @@ custom_menu() {
             wlogout
             ;;
         "")
-            alacritty
+            ghostty
             ;;
         "")
             xdg-open https://about:blank
@@ -212,6 +212,7 @@ system_menu() {
          	  ! -name "spotify" \
          	  ! -name "cliphist" \
          	  ! -name "yay" \
+         	  ! -name "pip" \
          	  ! -name "rofi-entry-history.txt" \
          	  ! -name "Hyprland Polkit Agent" \
          	  ! -name "spotube" \
@@ -224,7 +225,7 @@ system_menu() {
             wlogout
             ;;
         " Update System")
-            alacritty -e ~/.scripts/update
+            ghostty -e ~/.scripts/update
             ;;
         " Rice Settings")
             rice_settings

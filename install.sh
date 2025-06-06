@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Binary Harbingers Dotfiles v2.0"
+echo "Binary Harbingers Dotfiles v3"
 
 # Helper function to run commands silently and show errors
 run_cmd() {
@@ -14,7 +14,7 @@ echo "Updating system..."
 run_cmd yay -Syu --noconfirm --needed >/dev/null 2>&1
 
 PACKAGES=(
-  breeze cliphist git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono
+  breeze cliphist git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono ghostty
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpolkitagent unzip hyprsunset rofimoji
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync mpv hyprpicker eww pamixer hypridle udiskie
   network-manager-applet pamixer brightnessctl hyprswitch avizo bibata-cursor-theme catppuccin-gtk-theme-mocha ttf-material-design-iconic-font

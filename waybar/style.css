@@ -64,7 +64,7 @@ tooltip label {
 #workspaces button {
     color: @content_alt;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    padding: 0px 8px;
+    padding: 2px 8px;
     margin: 3px 4px;
     background-color: @bg_alt;
     border-radius: 10px;
