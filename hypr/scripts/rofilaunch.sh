@@ -212,6 +212,7 @@ system_menu() {
          	  ! -name "spotify" \
          	  ! -name "cliphist" \
          	  ! -name "yay" \
+         	  ! -name "mcpelauncher-webview"\
          	  ! -name "pip" \
          	  ! -name "rofi-entry-history.txt" \
          	  ! -name "Hyprland Polkit Agent" \

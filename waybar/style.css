@@ -40,6 +40,7 @@ tooltip label {
 #custom-swaync {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 1px;
+    color: @content_main;
     background-color: @bg_main;
     min-width: 20px;
     padding-left: 12px;
@@ -56,10 +57,10 @@ tooltip label {
     color: transparent;
     margin-right: 1.5px;
     margin-left: 1.5px;
-    border-radius: 20px;
-    border: 2px solid @border_main ;
+    border-radius: 12px;
+    border: 2px solid @content_main ;
     background-color: @bg_main;
-    padding: 0px 25px;
+    padding: 0px 20px;
 }
 #workspaces button {
     color: @content_alt;
@@ -234,7 +235,6 @@ tooltip label {
 }
 
 #custom-swaync {
-    color: rgb(255, 255, 255);
     padding-right: 13px; 
 }
 

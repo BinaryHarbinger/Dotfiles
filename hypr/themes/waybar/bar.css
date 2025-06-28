@@ -1,4 +1,4 @@
-/*
+ü,/*
  * __        __          _                  ____  _         _       
  * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
  *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
@@ -43,6 +43,7 @@ tooltip label {
 #custom-swaync {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 1px;
+	color: @content_main;
     background-color: @bg_main;
     min-width: 20px;
     padding-left: 12px;
@@ -69,7 +70,7 @@ tooltip label {
 #workspaces button {
     color: @content_alt;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    padding: 0px 8px;
+    padding: 2px 8px;
     margin: 3px 4px;
     background-color: @bg_alt;
     border-radius: 10px;
@@ -239,7 +240,6 @@ tooltip label {
 }
 
 #custom-swaync {
-    color: rgb(255, 255, 255);
     padding-right: 13px; 
 }
 
