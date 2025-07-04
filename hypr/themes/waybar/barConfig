@@ -18,9 +18,9 @@
   "margin-top": 6, "margin-bottom": 0,
   "passthrough": false,
   "height": 0,
-  "modules-left": ["group/leftSide"],
+  "modules-left": ["group/customs", "mpris", "group/hardware"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray", "group/rightSide", "custom/swaync"],
+  "modules-right": ["tray", "group/controlCenter", "power-profiles-daemon", "clock", "custom/swaync"],
   "hyprland/language": {
     "format": "{}",
     "format-en": "ENG",
@@ -116,7 +116,7 @@
                },*/
   },
   "custom/os_button": {
-    "format": "",
+    "format": " ",
     "on-click": "~/.config/hypr/scripts/rofilaunch.sh --menu",
     "tooltip": false
   },
@@ -200,6 +200,12 @@
             ]
 	},
 
+    "group/customs": {
+		"orientation": "horizontal",
+		"modules": ["custom/search", "custom/runner", "custom/os_button"]
+	},
+
+
 
     "group/controlCenter": {
 		"orientation": "horizontal",
@@ -209,16 +215,5 @@
 			"battery",
             "backlight"
 		]
-	},
-    
-    "group/leftSide": {
-		"orientation": "horizontal",
-		"modules": [
-			"custom/search", "custom/runner", "custom/os_button", "mpris"]
-	},
-
-    "group/rightSide": {
-		"orientation": "horizontal",
-		"modules": ["group/controlCenter","power-profiles-daemon", "clock"]
 	},
 }

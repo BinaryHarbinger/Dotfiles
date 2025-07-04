@@ -18,27 +18,21 @@
   "margin-top": 6, "margin-bottom": 0,
   "passthrough": false,
   "height": 0,
-  "modules-left": [
-    "custom/search", "custom/runner", "custom/os_button", "mpris",
-    "memory", "cpu"
-  ],
+  "modules-left": ["group/leftSide"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": [
-    "tray", "pulseaudio", "network", "battery", "backlight", "power-profiles-daemon",
-    "hyprland/language", "clock", "custom/swaync"
-  ],
+  "modules-right": ["tray", "group/rightSide", "custom/swaync"],
   "hyprland/language": {
     "format": "{}",
     "format-en": "ENG",
     "format-tr": "TR"
   },
   "custom/search": {
-          "format": "",
+          "format": " ",
           "on-click": "~/.config/hypr/scripts/rofilaunch.sh --drun",
           "tooltip": false,
       },
   "custom/runner": {
-    "format": "",
+    "format": " ",
     "on-click": "~/.config/hypr/scripts/rofilaunch.sh --system_menu",
     "tooltip": false
   },
@@ -46,7 +40,7 @@
     "on-click-right": "eww open musiccenter --toggle --no-daemonize &",
     "format": "{status_icon}",
     "player-icons": {
-      "default": "▶ Playing",
+      "default": "▶  Playing",
     },
     "status-icons": {
       "paused": "  Paused",
@@ -70,17 +64,17 @@
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
+      "default": " ",
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " "
     }
   },
   "backlight": {
     "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
     "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "format": "{icon}",
+    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   },
   "custom/swaync": {
     "tooltip": false,
@@ -146,11 +140,11 @@
   },
   "network": {
     "format-wifi": "{icon}",
-    "format-ethernet": "",
-    "format-disconnected": "󰌙",
+    "format-ethernet": " ",
+    "format-disconnected": "󰌙 ",
     "tooltip-format": "{icon} {essid}",
     "format-icons": [
-      "󰤯", "󰤟", "󰤢", "󰤢", "󰤨"
+      "󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "
     ],
     "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
     "on-click-right": "kitty -e 'nmtui'"
@@ -162,14 +156,14 @@
       "warning": 30,
       "critical": 20
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format": "{icon}",
+    "format-charging": " ",
+    "format-plugged": " ",
     "format-alt": "{time} {icon}",
     "format-alt-icons": [
       "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
     ],
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": [" ", " ", " ", " ", " "]
   },
   "pulseaudio": {
     "max-volume": 150,
@@ -177,8 +171,8 @@
     "format": "{icon}",
     "tooltip-format": "{icon}  {volume}%",
     "format-icons": {
-    "headphone": "",
-      "format-muted": "",
+    "headphone": " ",
+      "format-muted": " ",
       "default": [
         " ", " "
       ]
@@ -191,9 +185,40 @@
     "format-alt": "󰍛 {used}/{total} GiB",
     "interval": 5
   },
+
   "cpu": {
     "format": "󰻠 {usage}%",
     "format-alt": "󰻠 {avg_frequency} GHz",
     "interval": 5
-  }
+  },
+   
+    "group/hardware": {
+		"orientation": "horizontal",
+		"modules": [
+			"memory",
+			"cpu"		
+            ]
+	},
+
+
+    "group/controlCenter": {
+		"orientation": "horizontal",
+		"modules": [
+			"pulseaudio",
+			"network",
+			"battery",
+            "backlight"
+		]
+	},
+    
+    "group/leftSide": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/search", "custom/runner", "custom/os_button", "mpris"]
+	},
+
+    "group/rightSide": {
+		"orientation": "horizontal",
+		"modules": ["group/controlCenter","power-profiles-daemon", "clock"]
+	},
 }

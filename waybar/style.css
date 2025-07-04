@@ -116,14 +116,11 @@ tooltip label {
 #tray > .passive {
     border-bottom: none;
 }
-/*#tray > .active {
-    border-bottom: 2px solid white;
-}
-#tray > .needs-attention {
-    border-bottom: 2px solid @warning_color;
-}*/
+
 #tray > widget {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 8px;
+    padding: 0px 3px;
 }
 
 #tray menu {
@@ -154,30 +151,6 @@ tooltip label {
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Network and Battery widget styling */
-#network, #battery {
-    background-color: @bg_main;
-    padding-left: 3px;
-    padding-right: 3px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-/* Pulseaudio widget styling */
-#pulseaudio {
-    font-family: "JetBrainsMono Nerd Font";
-    padding-left: 10px;
-    padding-right: 3px;
-    border: 2px solid @border_main;
-    border-right: 0px;
-    border-radius: 10px 0px 0px 10px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background-color: rgba(17, 17, 27, 1);
-}
-
 /* Language widget styling */
 #language {
     background-color: @bg_main;
@@ -188,24 +161,6 @@ tooltip label {
     border-right: 0px;
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-/* Clock widget styling */
-#clock {
-    background-color: @bg_main;
-    padding-right: 15px;
-    padding-left: 15px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-radius: 0px 10px 10px 0px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-/* Battery widget hover effect */
-#battery {
-    background-color: @bg_main;
-    padding-left: 8px;
-    padding-right: 8px;
 }
 
 /* Bluetooth widget styling */
@@ -224,14 +179,9 @@ tooltip label {
 }
 
 /* Sway notification custom widget and other widgets */
-#custom-swaync, #network, #pulseaudio {
+#custom-swaync {
     font-size: 20px;
     padding: 0px 8px;
-}
-
-#network, #pulseaudio {
-    padding: 0px 10px;
-    padding-right: 15px;
 }
 
 #custom-swaync {
@@ -243,50 +193,28 @@ tooltip label {
 #power-profiles-daemon {
     background-color: @bg_main;
     color: @content_main;
-    padding: 0px 3px;
-    padding-right: 8px;
+    padding: 0px 5px;
+    padding-left: 10px;
     font-size: 14px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
+    border-radius: 10px;
+    margin: 2px 6px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-/* Backlight widget styling */
-#backlight {
-    background-color: @bg_main;
-    padding: 0px 10px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 
 /* Styling for memory, search, os button, etc. */
-#memory, #custom-search, #custom-os_button, #custom-runner, #mpris, #custom-cafein, #cava {
+#cpu, #memory, #custom-search, #custom-os_button, #custom-runner, #mpris, #custom-cafein, #cava, #clock {
     font-family: "Symbols Nerd Font", "JetbrainsMono Nerd Font";
     background-color: @bg_main;
     font-weight: bold;
     border-radius: 16px;
-    padding: 0px 10px 0px 10px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
+    padding: 0px 10px;
+    border: 0px solid @border_main;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#custom-search {
-    margin-left: 5px;
-    border-left: 2px solid @border_main;
-	border-radius: 10px 0px 0px 10px;
 }
 
 #mpris {
 	padding: 0px;
+    margin: 0px 8px;
 	min-width: 90px;
 }
 
@@ -295,26 +223,68 @@ tooltip label {
 }
 
 /* Hover effect for bar elements */
-#custom-swaync:hover,#tray > widget:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover {
+#custom-swaync:hover,#tray > widget:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover, #clock:hover, #power-profiles-daemon:hover, #cpu:hover, #memory:hover {
     background-color: @bg_hover;
 }
 
-/* CPU widget styling */
-#cpu {
-    background-color: @bg_main;
+/* Hardware widget styling */
+#hardware {
+    background-color: @bg_active;
     font-weight: bold;
     padding: 0px 10px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-radius: 0px 10px 10px 0px;
+    margin: 2px 0px;
+    border-radius: 10px;
+}
+
+#cpu, #memory {
+    background-color: unset;
 }
 
 /* Bluetooth, network, pulseaudio icon size adjustment */
-#bluetooth, #network, #pulseaudio {
+#bluetooth {
     font-size: 15px; /* Decrease icon size */
 }
 
-#pulseaudio {
-	padding: 0px 5px;
-	padding-left: 14px;
+#leftSide {
+    border: 2px solid @border_main;
+    border-radius: 10px;
+    margin: 0px 10px;
+    background-color: @bg_main;
+    padding: 0px 10px;
+}
+
+
+/* Right Side */
+
+#rightSide {
+    border: 2px solid @border_main;
+    border-radius: 10px;
+    margin: 0px 10px;
+    background-color: @bg_main;
+    padding: 0px 10px;
+    padding-left: 2px;
+}
+
+#clock {
+    font-size: 14px;
+    padding: 0px 6px;
+    margin: 0px 4px;
+}
+
+/* Control Center*/
+
+#controlCenter {
+    background-color: @bg_active;
+    border-radius: 15px;
+    padding: 0px 8px;
+    margin: 0px 10px;
+}
+
+#controlCenter:hover, #cpu:hover, #memory:hover  {
+    background-color: @content_alt;
+}
+
+#network, #pulseaudio, #battery, #backlight {
+    padding: 0px 6px;
+    font-size: 15px;
 }

@@ -1,24 +1,26 @@
 /*
- * __        __          _                  ____  _         _
- * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___
- *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \
- *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/
- *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___|
- *                 |___/                              |___/
- *
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
  * by Binary Harbinger
- * -----------------------------------------------------
+ * ----------------------------------------------------- 
 */
 
 /*Import the theme.css file */
 @import "theme.css";
 
 * {
-    all: unset; /*Remove the useless GTK theme rules*/
-    font-family: "JetBrainsMono Nerd Font", "Fira Mono";
+	all: unset; /*Remove the useless GTK theme rules*/
+    font-family: "JetBrainsMono Nerd Font","Fira Mono";
     font-weight: 700;
     font-size: 12.5px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
 
 window#waybar {
     background: rgba(17, 17, 27, 1);
@@ -41,31 +43,28 @@ tooltip label {
 /* Custom widget for sway notifications */
 #custom-swaync {
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 1px;
-    background-color: @bg_main;
-    min-width: 20px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-left: 10px;
-    margin-right: 10px;
+	color: @content_main;
+    background-color: @bg_active;
+    min-width: 25px;
+    padding: 0px 20px;
+    margin-left: 6px;
+    margin-right: 12px;
+    margin-top: 2px; margin-bottom: 2px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
+    border: 0px;
+    border-radius: 10px;
 }
 
 /* Workspaces styling */
 #workspaces {
-    color: transparent;
+    background-color: @bg_active;
     margin-right: 1.5px;
     margin-left: 1.5px;
     border-radius: 20px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
-    padding: 0px 25px;
+    border: 0px solid @border_main;
+    border-left:0px;border-right: 0px;
+    padding: 0px 15px;
+    margin: 2px 1.5px;
 }
 #workspaces button {
     color: @content_alt;
@@ -97,9 +96,7 @@ tooltip label {
 }
 
 /* Styling for system info panels like CPU, Disk, Memory */
-#cpu,
-#disk,
-#memory {
+#cpu, #disk, #memory {
     padding: 3px;
 }
 
@@ -115,8 +112,7 @@ tooltip label {
     margin-left: 5px;
     margin-right: 5px;
     border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
+    border-left:0px;border-right:0px;
     border-radius: 0px;
     padding: 0px 10px;
     margin-right: 20px;
@@ -136,7 +132,7 @@ tooltip label {
 }
 
 #tray menu {
-    font-family: "JetBrainsMono Nerd Font";
+	font-family: "JetBrainsMono Nerd Font";
     border: 2px solid @border_main;
     border-radius: 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -145,49 +141,46 @@ tooltip label {
 }
 
 #tray menu > * {
-    border: 2px solid transparent;
+	border: 2px solid transparent;
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     padding: 0px 4px; /* Alt öğeler arasında boşluk */
 }
 
 #tray menu > *:hover {
-    border: 2px solid @border_main;
+	border: 2px solid @border_main;
     background-color: @bg_alt2; /* Alt öğe hover arka plan rengi */
     border-top: 2px solid transparent;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #tray menu > *:active {
     background-color: @bg_alt2;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Network and Battery widget styling */
-#network,
-#battery {
+/* Network and Battery widget styling
+#network, #battery {
     background-color: @bg_main;
     padding-left: 3px;
     padding-right: 3px;
     border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
+    border-left:0px;border-right:0px;
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+}*/
 
-/* Pulseaudio widget styling */
+/* Pulseaudio widget styling
 #pulseaudio {
     font-family: "JetBrainsMono Nerd Font";
     padding-left: 10px;
     padding-right: 3px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
+	border: 2px solid @border_main;
+    border-left:0px;border-right:0px;
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: rgba(17, 17, 27, 1);
-}
+}*/
 
 /* Language widget styling */
 #language {
@@ -202,23 +195,23 @@ tooltip label {
 }
 
 /* Clock widget styling */
-#clock {
-    background-color: @bg_main;
-    padding-right: 15px;
-    padding-left: 15px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
+#clock { 
+    padding: 0px 6px;
+    margin: 2px 8px;
+    border-radius: 8px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Battery widget hover effect */
+#clock:hover {
+    background-color: @bg_active;
+}
+
+/* Battery widget hover effect
 #battery {
     background-color: @bg_main;
     padding-left: 8px;
     padding-right: 8px;
-}
+}*/
 
 /* Bluetooth widget styling */
 #bluetooth {
@@ -228,122 +221,113 @@ tooltip label {
 }
 
 /* Bluetooth widget status colors */
-#bluetooth.disabled,
-#bluetooth.off {
+#bluetooth.disabled, #bluetooth.off {
     color: #565858;
 }
-#bluetooth.on,
-#bluetooth.connected {
+#bluetooth.on, #bluetooth.connected {
     color: #6f7dd8;
 }
 
 /* Sway notification custom widget and other widgets */
-#custom-swaync,
-#network,
-#pulseaudio {
+#custom-swaync, #network, #pulseaudio {
     font-size: 20px;
     padding: 0px 8px;
 }
 
-#network,
-#pulseaudio {
+#network, #pulseaudio {
     padding: 0px 10px;
     padding-right: 15px;
 }
 
 #custom-swaync {
-    color: rgb(255, 255, 255);
-    padding-right: 13px;
+    padding-right: 13px; 
 }
+
 
 /* Power profile daemon widget styling */
 #power-profiles-daemon {
     background-color: @bg_main;
     color: @content_main;
-    padding: 0px 3px;
-    padding-right: 8px;
+    padding: 0px 5px;
+    padding-left: 10px;
+    margin: 2px 6px;
+    margin-left: 14px;
+    border-radius: 10px;
     font-size: 14px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-/* Backlight widget styling */
-#backlight {
-    background-color: @bg_main;
-    padding: 0px 10px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* Styling for memory, search, os button, etc. */
-#memory,
-#custom-search,
-#custom-os_button,
-#custom-runner,
-#mpris,
-#custom-cafein,
-#cava {
+#controlCenter, #hardware, #customs, #mpris, #custom-cafein, #cava {
     font-family: "Symbols Nerd Font", "JetbrainsMono Nerd Font";
-    background-color: @bg_main;
+    background-color: @bg_active;
     font-weight: bold;
     border-radius: 16px;
     padding: 0px 10px 0px 10px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
+    border: 0px solid @border_main;
+    border-left:0px;border-right:0px;
+    border-radius: 15px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin: 2px;
 }
 
 #custom-search {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 #mpris {
-    padding: 0px;
-    min-width: 90px;
+	padding: 0px;
+    margin: 2px 8px; 
+	min-width: 90px;
 }
 
 #mpris.paused {
-    color: @bg_alt;
+	color: @bg_alt;
+}
+
+#mpris.paused {
+	all: unset;
 }
 
 /* Hover effect for bar elements */
-#custom-swaync:hover,
-#tray > widget:hover,
-#custom-search:hover,
-#custom-os_button:hover,
-#custom-runner:hover,
-#mpris:hover,
-#custom-cafein:hover {
-    background-color: @bg_hover;
-}
-
-/* CPU widget styling */
-#cpu {
-    background-color: @bg_main;
-    font-weight: bold;
-    padding: 0px 10px;
-    border: 2px solid @border_main;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px;
+#power-profiles-daemon:hover, #custom-swaync:hover,#tray > widget:hover,#custom-search:hover, #custom-os_button:hover, #custom-runner:hover, #mpris:hover, #custom-cafein:hover, #memory:hover, #cpu:hover {
+    background-color: @content_alt;
 }
 
 /* Bluetooth, network, pulseaudio icon size adjustment */
-#bluetooth,
-#network,
-#pulseaudio {
+#bluetooth, #network, #pulseaudio, #backlight {
     font-size: 15px; /* Decrease icon size */
 }
 
-#pulseaudio {
+#pulseaudio, #network, #battery, #backlight {
     padding: 0px 5px;
-    padding-left: 14px;
+}
+
+#controlCenter:hover {
+    background-color: @content_alt;
+}
+
+#customs {
+    margin: 2px 6px;
+    margin-left: 12px;
+    background-color: @bg_active; 
+    padding: 0px 10px;
+}
+
+/* Memory and CPU */
+
+#hardware {
+    margin: 2px 6px;
+    background-color: @bg_active; 
+    padding: 0px 10px;
+}
+
+#cpu, #memory, #custom-search, #custom-os_button, #custom-runner {
+    border-radius: 15px;
+    padding: 4px;
+    margin: 0px 2px;
+}
+
+#custom-search, #custom-os_button, #custom-runner {
+    padding-left: 8px;
 }
