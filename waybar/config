@@ -214,7 +214,7 @@
     "group/leftSide": {
 		"orientation": "horizontal",
 		"modules": [
-			"custom/search", "custom/runner", "custom/os_button", "mpris"]
+			"custom/search", "custom/runner", "custom/os_button", "mpris","group/hardware"]
 	},
 
     "group/rightSide": {

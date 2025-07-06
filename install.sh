@@ -17,7 +17,7 @@ PACKAGES=(
   breeze cliphist git nwg-look qt6ct fish power-profiles-daemon fastfetch ttf-jetbrains-mono-nerd ttf-jetbrains-mono ghostty
   ttf-fira-code otf-fira-code-symbol hyprland yazi micro rofi-wayland hyprlock hyprpolkitagent unzip hyprsunset rofimoji
   hyprpaper wlogout kitty alacritty papirus-icon-theme base-devel waybar swaync mpv hyprpicker eww pamixer hypridle udiskie
-  network-manager-applet pamixer brightnessctl hyprswitch avizo bibata-cursor-theme catppuccin-gtk-theme-mocha ttf-material-design-iconic-font
+  network-manager-applet pamixer brightnessctl hyprswitch swww bibata-cursor-theme catppuccin-gtk-theme-mocha ttf-material-design-iconic-font
 )
 
 echo "Installing packages..."
@@ -55,9 +55,14 @@ if pgrep -x "waybar" >/dev/null; then
 fi
 
 if pgrep -x "hyprpaper" >/dev/null; then
-    echo "Relaunching hyprpaper"
-    run_cmd pkill hyprpaper&& run_cmd hyprpaper& run_cmd disown
+    echo "Killing hyprpaper"
+    run_cmd pkill hyprpaper& run_cmd disown
 fi
+
+swww-deamon
+
+swww img ~/.config/hypr/wallpapers/Lines.png --transition-fps 60 --transition-step 255 --transiti    on-type any
+
 sleep 1
 if pgrep -x "eww" >/dev/null; then
     echo "Relaunching eww"

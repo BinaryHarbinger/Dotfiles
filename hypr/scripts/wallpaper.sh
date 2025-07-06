@@ -16,18 +16,15 @@ case $1 in
         else
             filepath="$2"
         fi
-        ln -sf "$filepath" ~/.config/hypr/wallppr.png
         echo "Wallpaper set to $filepath."
-		pkill hyprpaper
-        nohup hyprpaper > /dev/null 2>&1 &
+		swww img "$filepath" --transition-fps 60 --transition-step 255 --transition-type any
 		sleep 1
-        eww reload > /dev/null 2>&1
-        echo "Hyprpaper and Eww reloaded."
+        echo "Hyprpaper reloaded."
         ;;
     --reload|-r)
-        pkill hyprpaper
-        nohup hyprpaper > /dev/null 2>&1 &
+        pkill swww-deamon
 		sleep 2
+        swww-deamon > /dev/null 2>&1 & disown
         eww reload > /dev/null 2>&1
         echo "Hyprpaper and Eww reloaded."
         ;;

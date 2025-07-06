@@ -355,3 +355,13 @@
   text-shadow: 5px 3px 1px c.$ply-act ;
   border: 2px solid c.$border_main;
 }
+
+.OSD{
+  margin-top: 0px;
+  min-width: 200px;
+  font-size: 20px;
+  padding: 15px 10px;
+  border: 2px solid c.$border_main;
+  background-color: c.$bg-alt2;
+  border-radius: 10px;
+}

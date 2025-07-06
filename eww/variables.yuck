@@ -12,14 +12,11 @@
   (defpoll mscshuffle :interval "1.5s"
   "playerctl shuffle")
 
-(defpoll monitor :interval "2s"
-  "scripts/activeworkspace.sh")
-
 (defpoll uptime :interval "60s"
   "uptime -p | cut -c3-")
 (defpoll hyprsunset :interval "30s"
   "scripts/sunset.sh --isActive")
-(defpoll brightness :interval "5"
+(defpoll brightness :interval "600s"
   "brightnessctl -m echo 'text|jdbc' | sed -e 's/,/\ /g' | awk '{print $3/$5*100}'")
 
 
@@ -37,7 +34,7 @@
   "playerctl metadata --format '{{ title }} - {{ artist }}' || true")
 (defpoll musicshort :interval "1s"
   `playerctl metadata --format '{{ title }}' | cut -c1-30`)
-(defpoll volume :interval "1s"
+(defpoll volume :interval "60s"
   "scripts/getVol.sh speaker")
 
 (defpoll mic_percent :interval "3s" 

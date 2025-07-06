@@ -105,16 +105,46 @@
   )
   )
 
-    (defwidget deskclock []
+(defwidget deskclock []
     (box :class "deskclock"
       :orientation "v"
       :halign "start"
       :valign "start"
       (label :xalign 0 :text clock)))
 
-  (defwindow deskclockwin
+(defwindow deskclockwin
     :monitor 0
     :wm-ignore true
     :stacking "bg"
     :geometry (geometry :x "0px" :y "20px" :width "350px" :anchor "bottom right")
     (deskclock))
+
+(defwidget volumeOSD []
+(box :class "OSD" :orientation "v" :valign "center" :halign "center" :spacing 5
+  (scalestat :label ""
+      :value "${volume}"
+      :onchange "pamixer --set-volume {}")
+)
+)
+
+(defwindow volOSD
+    :monitor 0
+    :wm-ignore true
+    :stacking "fg"
+    :geometry (geometry :x "0px" :y "20px" :width "350px" :anchor "top center")
+    (volumeOSD))
+
+(defwidget brightnessOSD []
+(box :class "OSD" :orientation "v" :valign "center" :halign "center" :spacing 5
+  (scalestat :label ""
+      :value "${brightness}"
+      :onchange "brightnessctl set {}%")
+)
+)
+
+(defwindow brightOSD
+    :monitor 0
+    :wm-ignore true
+    :stacking "fg"
+    :geometry (geometry :x "0px" :y "20px" :width "350px" :anchor "top center")
+    (brightnessOSD))
