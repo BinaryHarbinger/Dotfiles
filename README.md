@@ -73,14 +73,6 @@
 <p></details>
 
 <details><summary>
-🔄 Window Switcher
-</summary></p>
-
-![image](https://raw.githubusercontent.com/BinaryHarbinger/Dotfiles/main/preview/switcher.png)
-
-<p></details>
-
-<details><summary>
 💻 Desktop Widgets
 </summary></p>
 
