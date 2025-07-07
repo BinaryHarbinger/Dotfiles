@@ -1,0 +1,65 @@
+-- Basic settings: tabs, line numbers, colors, etc.
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.termguicolors = true
+vim.opt.cursorline = true
+vim.opt.showmatch = true
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+vim.opt.whichwrap:append("<,>,h,l")
+
+-- Keymaps for Telescope
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live Grep" })
+
+-- Add config directory to runtimepath for colorscheme loading
+vim.opt.rtp:append("~/.config/nvim")
+
+-- Lazy.nvim installation path
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Plugins setup using lazy.nvim
+require("lazy").setup({
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup{}
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        ensure_installed = { "c", "cpp", "python", "lua", "javascript", "bash", "rust", "css", "yaml", "json" },
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+        indent = {
+          enable = true,
+        },
+      }
+    end,
+  },
+})
+
+-- Load your custom vim colorscheme (binaryharbinger)
+vim.cmd("colorscheme binaryharbinger")
