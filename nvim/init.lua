@@ -38,6 +38,10 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
+    "nvim-telescope/telescope-file-browser.nvim", -- File Browser eklentisi
+    dependencies = { "nvim-telescope/telescope.nvim" },
+  },
+  {
     "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup{}
@@ -60,6 +64,14 @@ require("lazy").setup({
     end,
   },
 })
+
+-- Load telescope-file-browser extension
+require("telescope").load_extension("file_browser")
+
+-- Keymap: <leader>fb ile file browser aç
+vim.keymap.set("n", "<leader>fb", function()
+  require("telescope").extensions.file_browser.file_browser()
+end, { desc = "Telescope File Browser" })
 
 -- Load your custom vim colorscheme (binaryharbinger)
 vim.cmd("colorscheme binaryharbinger")
