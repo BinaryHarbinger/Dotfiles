@@ -101,7 +101,13 @@
       (scalecenter :label ""
           :value "${volume}"
           :onchange "pamixer --set-volume {}")
-    
+   
+    (scalecenter :label ""
+        :value mic_percent
+        :onchange "amixer -D pulse set Capture {}%"
+        :max 100
+        :min 0)
+
     (scalecenter :label ""
           :value "${brightness}"
           :onchange "brightnessctl set {}%")
@@ -110,8 +116,8 @@
   (defwidget bottomcenter []
     (box :class "bottomcenter" :valign "end" :orientation "v" :halign "center" :spacing 10  
       (box :spacing 10
-        (button :class { networkstatus != "" ? "testenabled" : "test"} :onclick {networkstatus != "" ? "rfkill block wifi &" : "rfkill unblock wifi"} "󰤨 ")
-        (button :class { bluetoothstatus != "no" ? "testenabled" : "test"}  :onclick {bluetoothstatus != "no" ? "bluetoothctl power off" : "bluetoothctl power on"}  "")
+        (button :class { networkstatus != "" ? "testenabled" : "test"} :onclick {networkstatus != "" ? "rfkill toggle wifi & eww update networkstatus=''"  : "rfkill toggle wifi & eww update networkstatus='D'"} "󰤨 ")
+        (button :class { bluetoothstatus != "no" ? "testenabled" : "test"}  :onclick {"rfkill toggle bluetooth"}  "")
         (button :class { nighttoggle != false ? "testenabled" : "test"} :onclick {nighttoggle != false ? "bash $HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=false" : "$HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=true"} " ")
       )
       (box :spacing 10
@@ -137,7 +143,6 @@
   (defwindow actioncenter
     :monitor 0
     :exclusive "false"
-    :windowtype "normal"
     :stacking "fg"
     :geometry (geometry :x "61"
                         :y "10"

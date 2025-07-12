@@ -20,7 +20,8 @@
         (box :class "label" {musicposition})
         (scale :min 0
               :max 101
-              :value musicpositionpercentage)
+              :value musicpositionpercentage
+              :onchange "bash ~/.config/eww/scripts/music.sh {}")
         (box :class "label" {musiclength})
       )
       (box :class "musicbuttons" :orientation "h" :halign "center" :spacing 10
@@ -130,7 +131,7 @@
 (defwindow volOSD
     :monitor 0
     :wm-ignore true
-    :stacking "fg"
+    :stacking "overlay"
     :geometry (geometry :x "0px" :y "20px" :width "350px" :anchor "top center")
     (volumeOSD))
 
@@ -145,6 +146,6 @@
 (defwindow brightOSD
     :monitor 0
     :wm-ignore true
-    :stacking "fg"
+    :stacking "overlay"
     :geometry (geometry :x "0px" :y "20px" :width "350px" :anchor "top center")
     (brightnessOSD))

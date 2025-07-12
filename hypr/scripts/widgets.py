@@ -70,6 +70,10 @@ for argument in arguments:
         elif argument == "r":
             command = ["eww","close-all"]
             runCommand(command)
+            command = ["kill","-9","eww"]
+            runCommand(command)
+            command = ["eww", "d"]
+            runCommand(command)
             openWidgets(data)
             command = ["eww", "r"]
             print(data)

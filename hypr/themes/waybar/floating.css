@@ -144,7 +144,7 @@ tooltip label {
 	border: 2px solid transparent;
     border-radius: 0px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    padding: 0px 4px; /* Alt öğeler arasında boşluk */
+    padding: 0px 8px; /* Alt öğeler arasında boşluk */
 }
 
 #tray menu > *:hover {

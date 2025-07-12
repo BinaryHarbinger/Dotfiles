@@ -37,7 +37,7 @@
     "tooltip": false
   },
   "mpris": {
-    "on-click-right": "eww open musiccenter --toggle --no-daemonize &",
+   //"on-click-right": "eww open musiccenter --toggle --no-daemonize &",
     "format": "{status_icon}",
     "player-icons": {
       "default": "▶  Playing",
@@ -71,9 +71,10 @@
     }
   },
   "backlight": {
-    "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
+    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close calendar",
     "device": "intel_backlight",
     "format": "{icon}",
+    "tooltip-format": "{icon} {percent}%",
     "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   },
   "custom/swaync": {
@@ -92,7 +93,7 @@
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
+    "on-click": "swaync-client -t -sw & eww close actioncenter calendar musiccenter",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
@@ -135,7 +136,7 @@
   },
   "clock": {
     "format": " {:%R}",
-    "on-click": "eww open calendar --toggle --no-daemonize & eww close volumewidget actioncenter",
+    "on-click": "eww open calendar --toggle --no-daemonize & eww close actioncenter musiccenter",
     "tooltip-format": " {:%d %B %Y}",
   },
   "network": {
@@ -146,11 +147,11 @@
     "format-icons": [
       "󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "
     ],
-    "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
+    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close  calendar",
     "on-click-right": "kitty -e 'nmtui'"
   },
   "battery": {
-    "on-click": "eww open actioncenter --toggle --no-daemonize & eww close volumewidget calendar",
+    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close calendar",
     "states": {
       "good": 95,
       "warning": 30,
@@ -177,7 +178,7 @@
         " ", " "
       ]
     },
-    "on-click": "eww open volumewidget --toggle --no-daemonize & eww close actioncenter calendar",
+    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close calendar",
     "on-click-right": "pavucontrol"
   },
   "memory": {

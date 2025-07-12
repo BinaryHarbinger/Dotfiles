@@ -13,10 +13,6 @@ vim.opt.writebackup = false
 vim.opt.swapfile = false
 vim.opt.whichwrap:append("<,>,h,l")
 
--- Keymaps for Telescope
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live Grep" })
-
 -- Add config directory to runtimepath for colorscheme loading
 vim.opt.rtp:append("~/.config/nvim")
 
@@ -38,7 +34,7 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
-    "nvim-telescope/telescope-file-browser.nvim", -- File Browser eklentisi
+    "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
   },
   {
@@ -52,7 +48,9 @@ require("lazy").setup({
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup {
-        ensure_installed = { "c", "cpp", "python", "lua", "javascript", "bash", "rust", "css", "yaml", "json" },
+        ensure_installed = {
+          "c", "cpp", "python", "lua", "javascript", "bash", "rust", "css", "yaml", "json"
+        },
         highlight = {
           enable = true,
           additional_vim_regex_highlighting = false,
@@ -68,10 +66,28 @@ require("lazy").setup({
 -- Load telescope-file-browser extension
 require("telescope").load_extension("file_browser")
 
--- Keymap: <leader>fb ile file browser aç
+-- Telescope keymaps with hidden file support
+vim.keymap.set("n", "<leader>ff", function()
+  require("telescope.builtin").find_files({
+    hidden = true,
+    no_ignore = true,
+    file_ignore_patterns = { ".git/" },
+  })
+end, { desc = "Find Files (includes hidden)" })
+
+vim.keymap.set("n", "<leader>fg", function()
+  require("telescope.builtin").live_grep({
+    additional_args = function()
+      return { "--hidden", "--no-ignore" }
+    end,
+  })
+end, { desc = "Live Grep (includes hidden)" })
+
 vim.keymap.set("n", "<leader>fb", function()
-  require("telescope").extensions.file_browser.file_browser()
-end, { desc = "Telescope File Browser" })
+  require("telescope").extensions.file_browser.file_browser({
+    hidden = true
+  })
+end, { desc = "Telescope File Browser (includes hidden)" })
 
 -- Load your custom vim colorscheme (binaryharbinger)
 vim.cmd("colorscheme binaryharbinger")

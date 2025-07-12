@@ -1,5 +1,5 @@
 
-(defpoll networkstatus :interval "5s"
+(defpoll networkstatus :interval "2s"
   `nmcli -t -f active,ssid dev wifi | grep "yes" | cut -c5-`)
 (defpoll bluetoothstatus :interval "1s"
   `bluetoothctl show | grep "Powered" | cut -c11-`)
