@@ -33,5 +33,5 @@ while true; do
         show_osd "$currentState"
         prevState="$currentState"
     fi
-    sleep 0.1
+    sleep 0.2
 done
