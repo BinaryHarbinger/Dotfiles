@@ -33,6 +33,7 @@
       :spacing 10
       (button 
         :class "bluetooth"
+        :onrightclick "blueman-manager"
         :onclick "rofi-bluetooth &"
         ""
       )
@@ -87,12 +88,25 @@
     "cat /etc/hostname")
   
   (defwidget topcenter []
-    (box :class "topcenter" :orientation "h" :halign "start" :spacing 10 :space-evenly "false"
-      (image :class "pfp" :valign "start" :style `background-image: url("/home/${username}/.face");` )
-      (box :orientation "v" :space-evenly "false" :valign "center" :spacing 5
-        (label :class "welcometext" :text username :halign "start" :valign "center")
-        (label :text "${username}@${hostname}" :halign "center" :halign "start" :valign "start" :style "color: #b4befe")
-        (label :text "${uptime}" :halign "start" :valign "start" :halign "start" :style "color: #ffffff")
+    (box :class "topcenter" 
+    :orientation "h" :halign "start" :spacing 10 :space-evenly "false"
+      (image 
+      :class "pfp" 
+      :valign "start" 
+      :style `background-image: url("/home/${username}/.face");` )
+
+      (box 
+      :orientation "v" :space-evenly "false" :valign "center" :spacing 5
+        (label 
+        :class "welcometext" 
+        :text username 
+        :halign "start" :valign "center")
+
+        (label 
+        :text "${username}@${hostname}" 
+        :halign "center" :halign "start" :valign "start" :style "color: #b4befe")
+        (label 
+        :text "${uptime}" :valign "start" :halign "start" :style "color: #ffffff")
       )
     )
   )
@@ -114,16 +128,39 @@
     )
   )
   (defwidget bottomcenter []
-    (box :class "bottomcenter" :valign "end" :orientation "v" :halign "center" :spacing 10  
+    (box 
+    :class "bottomcenter" 
+    :valign "end" :orientation "v" :halign "center" :spacing 10  
       (box :spacing 10
-        (button :class { networkstatus != "" ? "testenabled" : "test"} :onclick {networkstatus != "" ? "rfkill toggle wifi & eww update networkstatus=''"  : "rfkill toggle wifi & eww update networkstatus='D'"} "󰤨 ")
-        (button :class { bluetoothstatus != "no" ? "testenabled" : "test"}  :onclick {"rfkill toggle bluetooth"}  "")
-        (button :class { nighttoggle != false ? "testenabled" : "test"} :onclick {nighttoggle != false ? "bash $HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=false" : "$HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=true"} " ")
+        
+        (button 
+        :class { networkstatus != "" ? "testenabled" : "test"} 
+        :onclick {networkstatus != "" ? "rfkill toggle wifi & eww update networkstatus=''"  : "rfkill toggle wifi & eww update networkstatus='D'"}
+        "󰤨 ")
+        
+        (button 
+        :class { bluetoothstatus != "no" ? "testenabled" : "test"}  
+        :onclick {"rfkill toggle bluetooth"}  "")
+        
+        (button 
+        :class { nighttoggle != false ? "testenabled" : "test"} 
+        :onclick {nighttoggle != false ? "bash $HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=false" : "$HOME/.config/eww/scripts/sunset.sh & eww update nighttoggle=true"}
+        " ")
       )
+
       (box :spacing 10
-        (button :class "test" :onclick "eww open actioncenter --toggle && hyprshot-gui &" "󰹑 ")
-        (button :class "test" :onclick "thunar ~ & eww open actioncenter --toggle &" " ")
-        (button :class { cafein != 'false' ? "testenabled" : "test"} :onclick {cafein != false ? "bash $HOME/.config/hypr/scripts/cafein toggle & eww update cafein='false'" : "$HOME/.config/hypr/scripts/cafein toggle & eww update cafein='true'"} " ")
+        (button 
+        :class "test" 
+        :onclick "eww open actioncenter --toggle && hyprshot-gui &" "󰹑 ")
+    
+        (button 
+        :class "test" 
+        :onclick "thunar ~ & eww open actioncenter --toggle &" " ")
+        (button 
+        :class { cafein != 'false' ? "testenabled" : "test"} 
+        :onclick {cafein != false ? "bash $HOME/.config/hypr/scripts/cafein toggle & eww update cafein='false'" : "$HOME/.config/hypr/scripts/cafein toggle & eww update cafein='true'"} 
+        " ")
+
       )
     )
   )
@@ -140,22 +177,33 @@
              :onchange onchange)
     )
   )
-  (defwindow actioncenter
-    :monitor 0
-    :exclusive "false"
-    :stacking "fg"
-    :geometry (geometry :x "61"
-                        :y "10"
-                        :width "300px"
-                        :height "300px"
-                        :anchor "top right")
-    :reserve (struts :side "right" :distance "4%")
-    (centerbox :orientation "v"
+  (defwidget actioncentercont []
+    (centerbox 
+    :class "actioncentercont"
+    :orientation "v"
       (topcenter)
       (middlecenter)
-      (bottomcenter)
-    )
-  )
+      (bottomcenter)))
+
+ (defwindow actioncenter
+   :monitor 0
+   :exclusive "false"
+   :stacking "fg"
+   :geometry (geometry :x "61"
+                       :y "10"
+                       :width "300px"
+                       :height "300px"
+                       :anchor "top right")
+   :reserve (struts :side "right" :distance "4%")
+   (revealer
+     :reveal actioncenter_reveal
+     :transition "slidedown"
+     :duration "400ms"
+     (actioncentercont)))
+ 
+
+(defvar actioncenter_reveal false)
+
   
   (include "./music_center.yuck")
   (include "./barwidget.yuck")

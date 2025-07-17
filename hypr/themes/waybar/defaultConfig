@@ -71,7 +71,7 @@
     }
   },
   "backlight": {
-    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close calendar",
+    "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
     "device": "intel_backlight",
     "format": "{icon}",
     "tooltip-format": "{icon} {percent}%",
@@ -147,11 +147,11 @@
     "format-icons": [
       "󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "
     ],
-    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close calendar",
+    "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
     "on-click-right": "kitty -e 'nmtui'"
   },
   "battery": {
-    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close calendar",
+    "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
     "states": {
       "good": 95,
       "warning": 30,
@@ -178,7 +178,7 @@
         " ", " "
       ]
     },
-    "on-click": "eww open-many actioncenter musiccenter --toggle --no-daemonize & eww close calendar",
+    "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
     "on-click-right": "pavucontrol"
   },
   "memory": {
