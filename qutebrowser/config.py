@@ -70,6 +70,9 @@ c.url.default_page = "https://web.tabliss.io/"
 c.scrolling.smooth = True
 c.completion.web_history.max_items = 0
 
+c.auto_save.session = True
+
+
 c.completion.use_best_match = False
 c.completion.show = "never"
 

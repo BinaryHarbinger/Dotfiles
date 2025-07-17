@@ -16,7 +16,7 @@ vim.opt.whichwrap:append("<,>,h,l")
 -- Add config directory to runtimepath for colorscheme loading
 vim.opt.rtp:append("~/.config/nvim")
 
--- Lazy.nvim installation path
+-- Ensure lazy.nvim is installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -27,7 +27,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Plugins setup using lazy.nvim
+-- Plugin setup using lazy.nvim
 require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim",
@@ -44,77 +44,109 @@ require("lazy").setup({
     end,
   },
   {
+    "denialofsandwich/sudo.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    config = true,
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup {
-        ensure_installed = {
-          "c", "cpp", "python", "lua", "javascript", "bash", "rust", "css", "yaml", "json"
-        },
-        highlight = {
-          enable = true,
-          additional_vim_regex_highlighting = false,
-        },
-        indent = {
-          enable = true,
-        },
+        ensure_installed = { "c", "cpp", "python", "lua", "javascript", "bash", "rust", "css", "yaml", "json" },
+        highlight = { enable = true, additional_vim_regex_highlighting = false },
+        indent    = { enable = true },
       }
     end,
   },
 
-  -- coq_nvim for completion
-  { "ms-jpq/coq_nvim", branch = "coq" },
-  { "ms-jpq/coq.artifacts", branch = "artifacts" },
-  { "neovim/nvim-lspconfig" },
+  -- Completion framework and sources
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lsp",
+      "L3MON4D3/LuaSnip",            -- Snippet engine
+      "saadparwaiz1/cmp_luasnip",   -- Snippet completions
+    },
+    config = function()
+      local cmp = require("cmp")
+      local luasnip = require("luasnip")
+
+      cmp.setup({
+        snippet = {
+          expand = function(args)
+            luasnip.lsp_expand(args.body)
+          end,
+        },
+        mapping = cmp.mapping.preset.insert({
+          ["<Tab>"] = cmp.mapping.select_next_item(),
+          ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        }),
+        sources = cmp.config.sources({
+          { name = "nvim_lsp" },
+          { name = "luasnip" },
+        }, {
+          { name = "buffer" },
+          { name = "path" },
+        }),
+      })
+    end,
+  },
+
+  -- Language Server Protocol configurations
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require("lspconfig")
+
+      -- C/C++ language server
+      lspconfig.clangd.setup{}
+
+      -- Python language server
+      lspconfig.pyright.setup{}
+
+      -- Lua language server
+      lspconfig.lua_ls.setup{}
+
+      -- JavaScript/TypeScript language server
+      lspconfig.ts_ls.setup{}
+
+      -- Bash language server
+      lspconfig.bashls.setup{}
+
+      -- Rust language server
+      lspconfig.rust_analyzer.setup{}
+
+      -- CSS language server
+      lspconfig.cssls.setup{}
+
+      -- YAML language server
+      lspconfig.yamlls.setup{}
+
+      -- JSON language server
+      lspconfig.jsonls.setup{}
+    end,
+  },
 })
 
--- Load telescope-file-browser extension
+-- Load telescope file browser extension
 require("telescope").load_extension("file_browser")
 
--- coq_nvim ayarları
-vim.g.coq_settings = {
-  auto_start = 'shut-up',  -- otomatik başlasın
-}
-
--- coq + LSP entegrasyonu
-local lspconfig = require("lspconfig")
-local coq = require("coq")
-
--- LSP sunucularını coq ile başlat
-lspconfig.pyright.setup(coq.lsp_ensure_capabilities{})
-lspconfig.clangd.setup(coq.lsp_ensure_capabilities{})
-lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" },
-      },
-    },
-  }
-}))
-
--- Telescope keymaps with hidden file support
+-- Telescope key mappings for hidden files and project search
 vim.keymap.set("n", "<leader>ff", function()
-  require("telescope.builtin").find_files({
-    hidden = true,
-    no_ignore = true,
-    file_ignore_patterns = { ".git/" },
-  })
+  require("telescope.builtin").find_files({ hidden = true, no_ignore = true, file_ignore_patterns = { ".git/" } })
 end, { desc = "Find Files (includes hidden)" })
 
 vim.keymap.set("n", "<leader>fg", function()
-  require("telescope.builtin").live_grep({
-    additional_args = function()
-      return { "--hidden", "--no-ignore" }
-    end,
-  })
+  require("telescope.builtin").live_grep({ additional_args = function() return { "--hidden", "--no-ignore" } end })
 end, { desc = "Live Grep (includes hidden)" })
 
 vim.keymap.set("n", "<leader>fb", function()
-  require("telescope").extensions.file_browser.file_browser({
-    hidden = true
-  })
+  require("telescope").extensions.file_browser.file_browser({ hidden = true })
 end, { desc = "Telescope File Browser (includes hidden)" })
 
--- Load your custom vim colorscheme (binaryharbinger)
+-- Load custom colorscheme
 vim.cmd("colorscheme binaryharbinger")
