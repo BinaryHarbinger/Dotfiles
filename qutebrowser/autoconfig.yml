@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  content.javascript.clipboard:
-    https://chatgpt.com: access-paste
+  content.notifications.enabled:
+    http://rss.efeesen.me: true

@@ -34,7 +34,7 @@ font-size = 14
 # # a comment after a config option, since it would be interpreted as a
 # # part of the value. For example, this will have a value of "#123abc":
 background = #11111b
-background-opacity = 0.5
+background-opacity = 0.55
 #
 # # Empty values are used to reset config keys to default.
 # key =

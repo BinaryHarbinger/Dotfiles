@@ -129,6 +129,8 @@ tooltip label {
 }*/
 #tray > widget {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 8px;
+    padding: 0px 3px;
 }
 
 #tray menu {
@@ -137,12 +139,12 @@ tooltip label {
     border-radius: 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: @bg_main;
-    padding: 5px 0px;
+    padding: 5px 2px;
 }
 
 #tray menu > * {
 	border: 2px solid transparent;
-    border-radius: 0px;
+    border-radius: 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     padding: 0px 8px; /* Alt öğeler arasında boşluk */
 }
@@ -150,8 +152,9 @@ tooltip label {
 #tray menu > *:hover {
 	border: 2px solid @border_main;
     background-color: @bg_alt2; /* Alt öğe hover arka plan rengi */
-    border-top: 2px solid transparent;
+    border: 2px solid transparent;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-bottom: 2px solid @content_main;
 }
 
 #tray menu > *:active {

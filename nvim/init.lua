@@ -61,10 +61,37 @@ require("lazy").setup({
       }
     end,
   },
+
+  -- coq_nvim for completion
+  { "ms-jpq/coq_nvim", branch = "coq" },
+  { "ms-jpq/coq.artifacts", branch = "artifacts" },
+  { "neovim/nvim-lspconfig" },
 })
 
 -- Load telescope-file-browser extension
 require("telescope").load_extension("file_browser")
+
+-- coq_nvim ayarları
+vim.g.coq_settings = {
+  auto_start = 'shut-up',  -- otomatik başlasın
+}
+
+-- coq + LSP entegrasyonu
+local lspconfig = require("lspconfig")
+local coq = require("coq")
+
+-- LSP sunucularını coq ile başlat
+lspconfig.pyright.setup(coq.lsp_ensure_capabilities{})
+lspconfig.clangd.setup(coq.lsp_ensure_capabilities{})
+lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+  }
+}))
 
 -- Telescope keymaps with hidden file support
 vim.keymap.set("n", "<leader>ff", function()
