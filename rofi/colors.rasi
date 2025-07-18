@@ -18,7 +18,7 @@
     active-background:           var(active);
     active-foreground:           var(background);
     selected-normal-background:  #2b2b42;
-    selected-normal-border: 	#b4befe;
+    selected-normal-border: 	 var(foreground);
     selected-normal-foreground:  var(foreground);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
@@ -71,19 +71,20 @@ inputbar {
         children:                    [ "prompt", "entry"];
 }
 entry {
-    placeholder: "Search";
     cursor: text;
+    text-color: var(background);
     margin: 0px 3px;
     hide-cursor-on-empty: true;
 }
 prompt {
     font: "JetbrainsMono Nerd Font 14";
     text-font:  inherit;
-    margin:     0px 4px;
+    padding:     0px 4px 0px 10px;
+    border-radius: 10px;
     text-color: inherit;
     horizontal-align: 0.30;
     vertical-align: 0.50;
-    background-color: var(bgalt);
+    background-color: var(background-alt);
 }
 
 textbox-prompt-colon {

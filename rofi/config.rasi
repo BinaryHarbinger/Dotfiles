@@ -5,7 +5,7 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search...";
+    placeholder:                 "Type...";
     placeholder-color:           inherit;
 }
 

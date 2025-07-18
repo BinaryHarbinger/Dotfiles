@@ -95,36 +95,38 @@ tooltip label{
 }
 
 #taskbar {
-  border-top: 2px solid #b4befe;
+  border: 2px solid #b4befe; border-left: 0px;
   border-right: 2px solid #b4befe;
     background-color: rgba(17, 17, 27, 1);
     padding: 2px 10px;
     border-radius: 0px;
     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     
 }
 
 #taskbar button {
 	min-width: 30px;
-	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+	border-bottom: 0px solid rgba(255, 255, 255, 0.3);
 	margin-left: 2px;
   padding-left: 8px;
   padding-right: 8px;
   color: white;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 10px;
 }
 
 #taskbar button.active {
-	border-bottom: 3px solid white;
+	border-bottom: 0px solid white;
     background: rgba(96, 100, 128,0.8);
-    border-radius: 8px 8px 0px 0px;
+    /*border-radius: 8px 8px 0px 0px;*/
 }
 
 #taskbar button:hover {
-	border-bottom: 3px solid white;
+	border-bottom: 0px solid white;
   background: @bg_hover;
 	color: @content_main;
-  border-radius: 8px 8px 0px 0px;
+  /*border-radius: 8px 8px 0px 0px;*/
 }
 
 #custom-terminal {

@@ -1,0 +1,13 @@
+@import "config.rasi"
+
+window {
+    anchor:           northeast;
+    location:         northeast;
+    x-offset:         -40px;
+    width:            380px;
+}
+
+element {
+    padding: 1px 0px;
+    font: "JetbrainsMono Nerd Font 10";
+}

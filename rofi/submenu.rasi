@@ -12,6 +12,7 @@ window {
 element {
     padding: 18px 0px;
     vertical-align:   1;
+    horizontal-align: 0.50;
 }
 
 listview {

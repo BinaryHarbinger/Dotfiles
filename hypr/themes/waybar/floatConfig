@@ -149,7 +149,7 @@
       "󰤯 ", "󰤟 ", "󰤢 ", "󰤢 ", "󰤨 "
     ],
     "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
-    "on-click-right": "kitty -e 'nmtui'"
+    "on-click-right": "bash .config/hypr/scripts/rofiwifi.sh"
   },
   "battery": {
     "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
@@ -180,8 +180,13 @@
       ]
     },
     "on-click": "bash ~/.config/hypr/scripts/actioncenter.sh &  eww close calendar",
-    "on-click-right": "pavucontrol"
-  },
+    "menu": "on-click-right",
+    "menu-file": "~/.config/waybar/volume_menu.xml",
+		"menu-actions": {
+			"ToggleSound": "pamixer -t&",
+			"pavu": "nohup pavucontrol >/dev/null 2>&1 &",
+		},
+    },
   "memory": {
     "format": "󰍛 {}%",
     "format-alt": "󰍛 {used}/{total} GiB",
