@@ -74,12 +74,15 @@ entry {
     placeholder: "Search";
     cursor: text;
     margin: 0px 3px;
+    hide-cursor-on-empty: true;
 }
 prompt {
-    font: "Symbols Nerd Font 13", "JetbrainsMono 14";
+    font: "JetbrainsMono Nerd Font 14";
     text-font:  inherit;
     margin:     0px 4px;
     text-color: inherit;
+    horizontal-align: 0.30;
+    vertical-align: 0.50;
     background-color: var(bgalt);
 }
 
@@ -107,7 +110,7 @@ listview {
 element {
     padding:          5px 10px ;
     background-color: var(background);
-    vertical-align:   0.50;
+    vertical-align:   1;
     font:             inherit;
     border-radius:    4px ;
     text-color:       var(foreground);
