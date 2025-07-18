@@ -9,7 +9,7 @@
   --cc-bg: @bg_main;
   --noti-border-color: @content_main;
   --noti-bg: @bg_main;
-  --noti-bg-alpha: 0.5;
+  --noti-bg-alpha: 1;
   --noti-bg-darker: @bg_main;
   --noti-bg-hover: @bg_active;
   --noti-bg-focus: @bg_main;
@@ -86,7 +86,7 @@
   padding: 10px 6px;
   margin: 0;
   box-shadow: none;
-  background: transparent;
+  background: var(--bg_main);
   border: none;
   color: var(--text-color);
   transition: background 0.15s ease-in-out;
@@ -105,7 +105,7 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content {
-  background: transparent;
+  background: var(--bg_main);
   border-radius: 12px;
   padding: 0;
 }
@@ -136,16 +136,17 @@
   /* Notification summary/title */
   font-size: 16px;
   font-weight: bold;
-  background: transparent;
+  background: var(--bg_main);
   color: var(--text-color);
   text-shadow: none;
+  margin-bottom: 4px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
   /* Notification time-ago */
   font-size: 12px;
   font-weight: bold;
-  background: transparent;
+  background: var(--bg_main);
   color: var(--text-color);
   text-shadow: none;
   margin-right: 30px;
@@ -153,11 +154,12 @@
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
   /* Notification body */
-  font-size: 15px;
-  font-weight: normal;
-  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--bg_main);
   color: var(--text-color);
   text-shadow: none;
+  margin: 2px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content progressbar {
@@ -265,9 +267,27 @@
   color: var(--text-color);
 }
 
-.notification-group .notification-group-buttons {
-  /* Notification Group Buttons */
+.notification-group .notification-group-buttons > * { 
+  /* Notification group buttons */
+  background: var(--noti-bg-hover);
+  color: var(--text-color);
+  text-shadow: none;
+  padding: 0;
+  border-radius: 15%;
+  margin-top: 8px;
+  margin-right: 8px;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
 }
+
+.notification-group .notification-group-buttons > *:hover {
+  box-shadow: none;
+  background: var(--noti-close-bg);
+  transition: background 0.15s ease-in-out;
+  border: none;
+} 
 
 .notification-group.collapsed {
   /* When another group is expanded, lower the opacity of the collapsed ones */
@@ -278,18 +298,29 @@
 }
 
 .notification-group.collapsed .notification-row .notification {
-  background-color: rgba(var(--noti-bg), 1);
+  background-color: var(--noti-bg);
 }
 
 .notification-group.collapsed .notification-row:not(:last-child) {
   /* Top notification in stack */
   /* Set lower stacked notifications opacity to 0 */
+    opacity: 1;
 }
 
 .notification-group.collapsed .notification-row:not(:last-child) .notification-action,
 .notification-group.collapsed .notification-row:not(:last-child) .notification-default-action {
   opacity: 0;
 }
+
+.notification-group.collapsed, .notification-group.notification-group.collapsed.not-expanded {
+    background-color: var(--bg_main);
+}
+
+.notification-group.collapsed .notification-row:not(:only-child) .notification {
+  background-color: var(--noti-bg);
+  opacity: 1;
+}
+
 
 .notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
   background-color: var(--noti-bg-hover);
@@ -310,7 +341,7 @@
 /
 .control-center .control-center-list {
   /* List of notifications */
-  background: transparent;
+  background: var(--bg_main);
 }
 
 .control-center .control-center-list .notification {
@@ -334,7 +365,7 @@
 }
 
 .floating-notifications {
-  background: transparent;
+  background: var(--bg_main);
 }
 
 .floating-notifications .notification {
