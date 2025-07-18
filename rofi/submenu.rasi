@@ -1,0 +1,19 @@
+@import "sysmenu.rasi"
+
+
+
+window {
+    location:         west;
+    anchor:           west;
+    x-offset:         8;
+    width:            115px;
+}
+
+element {
+    padding: 18px 0px;
+    vertical-align:   1;
+}
+
+listview {
+    lines: 6;
+}

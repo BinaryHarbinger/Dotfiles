@@ -1,0 +1,29 @@
+@import "config.rasi"
+
+
+
+window {
+    location:         center;
+    anchor:           center;
+    width:            360px;
+}
+
+mainbox {
+    children: ["listview" ];
+}
+
+element {
+    padding: 15px 0px;
+}
+
+element-text {
+    font: "JetBrainsMono Nerd Font 20";
+}
+
+listview {
+    lines: 5;
+}
+
+scrollbar {
+    handle-width: 0px;
+}
