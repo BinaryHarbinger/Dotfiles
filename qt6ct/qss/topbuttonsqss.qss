@@ -1,0 +1,28 @@
+QMenuBar {
+    color: #b4befe;
+}
+
+QMenuBar::item {
+    color: #b4befe;
+}
+
+QMenuBar::item:hover {
+    color: #B4BEFE;
+    background: #27273E;
+}
+
+QMenuBar::item:selected {
+    color: #B4BEFE;
+    background: #27273E;
+}
+
+
+QMenu {
+    color: #b4befe;
+    background-color: #11111b;
+}
+
+QMenu::item:selected {
+    background-color: #27273E;
+    color: #b4befe;
+}
