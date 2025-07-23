@@ -8,4 +8,3 @@ config_version: 2
 settings:
   content.javascript.clipboard:
     https://chatgpt.com: access-paste
-    https://github.com: access-paste

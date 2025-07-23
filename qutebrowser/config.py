@@ -81,6 +81,7 @@ c.content.autoplay = False
 # Bindings
 config.bind("<Ctrl-Tab>", "tab-next")
 config.bind("<Ctrl-Shift-Tab>", "tab-prev")
+config.bind('M', "spawn --detach mpv --ytdl-format='bestvideo+bestaudio' {url}")
 
 
 # Dark Mode
@@ -95,6 +96,4 @@ c.content.blocking.enabled = True
 c.content.blocking.method = "both"
 
 c.content.headers.do_not_track = True
-
-
 
