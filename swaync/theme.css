@@ -1,26 +1,30 @@
-@define-color bg_main #11111b;
-@define-color bg_main_tooltip rgb(17, 17, 27);
+/* Base border color*/
+@define-color border-main #C6083A;
+@define-color sway-bg @bg-hover;
 
-/*base background color of selections */
-@define-color bg_hover #30304d;
-/*base background color of active elements */
-@define-color bg_active rgba(51, 51, 76, 1);
-/*Alternative background colors*/
-@define-color bg_alt #939cda;
-@define-color bg_alt2 #191929;
-/*base border color*/
-@define-color border_main #b4befe;
+/* Background Colors */
+@define-color bg-main #515659;
+@define-color bg-alt #878C8F;
+@define-color bg-hover #414447;
+@define-color bg-hover-alt #353738;
+@define-color bg-tooltip @bg-main;
+@define-color bg-second #464A4C;
+@define-color bg-third #878C8F;
 
 /*text color for entries, views and content in general */
-@define-color content_main #b4befe;
-@define-color content_hover #b4befe;
-@define-color content_alt #484872;
-@define-color content-act #cdd4ff;
-/*text color for entries that are unselected */
-@define-color content_inactive rgba(180, 190, 254, 1);
+@define-color fg-main #FFDDDD;
+@define-color fg-unactive @bg-hover;
+@define-color content-act #C42750; /* yeni fg %20 açığı */
 
 /* Player colors */
-@define-color ply-main #25253b;
-@define-color ply-hover #363657;
-@define-color ply-act #515181;
-@define-color msc-act #424268;
+@define-color ply-main #2F3234;
+@define-color ply-hover #3D4043;
+@define-color ply-act #606568;
+@define-color msc-act #4D5255;
+
+/* Wlogout */
+
+@define-color wlogout-hover rgba(47, 50, 52, 0.541);
+@define-color wlogout-bg rgba(81, 86, 89, 0.45);
+@define-color wlogout-button rgba(65, 69, 71, 0.78);
+

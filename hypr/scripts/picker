@@ -1,0 +1,11 @@
+#!/bin/bash
+
+COLOR=$(hyprpicker)
+
+if [ $? -eq 0 ] && [ -n "$COLOR" ]; then
+    wl-copy <<< "$COLOR"
+    notify-send -u normal "🎨 Color Picked" "Copied to clipboard: <b>$COLOR</b>" --icon=applications-graphics
+else
+    notify-send -u critical "❌ Hyprpicker Error" "No color picked or an error occurred." --icon=dialog-error
+fi
+

@@ -1,18 +1,20 @@
+@import "theme.css";
+
 * {
     background-image: none;
     font-size: 20px;
-    font-family: "Fira Code";
+    font-family: "Jetbrains Mono";
 }
 
 window {
-    background-color: rgba(17, 17, 17, 0.45)
+    background-color: @wlogout-bg;
 }
 
 button {
     border-radius: 0px;
-    color: #b4befe;
-    border-color: #b4befe;
-    background-color: rgba(17, 17, 27, 0.781);
+    color: @fg-main;
+    border-color: @border-main;
+    background-color: @wlogout-button;
     outline-style: none;
     border-style: solid;
 	border-width: 3px;
@@ -25,10 +27,14 @@ button {
 }
 
 button:hover,button:focus {
-    background-color: rgba(37, 37, 68, 0.541);
+    background-color: @wlogout-hover;
     background-size: 30%;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+button:active {
+    background-color: @bg-hover;
 }
 
 #lock {
@@ -60,17 +66,17 @@ button:hover,button:focus {
 }
 
 #lock, #suspend,#hibernate {
-    border-bottom: #b4befe solid 1px;
+    border-bottom: @border-main solid 1px;
 }
 
 #logout,#shutdown,#reboot {
-    border-top: #b4befe solid 1px;
+    border-top: @border-main solid 1px;
 }
 
 #logout,#lock,#suspend,#shutdown{
-    border-right: #b4befe solid 1px;
+    border-right: @border-main solid 1px;
 }
 
 #suspend,#shutdown,#hibernate,#reboot{
-    border-left: #b4befe solid 1px;
+    border-left: @border-main solid 1px;
 }

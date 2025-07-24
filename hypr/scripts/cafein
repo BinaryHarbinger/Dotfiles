@@ -1,0 +1,77 @@
+#!/bin/bash
+
+# Hypridle management script
+# Usage: cafein [start|stop|continue|kill|toggle]
+
+# Process name to manage
+PROCESS_NAME="hypridle"
+
+# Find the Process ID (PID) of the specified process
+PID=$(pgrep -x $PROCESS_NAME)
+
+# Check if the script was run with an argument
+if [ -z "$1" ]; then
+    echo "Usage: $0 [start|stop|continue|kill|toggle]"
+    exit 1
+fi
+
+# Perform the requested action based on the argument
+case $1 in
+	state)
+    if [ -z "$PID" ]; then
+        echo "true"
+    else
+		echo "false"
+	fi
+	;;
+    stop)
+        if [ -z "$PID" ]; then
+            echo "Process '$PROCESS_NAME' is not running."
+        else
+            echo "Stopping process '$PROCESS_NAME' (PID: $PID)..."
+            kill -STOP $PID # Send the STOP signal to suspend the process
+            echo "Process stopped."
+        fi
+        ;;
+    continue)
+        if [ -z "$PID" ]; then
+            echo "Process '$PROCESS_NAME' is not running."
+        else
+            echo "Continuing process '$PROCESS_NAME' (PID: $PID)..."
+            kill -CONT $PID # Send the CONT signal to resume the process
+            echo "Process continued."
+        fi
+        ;;
+    kill)
+        if [ -z "$PID" ]; then
+            echo "Process '$PROCESS_NAME' is not running."
+        else
+            echo "Killing process '$PROCESS_NAME' (PID: $PID)..."
+            kill -9 $PID # Send the KILL signal to terminate the process
+            echo "Process killed."
+        fi
+        ;;
+    toggle)
+        if [ -z "$PID" ]; then
+            echo "hypridle activating."
+            hypridle& disown #& notify-send '☕Cafein' 'Cafein disabled.'
+        else
+            echo "hypridle is running with PID: $PID."
+            echo "Killing process '$PROCESS_NAME' (PID: $PID)..."
+            kill -9 $PID # Send the KILL signal to terminate the process
+            echo "Process killed." #& notify-send '☕Cafein' 'Cafein activated.'
+        fi
+        ;;
+    start)
+        if [ -z "$PID" ]; then
+            echo "Starting process '$PROCESS_NAME'..."
+            nohup $PROCESS_NAME >/dev/null 2>&1 & # Start the process in the background
+            echo "Process started."
+        else
+            echo "'$PROCESS_NAME' is already running (PID: $PID)." # Notify the process is already running
+        fi
+        ;;
+    *)
+        echo "Invalid command. Usage: $0 [start|stop|continue|kill|toggle]" # Handle invalid arguments
+        ;;
+esac

@@ -1,0 +1,20 @@
+* {
+    border-color:     #C6083A;
+    selected-normal-foreground: #b4befe;
+    normal-foreground: #b4befe;
+    selected-normal-background: #2b2b42;
+    normal-background: #464A4C;
+    bg-selected:      #3B3E40;
+    input-bar-bg:     #515659;
+    background-color: #464A4C;
+    lightred:         rgba ( 204, 85, 51, 100 % );
+    font:             "JetbrainsMono 14";
+    dark:             rgba ( 28, 28, 28, 100 % );
+    transparent:      transparent;
+    lightblue:        SkyBlue;
+    selected:       #2B2B42;
+    active:         #98C379FF;
+    urgent:         #E06B74FF;
+    background:     #515659;
+    foreground:     #FFDDDD;
+}
