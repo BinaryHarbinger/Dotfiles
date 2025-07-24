@@ -12,12 +12,12 @@
 @define-color bg-third #878C8F;
 
 /*text color for entries, views and content in general */
-@define-color fg-main #FFDDDD;
+@define-color fg-main #FFCACA;
 @define-color fg-unactive @bg-hover;
 @define-color content-act #C42750; /* yeni fg %20 açığı */
 
 /* Player colors */
-@define-color ply-main #2F3234;
+@define-color ply-main #847a8a;
 @define-color ply-hover #3D4043;
 @define-color ply-act #606568;
 @define-color msc-act #4D5255;

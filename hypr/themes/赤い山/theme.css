@@ -12,7 +12,7 @@
 @define-color bg-third #878C8F;
 
 /*text color for entries, views and content in general */
-@define-color fg-main #FFDDDD;
+@define-color fg-main #FFCACA;
 @define-color fg-unactive @bg-hover;
 @define-color content-act #C42750; /* yeni fg %20 açığı */
 

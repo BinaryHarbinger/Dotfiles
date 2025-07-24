@@ -415,7 +415,7 @@
 
 .widget-dnd switch {
   border-radius: 12px;
-  background-color: @bg-hover;
+  background-color: @ply-main;
   margin: 8px;
 }
 
