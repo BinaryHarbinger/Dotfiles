@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ "$QUTE_URL" =~ ^(about:|qute://) ]]; then
+    exit
+fi
+
+mpv --ytdl-format='bestvideo+bestaudio' "$QUTE_URL" &
+

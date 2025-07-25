@@ -24,6 +24,7 @@ c.tabs.favicons.show = "always"
 c.tabs.padding = {"top": 8, "bottom": 8, "left": 6, "right": 5}
 c.tabs.indicator.width = 2 
 c.tabs.wrap = True
+c.tabs.last_close = "default-page"
 
 # Tab Colors
 c.colors.tabs.bar.bg = bg_main
@@ -78,6 +79,8 @@ c.completion.show = "never"
 
 c.content.autoplay = False
 
+c.editor.command = ["nvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
+
 # Bindings
 config.bind("<Ctrl-Tab>", "tab-next")
 config.bind("<Ctrl-Shift-Tab>", "tab-prev")
@@ -97,3 +100,6 @@ c.content.blocking.method = "both"
 
 c.content.headers.do_not_track = True
 
+# Privacy
+
+c.content.cookies.accept = "no-3rdparty"
